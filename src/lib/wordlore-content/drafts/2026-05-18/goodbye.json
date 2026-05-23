@@ -1,0 +1,30 @@
+{
+  "word": "GOODBYE",
+  "pronunciation": "/ɡʊdˈbaɪ/",
+  "partOfSpeech": "interjection",
+  "definition": "an expression used when parting from someone",
+  "hook": "Every time you say goodbye, you're saying a prayer.",
+  "modernAnchor": "You wave it at the door. You text it ten times a day.",
+  "origin": {
+    "language": "Middle English",
+    "era": "c. 1570s",
+    "originalWord": "God be with ye",
+    "originalMeaning": "a prayer for divine protection on the parted"
+  },
+  "journey": [
+    "It started as a full prayer: 'God be with ye,' spoken when one person left another.",
+    "Travel was dangerous and partings might be final, so you left them in God's hands.",
+    "Over centuries it contracted: godbwye, then godbye, until it became goodbye.",
+    "The 'good' you say isn't really good at all. It's a worn-down version of God."
+  ],
+  "payoff": {
+    "setupWord": "GOODBYE",
+    "connector": "is, literally,",
+    "revelation": "GOD WITH YOU"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "DISASTER"
+  },
+  "musicVariant": "light"
+}

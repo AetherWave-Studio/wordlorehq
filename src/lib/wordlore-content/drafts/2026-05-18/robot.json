@@ -1,0 +1,30 @@
+{
+  "word": "ROBOT",
+  "pronunciation": "/ˈroʊ.bɒt/",
+  "partOfSpeech": "noun",
+  "definition": "a machine designed to carry out tasks automatically",
+  "hook": "The word robot is barely a hundred years old.",
+  "modernAnchor": "You ask one to vacuum your floor. You picture one driving the car.",
+  "origin": {
+    "language": "Czech",
+    "era": "1920",
+    "originalWord": "robota",
+    "originalMeaning": "forced labor performed by serfs"
+  },
+  "journey": [
+    "The word was coined for a 1920 play by Czech writer Karel Čapek titled R.U.R.",
+    "Čapek needed a word for artificial workers. His brother Josef suggested robota: the Czech word for unpaid drudgery serfs performed for their nobles.",
+    "Before R.U.R., no one called automated machines robots.",
+    "The play was translated into thirty languages within five years. Science fiction never recovered."
+  ],
+  "payoff": {
+    "setupWord": "ROBOT",
+    "connector": "is, literally,",
+    "revelation": "FORCED LABOR"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "CLUE"
+  },
+  "musicVariant": "dark"
+}

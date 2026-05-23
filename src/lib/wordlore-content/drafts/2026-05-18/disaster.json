@@ -1,0 +1,30 @@
+{
+  "word": "DISASTER",
+  "pronunciation": "/dɪˈzɑː.stər/",
+  "partOfSpeech": "noun",
+  "definition": "a sudden event causing great damage or loss",
+  "hook": "Your worst day is written in the stars.",
+  "modernAnchor": "You spilled coffee on your laptop. Your project is a disaster.",
+  "origin": {
+    "language": "Italian",
+    "era": "late 1500s",
+    "originalWord": "disastro",
+    "originalMeaning": "an ill-starred event"
+  },
+  "journey": [
+    "The word comes from the Italian disastro: dis meaning bad, and astro meaning star.",
+    "In the Renaissance, people believed catastrophic events were caused by unlucky alignments of the heavens.",
+    "Astronomers and astrologers were the same profession. The stars explained human suffering.",
+    "A disastro was the moment the cosmos turned against you. Five hundred years later, the word stuck. The astrology faded."
+  ],
+  "payoff": {
+    "setupWord": "DISASTER",
+    "connector": "is, literally,",
+    "revelation": "BAD STAR"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ROBOT"
+  },
+  "musicVariant": "dark"
+}

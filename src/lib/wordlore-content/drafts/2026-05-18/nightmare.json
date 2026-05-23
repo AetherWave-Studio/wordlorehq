@@ -1,0 +1,30 @@
+{
+  "word": "NIGHTMARE",
+  "pronunciation": "/ˈnaɪt.mɛər/",
+  "partOfSpeech": "noun",
+  "definition": "a frightening or unpleasant dream",
+  "hook": "Your nightmares have nothing to do with horses.",
+  "modernAnchor": "You wake up sweating at 3am. That's a nightmare.",
+  "origin": {
+    "language": "Old English",
+    "era": "before 1300",
+    "originalWord": "mære",
+    "originalMeaning": "a malicious supernatural being"
+  },
+  "journey": [
+    "The mære was a demon believed to creep into your bedroom at night, sit on your chest while you slept, and suffocate you with bad dreams.",
+    "People across medieval Europe believed it was real.",
+    "Sleep paralysis was called 'being ridden by the mare.'",
+    "The 'mare' meaning horse is a completely separate word that just happens to sound the same."
+  ],
+  "payoff": {
+    "setupWord": "NIGHTMARE",
+    "connector": "is, literally,",
+    "revelation": "DEMON ATTACK"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "GOODBYE"
+  },
+  "musicVariant": "dark"
+}

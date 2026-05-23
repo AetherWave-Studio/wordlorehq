@@ -3,6 +3,7 @@
   "weeks": {
     "2026-05-18": {
       "status": "ready",
+      "renderDate": "2026-05-21",
       "words": ["nightmare", "goodbye", "disaster", "robot"],
       "renders": {
         "nightmare": "done",
@@ -14,6 +15,7 @@
     },
     "2026-05-25": {
       "status": "review",
+      "renderDate": null,
       "words": ["clue", "muscle", "panic", "salary"],
       "renders": {
         "clue": "queued",

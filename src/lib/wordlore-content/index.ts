@@ -39,6 +39,7 @@ export type RenderStatus = "queued" | "rendering" | "done" | "failed";
 
 export type WeekState = {
   status: WeekStatus;
+  renderDate: string | null;
   words: string[];
   renders: Record<string, RenderStatus>;
   publishes: Record<string, Record<string, string | null>>;
