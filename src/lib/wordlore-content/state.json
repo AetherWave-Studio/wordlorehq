@@ -1,0 +1,27 @@
+{
+  "currentWeek": "2026-05-25",
+  "weeks": {
+    "2026-05-18": {
+      "status": "ready",
+      "words": ["nightmare", "goodbye", "disaster", "robot"],
+      "renders": {
+        "nightmare": "done",
+        "goodbye": "done",
+        "disaster": "done",
+        "robot": "done"
+      },
+      "publishes": {}
+    },
+    "2026-05-25": {
+      "status": "review",
+      "words": ["clue", "muscle", "panic", "salary"],
+      "renders": {
+        "clue": "queued",
+        "muscle": "queued",
+        "panic": "queued",
+        "salary": "queued"
+      },
+      "publishes": {}
+    }
+  }
+}

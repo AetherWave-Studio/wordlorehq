@@ -1,0 +1,30 @@
+{
+  "word": "PANIC",
+  "pronunciation": "/ˈpæn.ɪk/",
+  "partOfSpeech": "noun",
+  "definition": "sudden uncontrollable fear or anxiety",
+  "hook": "Panic is named after the god who used to cause it.",
+  "modernAnchor": "A market crashes. A crowd surges. You feel your heartbeat in your throat.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "panikon",
+    "originalMeaning": "of Pan, the goat-footed god"
+  },
+  "journey": [
+    "Pan was the Greek god of the wild. Half man, half goat. He startled travelers in lonely forests.",
+    "The Greeks believed sudden inexplicable terror in empty places came directly from him.",
+    "Soldiers fleeing battlefields without reason were said to be panic-struck. Gripped by Pan himself.",
+    "The god is gone but his name still hijacks your nervous system every day."
+  ],
+  "payoff": {
+    "setupWord": "PANIC",
+    "connector": "is, literally,",
+    "revelation": "FROM THE GOD PAN"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SALARY"
+  },
+  "musicVariant": "dark"
+}

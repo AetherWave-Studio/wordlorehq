@@ -1,0 +1,30 @@
+{
+  "word": "CLUE",
+  "pronunciation": "/kluː/",
+  "partOfSpeech": "noun",
+  "definition": "a piece of evidence used to solve a problem or mystery",
+  "hook": "A clue used to be something you could hold in your hand.",
+  "modernAnchor": "Detectives gather them. Crosswords give them. We say I don't have one.",
+  "origin": {
+    "language": "Middle English",
+    "era": "1300s",
+    "originalWord": "clew",
+    "originalMeaning": "a ball of yarn or thread"
+  },
+  "journey": [
+    "In Greek myth, Theseus entered the labyrinth carrying a ball of thread given to him by Ariadne.",
+    "He unspooled it as he walked, marking the path to find his way back out.",
+    "That ball of thread was called a clew. The object's name became the word for finding your way.",
+    "Today the thread is gone but the idea remains. You still follow a clue through the dark."
+  ],
+  "payoff": {
+    "setupWord": "CLUE",
+    "connector": "is, literally,",
+    "revelation": "A BALL OF THREAD"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MUSCLE"
+  },
+  "musicVariant": "dark"
+}

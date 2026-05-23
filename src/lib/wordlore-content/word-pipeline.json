@@ -1,0 +1,31 @@
+{
+  "available": [
+    { "word": "SINISTER", "tier": 1, "language": "Latin", "payoff": "left (the unlucky hand)" },
+    { "word": "AVOCADO", "tier": 1, "language": "Nahuatl", "payoff": "testicle" },
+    { "word": "LUNATIC", "tier": 1, "language": "Latin", "payoff": "moon-struck" },
+    { "word": "WEIRD", "tier": 1, "language": "Old English", "payoff": "fate, destiny" },
+    { "word": "HOOLIGAN", "tier": 1, "language": "English", "payoff": "Irish family in 1890s London" },
+    { "word": "COMPANION", "tier": 2, "language": "Latin", "payoff": "one you share bread with" },
+    { "word": "QUARANTINE", "tier": 2, "language": "Italian", "payoff": "forty days (plague isolation)" },
+    { "word": "SARCASM", "tier": 2, "language": "Greek", "payoff": "to tear flesh" },
+    { "word": "BARBARIAN", "tier": 2, "language": "Greek", "payoff": "those who say bar bar bar" },
+    { "word": "VOLCANO", "tier": 3, "language": "Latin", "payoff": "the god Vulcan" },
+    { "word": "JANUARY", "tier": 3, "language": "Latin", "payoff": "the god Janus" },
+    { "word": "CEREAL", "tier": 3, "language": "Latin", "payoff": "the goddess Ceres" },
+    { "word": "BEDLAM", "tier": 3, "language": "English", "payoff": "Bethlehem Royal Hospital" },
+    { "word": "TANTALIZE", "tier": 4, "language": "Greek", "payoff": "Tantalus, eternal punishment" },
+    { "word": "HALCYON", "tier": 4, "language": "Greek", "payoff": "mythic bird that calmed seas" },
+    { "word": "NOSTALGIA", "tier": 4, "language": "Greek", "payoff": "ache to return home" },
+    { "word": "TARANTULA", "tier": 4, "language": "Italian", "payoff": "Taranto, Italy + tarantella dance" }
+  ],
+  "used": [
+    { "word": "NIGHTMARE", "week": "2026-05-18", "drafted": "2026-05-21" },
+    { "word": "GOODBYE", "week": "2026-05-18", "drafted": "2026-05-21" },
+    { "word": "DISASTER", "week": "2026-05-18", "drafted": "2026-05-21" },
+    { "word": "ROBOT", "week": "2026-05-18", "drafted": "2026-05-21" },
+    { "word": "CLUE", "week": "2026-05-25", "drafted": "2026-05-23" },
+    { "word": "MUSCLE", "week": "2026-05-25", "drafted": "2026-05-23" },
+    { "word": "PANIC", "week": "2026-05-25", "drafted": "2026-05-23" },
+    { "word": "SALARY", "week": "2026-05-25", "drafted": "2026-05-23" }
+  ]
+}

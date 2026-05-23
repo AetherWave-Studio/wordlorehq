@@ -1,0 +1,30 @@
+{
+  "word": "SALARY",
+  "pronunciation": "/ˈsæl.ə.ri/",
+  "partOfSpeech": "noun",
+  "definition": "a fixed regular payment for work",
+  "hook": "Your paycheck used to come in a different form entirely.",
+  "modernAnchor": "A salary lands in your account every two weeks. You barely look at it.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "salarium",
+    "originalMeaning": "salt money"
+  },
+  "journey": [
+    "Roman soldiers received an allowance specifically for buying salt. Salt preserved food and was traded like currency.",
+    "That allowance was called the salarium. From sal, the Latin word for salt.",
+    "A good soldier was worth his salt. A bad one wasn't. The phrase still exists today.",
+    "When your paycheck arrives, you are technically being paid in salt money."
+  ],
+  "payoff": {
+    "setupWord": "SALARY",
+    "connector": "is, literally,",
+    "revelation": "SALT MONEY"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SINISTER"
+  },
+  "musicVariant": "dark"
+}

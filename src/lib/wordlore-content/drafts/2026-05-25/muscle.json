@@ -1,0 +1,30 @@
+{
+  "word": "MUSCLE",
+  "pronunciation": "/ˈmʌs.əl/",
+  "partOfSpeech": "noun",
+  "definition": "a band of tissue in the body that contracts to produce movement",
+  "hook": "There is a small creature living under your skin.",
+  "modernAnchor": "You flex your bicep. You feel it move. You probably never asked what to call it.",
+  "origin": {
+    "language": "Latin",
+    "era": "before 1500",
+    "originalWord": "musculus",
+    "originalMeaning": "little mouse"
+  },
+  "journey": [
+    "Roman anatomists watched bare arms tense and saw something familiar moving under the skin.",
+    "The bulge that rolled and twitched looked exactly like a small mouse darting beneath a sheet.",
+    "So they named it after the animal. Musculus. Little mouse. The name stuck for two thousand years.",
+    "Every time you flex your arm, you are watching a Latin rodent move."
+  ],
+  "payoff": {
+    "setupWord": "MUSCLE",
+    "connector": "is, literally,",
+    "revelation": "LITTLE MOUSE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "PANIC"
+  },
+  "musicVariant": "dark"
+}
