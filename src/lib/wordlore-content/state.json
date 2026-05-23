@@ -14,14 +14,14 @@
       "publishes": {}
     },
     "2026-05-25": {
-      "status": "review",
-      "renderDate": null,
+      "status": "ready",
+      "renderDate": "2026-05-23",
       "words": ["clue", "muscle", "panic", "salary"],
       "renders": {
-        "clue": "queued",
-        "muscle": "queued",
-        "panic": "queued",
-        "salary": "queued"
+        "clue": "done",
+        "muscle": "done",
+        "panic": "done",
+        "salary": "done"
       },
       "publishes": {}
     }
