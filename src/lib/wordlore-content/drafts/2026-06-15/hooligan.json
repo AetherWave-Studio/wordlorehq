@@ -1,0 +1,30 @@
+{
+  "word": "HOOLIGAN",
+  "pronunciation": "/ˈhuː.lɪ.ɡən/",
+  "partOfSpeech": "noun",
+  "definition": "a violent young troublemaker",
+  "hook": "Every hooligan in history owes their name to one very rowdy family.",
+  "modernAnchor": "Football riots. Smashed windows. A teenager doing something no one can explain.",
+  "origin": {
+    "language": "English",
+    "era": "1890s",
+    "originalWord": "Hoolihan",
+    "originalMeaning": "an Irish surname from a notorious South London family"
+  },
+  "journey": [
+    "In 1890s South London, a family called the Hooligans became notorious for street fighting and disorder.",
+    "Newspapers wrote about them by name. Hooligan became shorthand for that specific kind of reckless trouble.",
+    "Police reports, court records, headlines - the name spread faster than any of the family's actual crimes.",
+    "One Irish family's surname became the word the whole world uses for a certain kind of chaos."
+  ],
+  "payoff": {
+    "setupWord": "HOOLIGAN",
+    "connector": "is, literally,",
+    "revelation": "A FAMILY NAME"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SARCASM"
+  },
+  "musicVariant": "dark"
+}

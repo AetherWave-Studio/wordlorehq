@@ -1,0 +1,30 @@
+{
+  "word": "TARANTULA",
+  "pronunciation": "/təˈræn.tʃʊ.lə/",
+  "partOfSpeech": "noun",
+  "definition": "a large hairy spider found chiefly in tropical and subtropical America",
+  "hook": "This spider was named after a city, and the city inspired a dance, and the dance was a cure.",
+  "modernAnchor": "Eight legs. A body the size of a fist. It lives in a tank on someone's shelf in a college dorm.",
+  "origin": {
+    "language": "Italian",
+    "era": "1300s",
+    "originalWord": "Taranto",
+    "originalMeaning": "a port city in southern Italy"
+  },
+  "journey": [
+    "In medieval Taranto, a southern Italian city, people believed the local wolf spider's bite was fatal.",
+    "The only cure, they said, was to sweat out the venom by dancing wildly for hours.",
+    "The frenzied dance became the tarantella. The spider became the tarantula. Both names trace to Taranto.",
+    "One Italian city quietly named a spider, a dance, and a medical tradition that lasted two centuries."
+  ],
+  "payoff": {
+    "setupWord": "TARANTULA",
+    "connector": "is, literally,",
+    "revelation": "A CITY IN ITALY"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "LUNATIC"
+  },
+  "musicVariant": "warm"
+}

@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-06-08",
+  "currentWeek": "2026-06-15",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -35,6 +35,13 @@
         "weird": "done",
         "quarantine": "done"
       },
+      "publishes": {}
+    },
+    "2026-06-15": {
+      "status": "ready",
+      "renderDate": "",
+      "words": ["companion", "hooligan", "sarcasm", "tarantula"],
+      "renders": {},
       "publishes": {}
     }
   }

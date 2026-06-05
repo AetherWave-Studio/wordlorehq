@@ -1,0 +1,30 @@
+{
+  "word": "SARCASM",
+  "pronunciation": "/ˈsɑːr.kæz.əm/",
+  "partOfSpeech": "noun",
+  "definition": "the use of irony to mock or convey contempt",
+  "hook": "Sarcasm is supposed to be funny. Its Greek roots are not.",
+  "modernAnchor": "Oh great, another Monday. Thanks for your help. The words say one thing. They mean another.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "sarkazein",
+    "originalMeaning": "to tear flesh, to bite the lips in rage"
+  },
+  "journey": [
+    "The Greek sarx meant flesh. Sarkazein meant to strip it away - like an animal at a bone.",
+    "Greek writers used it to describe cutting speech - the kind of words that left marks.",
+    "Latin took the word. Scholars carried it into French. By the 1500s it arrived in English.",
+    "Three thousand years of violent imagery compressed into a tone of voice you use at the office."
+  ],
+  "payoff": {
+    "setupWord": "SARCASM",
+    "connector": "is, literally,",
+    "revelation": "TEARING FLESH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "TARANTULA"
+  },
+  "musicVariant": "dark"
+}

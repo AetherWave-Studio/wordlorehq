@@ -1,0 +1,30 @@
+{
+  "word": "COMPANION",
+  "pronunciation": "/kəmˈpæn.jən/",
+  "partOfSpeech": "noun",
+  "definition": "a person or animal with whom one spends time or travels",
+  "hook": "Your closest companion has bread baked into their name.",
+  "modernAnchor": "A road trip partner. A loyal friend. Someone who shows up when things get hard.",
+  "origin": {
+    "language": "Latin",
+    "era": "1300s",
+    "originalWord": "companio",
+    "originalMeaning": "one who shares bread"
+  },
+  "journey": [
+    "In Latin, com means together. Panis means bread - the staff of life, the most basic thing shared.",
+    "A companio was the person you broke bread with. Someone trusted enough to share a meal.",
+    "Medieval soldiers divided rations. Travelers split loaves on the road. That sharing built the bond.",
+    "Friendship, in its oldest form, was not a feeling. It was a meal shared between travelers."
+  ],
+  "payoff": {
+    "setupWord": "COMPANION",
+    "connector": "is, literally,",
+    "revelation": "SOMEONE YOU SHARE BREAD WITH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "HOOLIGAN"
+  },
+  "musicVariant": "warm"
+}
