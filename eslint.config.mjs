@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Wordlore render pipeline lives outside the Next app and ships its own
+    // tsconfig (remotion/tsconfig.json). Skip both subtrees from the Next
+    // app's lint pass.
+    "remotion/**",
+    "scripts/**",
+    ".renders/**",
   ]),
 ]);
 

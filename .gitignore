@@ -41,3 +41,21 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# wordlore render pipeline — generated audio artifacts
+# (regenerated per render; not source-of-truth)
+/remotion/assets/audio/voiceover/
+/remotion/assets/audio/voiceover.mp3
+/remotion/assets/audio/trailer-voiceover/
+/remotion/assets/audio/trailer-voiceover.mp3
+/remotion/assets/audio/beat-durations.json
+
+# local render output (only used when WORDLORE_OUT_DIR is unset and
+# Andrew runs renders outside the cloud routine; renders that should
+# land in the repo go to public/episodes/ directly)
+/.renders/
+
+# render bookkeeping artifacts (only the .mp4 is the deliverable)
+/public/episodes/*-render-props.json
+/public/episodes/*-metadata.txt
+/public/trailers/*-render-props.json
