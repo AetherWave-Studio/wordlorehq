@@ -39,9 +39,14 @@
     },
     "2026-06-15": {
       "status": "ready",
-      "renderDate": "",
+      "renderDate": "2026-06-05",
       "words": ["companion", "hooligan", "sarcasm", "tarantula"],
-      "renders": {},
+      "renders": {
+        "companion": "done",
+        "hooligan": "done",
+        "sarcasm": "done",
+        "tarantula": "done"
+      },
       "publishes": {}
     }
   }
