@@ -1,0 +1,30 @@
+{
+  "word": "QUARANTINE",
+  "pronunciation": "/ˈkwɔːr.ən.tiːn/",
+  "partOfSpeech": "noun",
+  "definition": "a state of isolation imposed on people or animals to prevent the spread of disease",
+  "hook": "Quarantine has a specific number hidden inside it. Forty.",
+  "modernAnchor": "Lockdowns. Sealed borders. Two weeks alone in a room. The word came back fast in 2020.",
+  "origin": {
+    "language": "Italian",
+    "era": "1300s",
+    "originalWord": "quaranta giorni",
+    "originalMeaning": "forty days"
+  },
+  "journey": [
+    "When the Black Death swept Europe, the port city of Venice took a desperate defensive measure.",
+    "Every arriving ship had to anchor offshore for forty days before any sailor could step ashore.",
+    "The Venetians called this waiting period quaranta giorni. Forty days. Just enough to outlast the plague.",
+    "The number is buried in the word now. Every quarantine you survive is a memory of a Venetian harbor."
+  ],
+  "payoff": {
+    "setupWord": "QUARANTINE",
+    "connector": "is, literally,",
+    "revelation": "FORTY DAYS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "COMPANION"
+  },
+  "musicVariant": "dark"
+}

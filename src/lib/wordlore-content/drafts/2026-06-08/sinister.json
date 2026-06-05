@@ -1,0 +1,30 @@
+{
+  "word": "SINISTER",
+  "pronunciation": "/ˈsɪn.ɪ.stər/",
+  "partOfSpeech": "adjective",
+  "definition": "giving the impression that something harmful or evil is happening",
+  "hook": "Sinister used to just mean which hand you wrote with.",
+  "modernAnchor": "A shadow in a doorway. A smile that doesn't reach the eyes. We call it sinister.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "sinister",
+    "originalMeaning": "on the left side"
+  },
+  "journey": [
+    "Roman augurs read bird flight to predict the will of the gods before battles and decisions.",
+    "Birds that flew on the right were favorable. Birds that flew on the left were sinister. Unlucky.",
+    "Left-handed people were treated as cursed. Witches were said to hold the devil's left hand.",
+    "Centuries of superstition turned a direction into a feeling. Left became wrong became evil."
+  ],
+  "payoff": {
+    "setupWord": "SINISTER",
+    "connector": "is, literally,",
+    "revelation": "ON THE LEFT"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "AVOCADO"
+  },
+  "musicVariant": "dark"
+}

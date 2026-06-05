@@ -1,0 +1,30 @@
+{
+  "word": "WEIRD",
+  "pronunciation": "/wɪərd/",
+  "partOfSpeech": "adjective",
+  "definition": "suggesting something supernatural; uncanny or strange",
+  "hook": "Weird didn't always mean strange. It used to mean your future was already written.",
+  "modernAnchor": "A weird coincidence. A weird neighbor. A weird feeling in the back of your neck.",
+  "origin": {
+    "language": "Old English",
+    "era": "before 1000",
+    "originalWord": "wyrd",
+    "originalMeaning": "fate, destiny"
+  },
+  "journey": [
+    "In Old English, wyrd was the force that decided the shape of your life. Older than the gods.",
+    "Then Shakespeare wrote Macbeth. He called the three fate-spinning witches the weird sisters.",
+    "Audiences saw the witches and the word together. Weird stopped meaning fate. It started meaning witch.",
+    "And from witch it became anything strange enough to feel touched by an unseen hand."
+  ],
+  "payoff": {
+    "setupWord": "WEIRD",
+    "connector": "is, literally,",
+    "revelation": "FATE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "QUARANTINE"
+  },
+  "musicVariant": "dark"
+}

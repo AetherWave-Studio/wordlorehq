@@ -1,12 +1,8 @@
 {
   "available": [
-    { "word": "SINISTER", "tier": 1, "language": "Latin", "payoff": "left (the unlucky hand)" },
-    { "word": "AVOCADO", "tier": 1, "language": "Nahuatl", "payoff": "testicle" },
     { "word": "LUNATIC", "tier": 1, "language": "Latin", "payoff": "moon-struck" },
-    { "word": "WEIRD", "tier": 1, "language": "Old English", "payoff": "fate, destiny" },
     { "word": "HOOLIGAN", "tier": 1, "language": "English", "payoff": "Irish family in 1890s London" },
     { "word": "COMPANION", "tier": 2, "language": "Latin", "payoff": "one you share bread with" },
-    { "word": "QUARANTINE", "tier": 2, "language": "Italian", "payoff": "forty days (plague isolation)" },
     { "word": "SARCASM", "tier": 2, "language": "Greek", "payoff": "to tear flesh" },
     { "word": "BARBARIAN", "tier": 2, "language": "Greek", "payoff": "those who say bar bar bar" },
     { "word": "VOLCANO", "tier": 3, "language": "Latin", "payoff": "the god Vulcan" },
@@ -26,6 +22,10 @@
     { "word": "CLUE", "week": "2026-05-25", "drafted": "2026-05-23" },
     { "word": "MUSCLE", "week": "2026-05-25", "drafted": "2026-05-23" },
     { "word": "PANIC", "week": "2026-05-25", "drafted": "2026-05-23" },
-    { "word": "SALARY", "week": "2026-05-25", "drafted": "2026-05-23" }
+    { "word": "SALARY", "week": "2026-05-25", "drafted": "2026-05-23" },
+    { "word": "SINISTER", "week": "2026-06-08", "drafted": "2026-06-05" },
+    { "word": "AVOCADO", "week": "2026-06-08", "drafted": "2026-06-05" },
+    { "word": "WEIRD", "week": "2026-06-08", "drafted": "2026-06-05" },
+    { "word": "QUARANTINE", "week": "2026-06-08", "drafted": "2026-06-05" }
   ]
 }

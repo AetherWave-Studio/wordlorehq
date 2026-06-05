@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-05-25",
+  "currentWeek": "2026-06-08",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -22,6 +22,18 @@
         "muscle": "done",
         "panic": "done",
         "salary": "done"
+      },
+      "publishes": {}
+    },
+    "2026-06-08": {
+      "status": "ready",
+      "renderDate": "2026-06-05",
+      "words": ["sinister", "avocado", "weird", "quarantine"],
+      "renders": {
+        "sinister": "done",
+        "avocado": "done",
+        "weird": "done",
+        "quarantine": "done"
       },
       "publishes": {}
     }

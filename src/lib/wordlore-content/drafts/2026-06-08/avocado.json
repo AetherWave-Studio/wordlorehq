@@ -1,0 +1,30 @@
+{
+  "word": "AVOCADO",
+  "pronunciation": "/ˌæv.əˈkɑː.doʊ/",
+  "partOfSpeech": "noun",
+  "definition": "a pear-shaped fruit with a rough green skin and creamy pale flesh",
+  "hook": "The Aztecs named this fruit after a body part. You eat it on toast.",
+  "modernAnchor": "You smash it on bread. You add lime and salt. You pay nine dollars for it at brunch.",
+  "origin": {
+    "language": "Nahuatl",
+    "era": "before 1500",
+    "originalWord": "ahuacatl",
+    "originalMeaning": "testicle"
+  },
+  "journey": [
+    "The Aztecs looked at the fruit hanging in pairs from the tree and saw an obvious resemblance.",
+    "They named it ahuacatl. The same word they used for the part of the body it resembled.",
+    "Spanish conquistadors couldn't pronounce ahuacatl, so they twisted it into aguacate, then avocado.",
+    "Every time you order guacamole, you are technically asking for a bowl of mashed Aztec testicles."
+  ],
+  "payoff": {
+    "setupWord": "AVOCADO",
+    "connector": "is, literally,",
+    "revelation": "TESTICLE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "WEIRD"
+  },
+  "musicVariant": "warm"
+}
