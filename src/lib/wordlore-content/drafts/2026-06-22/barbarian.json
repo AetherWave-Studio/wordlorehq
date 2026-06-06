@@ -1,0 +1,30 @@
+{
+  "word": "BARBARIAN",
+  "pronunciation": "/bɑːrˈbeər.i.ən/",
+  "partOfSpeech": "noun",
+  "definition": "a member of a people regarded as primitive or uncivilized",
+  "hook": "The Greeks had a word for everyone who was not Greek. It was an impression of what they sounded like.",
+  "modernAnchor": "Conquest, pillage, chaos at the gates of Rome. We picture fur, swords, and shouting.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "barbaros",
+    "originalMeaning": "one who babbles foreign speech"
+  },
+  "journey": [
+    "To Greek ears, all foreign tongues sounded the same: bar bar bar, meaningless noise.",
+    "The Greeks called anyone who did not speak Greek a barbaros, a babbler, a stammerer.",
+    "Romans borrowed the word and hardened it. Barbarians were not just foreign. They were lesser.",
+    "An entire civilization's contempt for outsiders compressed into two syllables, repeated twice."
+  ],
+  "payoff": {
+    "setupWord": "BARBARIAN",
+    "connector": "is, literally,",
+    "revelation": "SOMEONE WHO SAYS BAR BAR BAR"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BEDLAM"
+  },
+  "musicVariant": "dark"
+}
