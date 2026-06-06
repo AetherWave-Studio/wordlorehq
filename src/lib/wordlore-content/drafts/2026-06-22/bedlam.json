@@ -1,0 +1,30 @@
+{
+  "word": "BEDLAM",
+  "pronunciation": "/ˈbed.ləm/",
+  "partOfSpeech": "noun",
+  "definition": "a scene of uproar and confusion",
+  "hook": "Bedlam is chaos. But it started as an address.",
+  "modernAnchor": "A stadium after a last-second goal. A trading floor at open. We call it bedlam.",
+  "origin": {
+    "language": "English",
+    "era": "1400s",
+    "originalWord": "Bethlem",
+    "originalMeaning": "the Hospital of St. Mary of Bethlehem, London"
+  },
+  "journey": [
+    "In 1247, a priory was founded in London dedicated to the Virgin Mary of Bethlehem.",
+    "By the 1400s it had become England's first institution for the mentally ill.",
+    "Londoners shortened Bethlehem to Bethlem, then to Bedlam. The name followed the reputation.",
+    "Conditions were so wretched that paying visitors came to watch the patients. It was a spectacle."
+  ],
+  "payoff": {
+    "setupWord": "BEDLAM",
+    "connector": "is, literally,",
+    "revelation": "A HOSPITAL IN LONDON"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "NOSTALGIA"
+  },
+  "musicVariant": "dark"
+}

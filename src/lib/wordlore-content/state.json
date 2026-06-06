@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-06-15",
+  "currentWeek": "2026-06-22",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -47,6 +47,12 @@
         "sarcasm": "done",
         "tarantula": "done"
       },
+      "publishes": {}
+    },
+    "2026-06-22": {
+      "status": "ready",
+      "words": ["lunatic", "barbarian", "bedlam", "nostalgia"],
+      "renders": {},
       "publishes": {}
     }
   }

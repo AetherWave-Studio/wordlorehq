@@ -1,0 +1,30 @@
+{
+  "word": "NOSTALGIA",
+  "pronunciation": "/nɒˈstæl.dʒə/",
+  "partOfSpeech": "noun",
+  "definition": "a sentimental longing or wistful affection for the past",
+  "hook": "Nostalgia feels warm. Its Greek roots describe a wound.",
+  "modernAnchor": "An old song comes on. You are somewhere else entirely, somewhere that no longer exists.",
+  "origin": {
+    "language": "Greek",
+    "era": "1680s",
+    "originalWord": "nostos + algos",
+    "originalMeaning": "the pain of returning home"
+  },
+  "journey": [
+    "A Swiss physician coined the word in 1688 to name a condition he saw in soldiers far from home.",
+    "Nostos means return. Algos means pain. Together they described something doctors treated as a disease.",
+    "Physicians believed extreme homesickness could be fatal. Soldiers were sometimes sent back as a cure.",
+    "What we now call a warm feeling was once diagnosed as a dangerous and potentially lethal disorder."
+  ],
+  "payoff": {
+    "setupWord": "NOSTALGIA",
+    "connector": "is, literally,",
+    "revelation": "THE PAIN OF GOING HOME"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "VOLCANO"
+  },
+  "musicVariant": "warm"
+}

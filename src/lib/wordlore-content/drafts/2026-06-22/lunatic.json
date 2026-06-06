@@ -1,0 +1,30 @@
+{
+  "word": "LUNATIC",
+  "pronunciation": "/ˈluː.nə.tɪk/",
+  "partOfSpeech": "adjective",
+  "definition": "mentally ill, especially in a historical or popular sense",
+  "hook": "Every full moon, people still act differently. The ancients had a clinical explanation.",
+  "modernAnchor": "We use it loosely now: a lunatic driver, a lunatic idea. It used to mean something precise.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "lunaticus",
+    "originalMeaning": "moon-struck"
+  },
+  "journey": [
+    "Romans believed the moon governed the mind the way it governed the tides.",
+    "Physicians tracked the onset of madness against the lunar calendar. The pattern seemed undeniable.",
+    "Lunaticus described a person whose madness came and went with the phases of the moon.",
+    "Even Shakespeare leaned on it. The moon in A Midsummer Night's Dream drives everyone briefly insane."
+  ],
+  "payoff": {
+    "setupWord": "LUNATIC",
+    "connector": "is, literally,",
+    "revelation": "MOON-STRUCK"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BARBARIAN"
+  },
+  "musicVariant": "dark"
+}
