@@ -1,0 +1,30 @@
+{
+  "word": "LUNATIC",
+  "pronunciation": "/ˈluː.nə.tɪk/",
+  "partOfSpeech": "noun",
+  "definition": "a person who is mentally ill or behaves in a wildly foolish way",
+  "hook": "We call someone a lunatic and think nothing of it. The word is an accusation about the sky.",
+  "modernAnchor": "He drives like a lunatic. She has some lunatic plan. We mean reckless, unhinged, out of control.",
+  "origin": {
+    "language": "Latin",
+    "era": "1200s",
+    "originalWord": "lunaticus",
+    "originalMeaning": "moon-struck, affected by the moon"
+  },
+  "journey": [
+    "For centuries, doctors believed madness rose and fell with the moon, like a tide on the mind.",
+    "The Latin luna meant moon. Lunaticus described anyone whose sanity seemed to wax and wane with it.",
+    "English borrowed the word in the 1200s. A lunatic was not just mad - they were moon-mad.",
+    "We kept the insult and forgot the theory. Every lunatic is still quietly blamed on the moon."
+  ],
+  "payoff": {
+    "setupWord": "LUNATIC",
+    "connector": "is, literally,",
+    "revelation": "MOON-STRUCK"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BEDLAM"
+  },
+  "musicVariant": "dark"
+}

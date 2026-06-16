@@ -1,0 +1,30 @@
+{
+  "word": "BARBARIAN",
+  "pronunciation": "/bɑːrˈbɛə.ri.ən/",
+  "partOfSpeech": "noun",
+  "definition": "an uncultured or brutish person; a member of a people seen as savage",
+  "hook": "The Greeks had a word for foreigners. They built it out of mockery of how foreigners talk.",
+  "modernAnchor": "We picture a barbarian as a sword-swinging brute at the gates. The Greeks just heard an accent.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "barbaros",
+    "originalMeaning": "one who babbles, a non-Greek speaker"
+  },
+  "journey": [
+    "To Greek ears, foreign languages sounded like meaningless noise - a stream of bar bar bar.",
+    "So they coined barbaros for any non-Greek speaker. The word is the sound of an accent.",
+    "At first it simply meant foreign. After the Persian wars, it curdled into something far crueler.",
+    "Rome borrowed it. Europe kept it. A word for not speaking Greek became a word for being savage."
+  ],
+  "payoff": {
+    "setupWord": "BARBARIAN",
+    "connector": "is, literally,",
+    "revelation": "ONE WHO SAYS BAR BAR"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "HYSTERIA"
+  },
+  "musicVariant": "warm"
+}

@@ -1,0 +1,30 @@
+{
+  "word": "HYSTERIA",
+  "pronunciation": "/hɪˈstɛə.ri.ə/",
+  "partOfSpeech": "noun",
+  "definition": "exaggerated or uncontrollable emotion or excitement",
+  "hook": "We call a panic hysteria without blinking. The word points a finger at one organ.",
+  "modernAnchor": "Mass hysteria. Don't get hysterical. We use it for emotion that has slipped its leash entirely.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "hystera",
+    "originalMeaning": "the womb"
+  },
+  "journey": [
+    "Ancient Greek physicians had a theory. They believed the womb could wander loose inside the body.",
+    "A roaming womb, they claimed, pressed on other organs and drove a woman to wild emotion.",
+    "From hystera, the Greek for womb, they built a diagnosis reserved almost entirely for women.",
+    "The medicine was nonsense. The word survived, and we still aim it mostly at women losing control."
+  ],
+  "payoff": {
+    "setupWord": "HYSTERIA",
+    "connector": "is, literally,",
+    "revelation": "OF THE WOMB"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "VOLCANO"
+  },
+  "musicVariant": "dark"
+}

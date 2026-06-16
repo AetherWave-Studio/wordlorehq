@@ -1,0 +1,30 @@
+{
+  "word": "BEDLAM",
+  "pronunciation": "/ˈbed.ləm/",
+  "partOfSpeech": "noun",
+  "definition": "a scene of uproar and confusion",
+  "hook": "When a room descends into bedlam, you are naming a real address in London.",
+  "modernAnchor": "The crowd surged, the alarms went off, total bedlam. We use it for any scene of pure chaos.",
+  "origin": {
+    "language": "English",
+    "era": "1400s",
+    "originalWord": "Bethlehem",
+    "originalMeaning": "the Hospital of St Mary of Bethlehem"
+  },
+  "journey": [
+    "In 1247, London founded a priory called the Hospital of St Mary of Bethlehem.",
+    "By the 1400s it had become an asylum for the insane - one of Europe's first and worst.",
+    "Londoners slurred Bethlehem into Bedlam. The hospital grew so notorious its nickname became a word.",
+    "For a fee, the public once paid to watch the patients. That chaos still names our worst rooms."
+  ],
+  "payoff": {
+    "setupWord": "BEDLAM",
+    "connector": "is, literally,",
+    "revelation": "A LONDON ASYLUM"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BARBARIAN"
+  },
+  "musicVariant": "dark"
+}
