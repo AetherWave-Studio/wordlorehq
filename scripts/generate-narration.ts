@@ -17,10 +17,17 @@
  */
 
 import OpenAI from 'openai';
+import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import type { WordloreInput } from '../remotion/Composition';
+
+// Load .env, overriding the shell env. On Andrew's workstation the shell
+// OPENAI_API_KEY is stale/revoked; the valid key lives in a gitignored .env.
+// This must run before the OpenAI client is constructed below. It is a no-op
+// for the cloud routine (no .env present; key comes from routine env vars).
+dotenv.config({ override: true });
 
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
