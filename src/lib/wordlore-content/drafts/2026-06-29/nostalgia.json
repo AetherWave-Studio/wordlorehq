@@ -1,0 +1,30 @@
+{
+  "word": "NOSTALGIA",
+  "pronunciation": "/nɒˈstæl.dʒə/",
+  "partOfSpeech": "noun",
+  "definition": "a sentimental longing for a happier time in the past",
+  "hook": "Nostalgia was once a diagnosed disease, and soldiers were sent home to be cured of it.",
+  "modernAnchor": "Nostalgia is the warm ache of an old song, a childhood smell, a photo from years ago.",
+  "origin": {
+    "language": "Greek",
+    "era": "1680s",
+    "originalWord": "nostos algos",
+    "originalMeaning": "the pain of returning home, homesickness as an illness"
+  },
+  "journey": [
+    "In 1688 a Swiss medical student coined nostalgia for a sickness he saw in soldiers far from home.",
+    "He fused two Greek words: nostos, the return home, and algos, pain. A homecoming wound.",
+    "Doctors treated it as a real disease, with leeches, opium, and orders to march the men homeward.",
+    "Over time the illness faded into a feeling. The ache to return home became the ache for the past."
+  ],
+  "payoff": {
+    "setupWord": "NOSTALGIA",
+    "connector": "is, literally,",
+    "revelation": "THE PAIN OF RETURNING HOME"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "VOLCANO"
+  },
+  "musicVariant": "dark"
+}

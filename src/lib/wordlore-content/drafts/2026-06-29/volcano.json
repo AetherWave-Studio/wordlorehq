@@ -1,0 +1,30 @@
+{
+  "word": "VOLCANO",
+  "pronunciation": "/vɒlˈkeɪ.nəʊ/",
+  "partOfSpeech": "noun",
+  "definition": "a mountain that erupts molten rock, ash, and gas from below the earth",
+  "hook": "Every time you say volcano, you are naming a Roman god by his forge.",
+  "modernAnchor": "A volcano is geology to us. Tectonic plates, magma chambers, a mountain that blows its top.",
+  "origin": {
+    "language": "Latin",
+    "era": "1600s",
+    "originalWord": "Vulcanus",
+    "originalMeaning": "Vulcan, the Roman god of fire and the forge"
+  },
+  "journey": [
+    "The Romans believed a god of fire and metalworking hammered out weapons deep underground.",
+    "His name was Vulcan, and his forge sat beneath a smoking island off the coast of Sicily.",
+    "When the mountain spat fire and smoke, Romans said Vulcan was at his anvil down below.",
+    "Italians named that island Vulcano. The whole class of fire-mountains inherited the god's name."
+  ],
+  "payoff": {
+    "setupWord": "VOLCANO",
+    "connector": "is, literally,",
+    "revelation": "THE GOD VULCAN'S FORGE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "CEREAL"
+  },
+  "musicVariant": "dark"
+}

@@ -1,0 +1,30 @@
+{
+  "word": "CEREAL",
+  "pronunciation": "/ˈsɪə.ri.əl/",
+  "partOfSpeech": "noun",
+  "definition": "a breakfast food made from processed grain, or the grain crop itself",
+  "hook": "The bowl you eat at breakfast is named after a Roman goddess of the harvest.",
+  "modernAnchor": "Cereal means a box, a bowl, a spoon, and milk. A cartoon mascot on the front.",
+  "origin": {
+    "language": "Latin",
+    "era": "1800s",
+    "originalWord": "Ceres",
+    "originalMeaning": "Ceres, the Roman goddess of grain and the harvest"
+  },
+  "journey": [
+    "The Romans worshipped Ceres, the goddess who made the fields ripen and the grain grow.",
+    "Anything that belonged to her, every wheat field and harvest, was called cerealis, of Ceres.",
+    "For centuries the word meant grain crops in general, the gift of the goddess to humankind.",
+    "Only in the modern age did we shrink her gift down to a box on the breakfast table."
+  ],
+  "payoff": {
+    "setupWord": "CEREAL",
+    "connector": "is, literally,",
+    "revelation": "OF THE GODDESS CERES"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "TANTALIZE"
+  },
+  "musicVariant": "light"
+}

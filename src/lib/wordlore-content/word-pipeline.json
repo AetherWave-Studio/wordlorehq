@@ -1,14 +1,7 @@
 {
   "available": [
-    { "word": "LUNATIC", "tier": 1, "language": "Latin", "payoff": "moon-struck" },
-    { "word": "BARBARIAN", "tier": 2, "language": "Greek", "payoff": "those who say bar bar bar" },
-    { "word": "VOLCANO", "tier": 3, "language": "Latin", "payoff": "the god Vulcan" },
     { "word": "JANUARY", "tier": 3, "language": "Latin", "payoff": "the god Janus" },
-    { "word": "CEREAL", "tier": 3, "language": "Latin", "payoff": "the goddess Ceres" },
-    { "word": "BEDLAM", "tier": 3, "language": "English", "payoff": "Bethlehem Royal Hospital" },
-    { "word": "TANTALIZE", "tier": 4, "language": "Greek", "payoff": "Tantalus, eternal punishment" },
-    { "word": "HALCYON", "tier": 4, "language": "Greek", "payoff": "mythic bird that calmed seas" },
-    { "word": "NOSTALGIA", "tier": 4, "language": "Greek", "payoff": "ache to return home" }
+    { "word": "HALCYON", "tier": 4, "language": "Greek", "payoff": "mythic bird that calmed seas" }
   ],
   "used": [
     { "word": "NIGHTMARE", "week": "2026-05-18", "drafted": "2026-05-21" },
@@ -26,6 +19,14 @@
     { "word": "COMPANION", "week": "2026-06-15", "drafted": "2026-06-05" },
     { "word": "HOOLIGAN", "week": "2026-06-15", "drafted": "2026-06-05" },
     { "word": "SARCASM", "week": "2026-06-15", "drafted": "2026-06-05" },
-    { "word": "TARANTULA", "week": "2026-06-15", "drafted": "2026-06-05" }
+    { "word": "TARANTULA", "week": "2026-06-15", "drafted": "2026-06-05" },
+    { "word": "LUNATIC", "week": "2026-06-22", "drafted": "2026-06-15" },
+    { "word": "BEDLAM", "week": "2026-06-22", "drafted": "2026-06-15" },
+    { "word": "BARBARIAN", "week": "2026-06-22", "drafted": "2026-06-15" },
+    { "word": "HYSTERIA", "week": "2026-06-22", "drafted": "2026-06-15" },
+    { "word": "VOLCANO", "week": "2026-06-29", "drafted": "2026-06-22" },
+    { "word": "CEREAL", "week": "2026-06-29", "drafted": "2026-06-22" },
+    { "word": "TANTALIZE", "week": "2026-06-29", "drafted": "2026-06-22" },
+    { "word": "NOSTALGIA", "week": "2026-06-29", "drafted": "2026-06-22" }
   ]
 }

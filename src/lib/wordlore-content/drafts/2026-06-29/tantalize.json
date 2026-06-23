@@ -1,0 +1,30 @@
+{
+  "word": "TANTALIZE",
+  "pronunciation": "/ˈtæn.tə.laɪz/",
+  "partOfSpeech": "verb",
+  "definition": "to tease someone by offering something desirable then keeping it out of reach",
+  "hook": "To tantalize someone is to sentence them to a Greek king's eternal punishment.",
+  "modernAnchor": "A tantalizing smell drifts from the kitchen. A tantalizing offer you cannot quite reach.",
+  "origin": {
+    "language": "Greek",
+    "era": "1500s",
+    "originalWord": "Tantalos",
+    "originalMeaning": "Tantalus, a king punished by the gods in the underworld"
+  },
+  "journey": [
+    "In Greek myth, King Tantalus offended the gods and was sentenced to a perfect torment.",
+    "He stood forever in a pool of water beneath a tree heavy with ripe fruit.",
+    "When he bent to drink, the water drained away. When he reached up, the branches lifted.",
+    "Desire forever within sight, forever out of reach. From his name we built the verb tantalize."
+  ],
+  "payoff": {
+    "setupWord": "TANTALIZE",
+    "connector": "is, literally,",
+    "revelation": "TO PUNISH LIKE TANTALUS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "NOSTALGIA"
+  },
+  "musicVariant": "dark"
+}

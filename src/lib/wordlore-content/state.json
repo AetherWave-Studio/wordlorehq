@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-06-22",
+  "currentWeek": "2026-06-29",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -58,6 +58,18 @@
         "bedlam": "done",
         "barbarian": "done",
         "hysteria": "done"
+      },
+      "publishes": {}
+    },
+    "2026-06-29": {
+      "status": "ready",
+      "renderDate": "2026-06-22",
+      "words": ["volcano", "cereal", "tantalize", "nostalgia"],
+      "renders": {
+        "volcano": "done",
+        "cereal": "done",
+        "tantalize": "done",
+        "nostalgia": "done"
       },
       "publishes": {}
     }
