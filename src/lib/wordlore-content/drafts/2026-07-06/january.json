@@ -1,0 +1,30 @@
+{
+  "word": "JANUARY",
+  "pronunciation": "/ˈdʒæn.ju.ɛr.i/",
+  "partOfSpeech": "noun",
+  "definition": "the first month of the year in the modern calendar",
+  "hook": "Every January, you walk through a doorway named after a two-faced god.",
+  "modernAnchor": "January is just month one to us. New year, fresh start, the calendar clicks over.",
+  "origin": {
+    "language": "Latin",
+    "era": "1st century BC",
+    "originalWord": "Ianuarius",
+    "originalMeaning": "the month of Janus, god of doorways and beginnings"
+  },
+  "journey": [
+    "Janus was the Roman god of gates, doorways, and transitions, shown with two faces looking opposite ways.",
+    "One face stared into the past, the other into the future, the perfect keeper of any threshold.",
+    "The Romans set his month at the hinge of the year, where the old one closes and the new one opens.",
+    "To cross into a new year was to step through the god's doorway, looking back and ahead at once."
+  ],
+  "payoff": {
+    "setupWord": "JANUARY",
+    "connector": "is, literally,",
+    "revelation": "JANUS'S DOORWAY"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "HALCYON"
+  },
+  "musicVariant": "dark"
+}

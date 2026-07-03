@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-06-29",
+  "currentWeek": "2026-07-06",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -70,6 +70,18 @@
         "cereal": "done",
         "tantalize": "done",
         "nostalgia": "done"
+      },
+      "publishes": {}
+    },
+    "2026-07-06": {
+      "status": "ready",
+      "renderDate": "2026-07-03",
+      "words": ["january", "halcyon", "tragedy", "mortgage"],
+      "renders": {
+        "january": "done",
+        "halcyon": "done",
+        "tragedy": "done",
+        "mortgage": "done"
       },
       "publishes": {}
     }

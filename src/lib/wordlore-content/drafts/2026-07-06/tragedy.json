@@ -1,0 +1,30 @@
+{
+  "word": "TRAGEDY",
+  "pronunciation": "/ˈtrædʒ.ə.di/",
+  "partOfSpeech": "noun",
+  "definition": "an event of great suffering, or a serious drama with an unhappy ending",
+  "hook": "Every tragedy you name traces back, somehow, to a goat.",
+  "modernAnchor": "A tragedy is the worst kind of news to us. A disaster, a loss, a serious play that ends in ruin.",
+  "origin": {
+    "language": "Greek",
+    "era": "5th century BC",
+    "originalWord": "tragoidia",
+    "originalMeaning": "goat song"
+  },
+  "journey": [
+    "The Greek word tragoidia splits into tragos, meaning goat, and oide, meaning song.",
+    "In the earliest Athenian festivals, choruses of singers competed in honor of the god Dionysus.",
+    "Scholars think a goat was the prize for the best song, or the animal sacrificed at the ritual itself.",
+    "Either way, the solemn dramas that grew out of those contests kept the name: the goat song."
+  ],
+  "payoff": {
+    "setupWord": "TRAGEDY",
+    "connector": "is, literally,",
+    "revelation": "A GOAT SONG"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MORTGAGE"
+  },
+  "musicVariant": "dark"
+}

@@ -1,0 +1,30 @@
+{
+  "word": "MORTGAGE",
+  "pronunciation": "/ˈmɔːr.ɡɪdʒ/",
+  "partOfSpeech": "noun",
+  "definition": "a loan taken to buy property, secured against that same property",
+  "hook": "Every mortgage you sign is, in the oldest sense, a pledge unto death.",
+  "modernAnchor": "A mortgage is a home loan to us. Thirty years, monthly payments, the bank holding the deed.",
+  "origin": {
+    "language": "Old French",
+    "era": "14th century",
+    "originalWord": "mort gage",
+    "originalMeaning": "dead pledge"
+  },
+  "journey": [
+    "The word comes from Old French: mort, meaning dead, and gage, meaning a pledge or security.",
+    "A medieval jurist explained the grim name two ways, and both of them end in death.",
+    "If the debtor failed to pay, the pledged land was lost to him forever, dead to his hands.",
+    "And if he paid in full, the pledge itself died, released and dissolved. Dead either way."
+  ],
+  "payoff": {
+    "setupWord": "MORTGAGE",
+    "connector": "is, literally,",
+    "revelation": "A DEAD PLEDGE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "JANUARY"
+  },
+  "musicVariant": "dark"
+}

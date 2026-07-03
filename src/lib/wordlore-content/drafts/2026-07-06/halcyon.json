@@ -1,0 +1,30 @@
+{
+  "word": "HALCYON",
+  "pronunciation": "/ˈhæl.si.ən/",
+  "partOfSpeech": "adjective",
+  "definition": "denoting a past time that was idyllically happy, peaceful, and calm",
+  "hook": "When you call a time halcyon, you are naming a grieving bird that calmed the sea.",
+  "modernAnchor": "Halcyon days means the good old days to us. Golden, peaceful, and gone.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "alkyon",
+    "originalMeaning": "kingfisher"
+  },
+  "journey": [
+    "In Greek myth, Alcyone lost her husband to a shipwreck and threw herself into the sea in grief.",
+    "The gods pitied them and turned the pair into kingfishers, alkyon, birds that nest beside the water.",
+    "Her father was Aeolus, keeper of the winds, and each winter he stilled the storms so she could nest.",
+    "Those windless days on a flat, quiet sea became known as the halcyon days."
+  ],
+  "payoff": {
+    "setupWord": "HALCYON",
+    "connector": "is, literally,",
+    "revelation": "THE KINGFISHER'S CALM DAYS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "TRAGEDY"
+  },
+  "musicVariant": "light"
+}
