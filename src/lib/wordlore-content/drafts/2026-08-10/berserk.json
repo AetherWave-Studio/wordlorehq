@@ -1,0 +1,30 @@
+{
+  "word": "BERSERK",
+  "pronunciation": "/bərˈzɜːrk/",
+  "partOfSpeech": "adjective",
+  "definition": "in or into a state of violent or uncontrollable rage or excitement",
+  "hook": "Berserk used to be a job description, not a mood.",
+  "modernAnchor": "We say it when someone loses control, a fan after a goal, a toddler mid tantrum. Going berserk.",
+  "origin": {
+    "language": "Old Norse",
+    "era": "Viking Age",
+    "originalWord": "berserkr",
+    "originalMeaning": "bear shirt, one who fights wearing a bear pelt"
+  },
+  "journey": [
+    "Norse warriors called berserkers fought without armor, wrapped only in bear or wolf pelts.",
+    "They worked themselves into a trance before battle, howling and biting their shields, feeling no pain.",
+    "Sagas described them as unstoppable, immune to blade and fire, more animal than man in the fury.",
+    "The rage stayed. The bear shirt disappeared. Berserk kept only the fury, and buried the fur."
+  ],
+  "payoff": {
+    "setupWord": "BERSERK",
+    "connector": "is, literally,",
+    "revelation": "A BEAR SHIRT"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "CHECKMATE"
+  },
+  "musicVariant": "dark"
+}

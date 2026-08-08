@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-07-06",
+  "currentWeek": "2026-08-10",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -82,6 +82,18 @@
         "halcyon": "done",
         "tragedy": "done",
         "mortgage": "done"
+      },
+      "publishes": {}
+    },
+    "2026-08-10": {
+      "status": "rendering",
+      "renderDate": "2026-08-08",
+      "words": ["berserk", "checkmate", "gymnasium", "ordeal"],
+      "renders": {
+        "berserk": "failed",
+        "checkmate": "queued",
+        "gymnasium": "queued",
+        "ordeal": "queued"
       },
       "publishes": {}
     }
