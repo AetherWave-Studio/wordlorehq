@@ -188,11 +188,15 @@ async function renderVideo(inputArg: string): Promise<void> {
   // gets loaded from. Without this, Remotion can latch onto a sibling
   // public/ directory (e.g. the Next.js public/episodes/) and try to serve
   // staticFile('audio/voiceover/beat-1.wav') from there.
+  // --ignore-certificate-errors is needed in the cloud routine: outbound
+  // HTTPS (e.g. the Google Fonts requests @remotion/google-fonts makes)
+  // goes through an agent proxy that MITMs TLS with its own CA, which the
+  // headless Chromium Remotion downloads doesn't trust out of the box.
   console.log('\n[4/4] Rendering video with Remotion');
   const outputMp4 = path.join(EPISODES_DIR, `${wordSlug}-${date}.mp4`);
   const publicDir = path.join(REMOTION_DIR, 'assets');
   execSync(
-    `npx remotion render index.ts WordloreVideo "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}"`,
+    `npx remotion render index.ts WordloreVideo "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}" --ignore-certificate-errors`,
     { stdio: 'inherit', cwd: REMOTION_DIR }
   );
 
@@ -267,7 +271,7 @@ async function renderTrailer(): Promise<void> {
   const outputMp4 = path.join(TRAILERS_DIR, `trailer-${date}.mp4`);
   const publicDir = path.join(REMOTION_DIR, 'assets');
   execSync(
-    `npx remotion render index.ts WordloreTrailer "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}"`,
+    `npx remotion render index.ts WordloreTrailer "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}" --ignore-certificate-errors`,
     { stdio: 'inherit', cwd: REMOTION_DIR },
   );
 

@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-08-10",
+  "currentWeek": "2026-08-17",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -85,14 +85,14 @@
       },
       "publishes": {}
     },
-    "2026-08-10": {
+    "2026-08-17": {
       "status": "rendering",
-      "renderDate": "2026-08-08",
+      "renderDate": "2026-08-13",
       "words": ["berserk", "checkmate", "gymnasium", "ordeal"],
       "renders": {
-        "berserk": "failed",
-        "checkmate": "queued",
-        "gymnasium": "queued",
+        "berserk": "done",
+        "checkmate": "done",
+        "gymnasium": "done",
         "ordeal": "queued"
       },
       "publishes": {}
