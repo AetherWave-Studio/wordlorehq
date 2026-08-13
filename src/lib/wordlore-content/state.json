@@ -86,14 +86,14 @@
       "publishes": {}
     },
     "2026-08-17": {
-      "status": "rendering",
+      "status": "ready",
       "renderDate": "2026-08-13",
       "words": ["berserk", "checkmate", "gymnasium", "ordeal"],
       "renders": {
         "berserk": "done",
         "checkmate": "done",
         "gymnasium": "done",
-        "ordeal": "queued"
+        "ordeal": "done"
       },
       "publishes": {}
     }
