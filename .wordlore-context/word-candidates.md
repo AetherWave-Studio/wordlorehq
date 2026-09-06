@@ -125,3 +125,50 @@ To save research time later, words that didn't pass the bar:
 2. Write the input JSON for each (following `production-workflow.md`)
 3. Remove used words from this list; add new candidates as research surfaces them
 4. Try to vary the languages of origin (don't do four Latin episodes in a row — mix in Old English, Greek, Czech, Aztec, etc. for tonal variety)
+
+## Refill batch (added 2026-09-06, extending runway past the September restart)
+
+The queue running dry is what stalled the channel: the routine's stop condition
+fires when `available` drops below a week's worth, and after 2026-07-06 it fired
+every Saturday for nine weeks. Sixteen candidates was four weeks of runway.
+These sixteen take it to roughly eight. Keep it above eight entries.
+
+Each payoff below is a well-documented etymology, but the drafting run should
+still check its own source before writing the episode - the routine's rule is
+that a disputed origin gets said out loud in the journey, not smoothed over.
+
+### Tier 1 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **WINDOW** | Old Norse "vindauga," wind eye | Concrete and instantly visual |
+| **SILLY** | Old English "gesaelig," blessed and happy | Cleanest meaning-drift in the language |
+| **SARCOPHAGUS** | Greek "flesh-eating," a stone thought to consume the body | Visceral, pairs with NIGHTMARE |
+| **BONFIRE** | Middle English "bone fire" | Literal and grim |
+
+### Tier 2 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **GOSSIP** | Old English "godsibb," a godparent | Warm origin, sour destination |
+| **NICE** | Latin "nescius," ignorant | Drifted further than almost any English word |
+| **MALARIA** | Italian "mala aria," bad air | Carries its own discarded theory of disease |
+| **VACCINE** | Latin "vacca," cow | Timely, and the cowpox story is a whole episode |
+| **ALCOHOL** | Arabic "al-kuhl," powdered eyeliner | Unexpected route from cosmetics to chemistry |
+| **CANDIDATE** | Latin "candidatus," dressed in white | Political, evergreen |
+
+### Tier 3 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **MUSEUM** | Greek "mouseion," a seat of the Muses | Pairs with the mythology cluster |
+| **PANTS** | Pantalone, a Venetian stock character | Words that used to be people |
+| **BOOK** | Old English "boc," tied to the beech tree | Quiet but satisfying |
+
+### Tier 4 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **DANDELION** | French "dent de lion," lion tooth | Visual, good for a light week |
+| **PENCIL** | Latin "penicillus," little tail | Same root as the paintbrush |
+| **HEARSE** | Latin "hirpex," a harrow | Three-step drift: farm tool, candle frame, funeral car |
