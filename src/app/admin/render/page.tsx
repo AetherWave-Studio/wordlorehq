@@ -7,6 +7,7 @@ const STATUS_COLOR: Record<string, string> = {
   rendering: "text-[#C9A961]",
   done: "text-[#C9A961]",
   failed: "text-[#8B2635]",
+  missing: "text-[#8B2635]",
 };
 
 const VIDEO_BASE =
@@ -50,10 +51,12 @@ export default async function RenderPage() {
           Render queue
         </h1>
         <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 text-sm max-w-prose">
-          For now, renders run locally on Andrew&apos;s machine. Status comes
-          from <code className="text-[#C9A961]">state.json</code> - the Phase 3
-          GitHub Actions worker will update it via webhook. MP4s served from{" "}
-          <code className="text-[#C9A961]">{VIDEO_BASE}</code>.
+          Renders come from the weekly cloud routine, which commits each MP4 to{" "}
+          <code className="text-[#C9A961]">{VIDEO_BASE}</code>. Status starts
+          from <code className="text-[#C9A961]">state.json</code> and is checked
+          against the files actually on disk -{" "}
+          <span className="text-[#8B2635]">missing</span> means the week was
+          recorded as rendered but the MP4 never landed.
         </p>
       </header>
 

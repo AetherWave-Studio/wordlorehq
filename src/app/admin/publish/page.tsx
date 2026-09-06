@@ -51,10 +51,12 @@ export default async function PublishPage() {
         </h1>
         <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 text-sm max-w-prose">
           Captions are generated from each episode&apos;s JSON. Copy a caption,
-          click the studio link, upload the MP4 from{" "}
-          <code className="text-[#C9A961]">E:\Wordlore\episodes\</code>, paste
-          the title + caption, publish. The mark-as-published toggle ships in
-          Phase 4.
+          click the studio link, upload the MP4 - every rendered episode is in{" "}
+          <code className="text-[#C9A961]">public/episodes/</code> in the repo
+          and playable on the render page - then paste the title + caption and
+          publish. Publishing is not recorded anywhere yet, so{" "}
+          <code className="text-[#C9A961]">publishes</code> in state.json stays
+          empty until the mark-as-published toggle ships.
         </p>
       </header>
 
