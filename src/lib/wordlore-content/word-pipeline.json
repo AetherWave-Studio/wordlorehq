@@ -95,6 +95,102 @@
       "tier": 4,
       "language": "Latin",
       "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
+    },
+    {
+      "word": "WINDOW",
+      "tier": 1,
+      "language": "Old Norse",
+      "payoff": "Old Norse \"vindauga,\" wind eye - the hole that let the weather in"
+    },
+    {
+      "word": "SILLY",
+      "tier": 1,
+      "language": "Old English",
+      "payoff": "Old English \"gesaelig,\" blessed and happy, before it drifted to foolish"
+    },
+    {
+      "word": "SARCOPHAGUS",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Greek \"sarkophagos,\" flesh-eating - a stone believed to consume the body"
+    },
+    {
+      "word": "BONFIRE",
+      "tier": 1,
+      "language": "Middle English",
+      "payoff": "Middle English \"bone fire,\" a fire built of bones"
+    },
+    {
+      "word": "GOSSIP",
+      "tier": 2,
+      "language": "Old English",
+      "payoff": "Old English \"godsibb,\" a godparent - then a close friend, then their talk"
+    },
+    {
+      "word": "NICE",
+      "tier": 2,
+      "language": "Latin",
+      "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
+    },
+    {
+      "word": "MALARIA",
+      "tier": 2,
+      "language": "Italian",
+      "payoff": "Italian \"mala aria,\" bad air, from the belief that swamp vapour caused it"
+    },
+    {
+      "word": "VACCINE",
+      "tier": 2,
+      "language": "Latin",
+      "payoff": "Latin \"vacca,\" cow - the first one was cowpox"
+    },
+    {
+      "word": "ALCOHOL",
+      "tier": 2,
+      "language": "Arabic",
+      "payoff": "Arabic \"al-kuhl,\" the fine powder used as eyeliner"
+    },
+    {
+      "word": "CANDIDATE",
+      "tier": 2,
+      "language": "Latin",
+      "payoff": "Latin \"candidatus,\" dressed in white - Roman office-seekers wore bleached togas"
+    },
+    {
+      "word": "MUSEUM",
+      "tier": 3,
+      "language": "Greek",
+      "payoff": "Greek \"mouseion,\" a seat of the Muses"
+    },
+    {
+      "word": "PANTS",
+      "tier": 3,
+      "language": "Italian",
+      "payoff": "From Pantalone, a Venetian stock character known for his trousers"
+    },
+    {
+      "word": "BOOK",
+      "tier": 3,
+      "language": "Old English",
+      "payoff": "Old English \"boc,\" tied to the beech tree its early writing surfaces came from"
+    },
+    {
+      "word": "DANDELION",
+      "tier": 4,
+      "language": "French",
+      "payoff": "French \"dent de lion,\" lion tooth, for the jagged leaves"
+    },
+    {
+      "word": "PENCIL",
+      "tier": 4,
+      "language": "Latin",
+      "payoff": "Latin \"penicillus,\" little tail - a fine brush"
+    },
+    {
+      "word": "HEARSE",
+      "tier": 4,
+      "language": "Latin",
+      "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
     }
   ],
   "used": [
