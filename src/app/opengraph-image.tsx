@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
+import { channel } from "@/lib/channel";
 
 export const runtime = "edge";
-export const alt = "Wordlore - Every word has a story.";
+export const alt = `${channel.name} - ${channel.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,7 +13,7 @@ export default async function OGImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0F1A2E",
+          background: channel.palette.background,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -27,7 +28,7 @@ export default async function OGImage() {
             display: "flex",
             alignItems: "center",
             gap: 16,
-            color: "#C9A961",
+            color: channel.palette.accent,
             opacity: 0.85,
             fontSize: 22,
             letterSpacing: "0.4em",
@@ -35,15 +36,15 @@ export default async function OGImage() {
             marginBottom: 40,
           }}
         >
-          <span style={{ display: "block", width: 60, height: 1, background: "#C9A961", opacity: 0.5 }} />
-          <span>W O R D L O R E</span>
-          <span style={{ display: "block", width: 60, height: 1, background: "#C9A961", opacity: 0.5 }} />
+          <span style={{ display: "block", width: 60, height: 1, background: channel.palette.accent, opacity: 0.5 }} />
+          <span>{channel.wordmark.split("").join(" ")}</span>
+          <span style={{ display: "block", width: 60, height: 1, background: channel.palette.accent, opacity: 0.5 }} />
         </div>
 
         {/* Hero wordmark */}
         <div
           style={{
-            color: "#C9A961",
+            color: channel.palette.accent,
             fontSize: 180,
             fontWeight: 700,
             letterSpacing: "0.02em",
@@ -51,7 +52,7 @@ export default async function OGImage() {
             display: "flex",
           }}
         >
-          WORDLORE
+          {channel.wordmark}
         </div>
 
         {/* Diamond ornament */}
@@ -63,23 +64,23 @@ export default async function OGImage() {
             marginTop: 50,
           }}
         >
-          <span style={{ display: "block", width: 120, height: 1, background: "#C9A961", opacity: 0.6 }} />
+          <span style={{ display: "block", width: 120, height: 1, background: channel.palette.accent, opacity: 0.6 }} />
           <span
             style={{
               display: "block",
               width: 14,
               height: 14,
-              background: "#C9A961",
+              background: channel.palette.accent,
               transform: "rotate(45deg)",
             }}
           />
-          <span style={{ display: "block", width: 120, height: 1, background: "#C9A961", opacity: 0.6 }} />
+          <span style={{ display: "block", width: 120, height: 1, background: channel.palette.accent, opacity: 0.6 }} />
         </div>
 
         {/* Tagline */}
         <div
           style={{
-            color: "#F4E8D0",
+            color: channel.palette.surface,
             fontSize: 48,
             fontStyle: "italic",
             marginTop: 36,
@@ -94,7 +95,7 @@ export default async function OGImage() {
           style={{
             position: "absolute",
             bottom: 48,
-            color: "#7A8B6F",
+            color: channel.palette.secondary,
             fontSize: 16,
             letterSpacing: "0.25em",
             textTransform: "uppercase",

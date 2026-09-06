@@ -13,12 +13,12 @@ const STATUS_LABEL: Record<string, string> = {
 };
 
 const STATUS_COLOR: Record<string, string> = {
-  drafting: "text-[#7A8B6F]",
-  review: "text-[#C9A961]",
-  rendering: "text-[#C9A961]",
-  ready: "text-[#C9A961]",
-  publishing: "text-[#C9A961]",
-  published: "text-[#7A8B6F]",
+  drafting: "text-secondary",
+  review: "text-accent",
+  rendering: "text-accent",
+  ready: "text-accent",
+  publishing: "text-accent",
+  published: "text-secondary",
 };
 
 export default async function AdminHome() {
@@ -34,13 +34,13 @@ export default async function AdminHome() {
     <div className="space-y-12">
       <header>
         <p
-          className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mb-2"
+          className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mb-2"
           style={{ letterSpacing: "0.25em" }}
         >
           Current week
         </p>
         <h1
-          className="font-[family-name:var(--font-serif)] text-[#C9A961] text-4xl mb-3"
+          className="font-[family-name:var(--font-serif)] text-accent text-4xl mb-3"
           style={{ letterSpacing: "0.02em" }}
         >
           Week of {state.currentWeek}
@@ -55,7 +55,7 @@ export default async function AdminHome() {
 
       <section>
         <h2
-          className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-xl mb-4"
+          className="font-[family-name:var(--font-serif)] text-surface text-xl mb-4"
           style={{ letterSpacing: "0.02em" }}
         >
           Episodes ({renderProgress}/{week.words.length} rendered)
@@ -64,29 +64,29 @@ export default async function AdminHome() {
           {episodes.map((ep) => (
             <div
               key={ep.word}
-              className="border border-[#C9A961]/30 rounded-lg p-5 bg-[#0F1A2E]/50 hover:border-[#C9A961]/60 transition"
+              className="border border-accent/30 rounded-lg p-5 bg-background/50 hover:border-accent/60 transition"
             >
               <p
-                className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mb-2"
+                className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mb-2"
                 style={{ letterSpacing: "0.2em" }}
               >
                 {ep.origin.language}
               </p>
               <h3
-                className="font-[family-name:var(--font-serif)] text-[#C9A961] text-2xl mb-3"
+                className="font-[family-name:var(--font-serif)] text-accent text-2xl mb-3"
                 style={{ letterSpacing: "0.02em" }}
               >
                 {ep.word}
               </h3>
-              <p className="font-[family-name:var(--font-serif-italic)] italic text-[#F4E8D0]/75 text-sm mb-3 leading-relaxed">
+              <p className="font-[family-name:var(--font-serif-italic)] italic text-surface/75 text-sm mb-3 leading-relaxed">
                 &ldquo;{ep.hook}&rdquo;
               </p>
               <p
                 className="font-[family-name:var(--font-sans)] text-xs uppercase"
                 style={{ letterSpacing: "0.2em" }}
               >
-                <span className="text-[#7A8B6F]">Payoff:&nbsp;</span>
-                <span className="text-[#F4E8D0]/85">
+                <span className="text-secondary">Payoff:&nbsp;</span>
+                <span className="text-surface/85">
                   {ep.payoff.revelation}
                 </span>
               </p>
@@ -94,7 +94,7 @@ export default async function AdminHome() {
                 className="font-[family-name:var(--font-sans)] text-xs uppercase mt-3"
                 style={{ letterSpacing: "0.2em" }}
               >
-                <span className="text-[#7A8B6F]">Render:&nbsp;</span>
+                <span className="text-secondary">Render:&nbsp;</span>
                 <span className={STATUS_COLOR[week.renders[ep.word.toLowerCase()] ?? "queued"]}>
                   {week.renders[ep.word.toLowerCase()] ?? "queued"}
                 </span>
@@ -107,43 +107,43 @@ export default async function AdminHome() {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link
           href="/admin/drafts"
-          className="block border border-[#C9A961]/30 rounded-lg p-6 hover:border-[#C9A961] hover:bg-[#C9A961]/5 transition"
+          className="block border border-accent/30 rounded-lg p-6 hover:border-accent hover:bg-accent/5 transition"
         >
           <p
-            className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mb-1"
+            className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mb-1"
             style={{ letterSpacing: "0.2em" }}
           >
             Step 1
           </p>
-          <p className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-lg">
+          <p className="font-[family-name:var(--font-serif)] text-surface text-lg">
             Review the drafts
           </p>
         </Link>
         <Link
           href="/admin/render"
-          className="block border border-[#C9A961]/30 rounded-lg p-6 hover:border-[#C9A961] hover:bg-[#C9A961]/5 transition"
+          className="block border border-accent/30 rounded-lg p-6 hover:border-accent hover:bg-accent/5 transition"
         >
           <p
-            className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mb-1"
+            className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mb-1"
             style={{ letterSpacing: "0.2em" }}
           >
             Step 2
           </p>
-          <p className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-lg">
+          <p className="font-[family-name:var(--font-serif)] text-surface text-lg">
             Render queue
           </p>
         </Link>
         <Link
           href="/admin/publish"
-          className="block border border-[#C9A961]/30 rounded-lg p-6 hover:border-[#C9A961] hover:bg-[#C9A961]/5 transition"
+          className="block border border-accent/30 rounded-lg p-6 hover:border-accent hover:bg-accent/5 transition"
         >
           <p
-            className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mb-1"
+            className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mb-1"
             style={{ letterSpacing: "0.2em" }}
           >
             Step 3
           </p>
-          <p className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-lg">
+          <p className="font-[family-name:var(--font-serif)] text-surface text-lg">
             Captions and publish
           </p>
         </Link>

@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Cormorant_Garamond, Inter } from "next/font/google";
+import { channel, paletteVars } from "@/lib/channel";
 import "./globals.css";
+
+/*
+ * next/font requires literal calls, so these three declarations cannot be read
+ * from the config. They must match channel.config.json's `fonts` - display,
+ * displayItalic, body - and docs/NEW-CHANNEL.md lists this as a required edit
+ * when forking the repo for another channel.
+ */
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -21,24 +29,26 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
+const siteTitle = `${channel.name} - ${channel.tagline}`;
+const platforms = (Object.keys(channel.socials) as (keyof typeof channel.socials)[])
+  .filter((p) => channel.socials[p])
+  .map((p) => p[0].toUpperCase() + p.slice(1));
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wordlorehq.com"),
-  title: "Wordlore - Every word has a story.",
-  description:
-    "Short-form etymology videos for YouTube, TikTok, Instagram, Facebook, and Threads. New stories every Monday, Tuesday, Thursday, Friday.",
+  metadataBase: new URL(channel.site.url),
+  title: siteTitle,
+  description: `${channel.site.description} On ${platforms.join(", ")}. New episodes every ${channel.cadence.publishDays.join(", ")}.`,
   openGraph: {
-    title: "Wordlore - Every word has a story.",
-    description:
-      "Short-form etymology videos. The English you speak is haunted.",
-    url: "https://wordlorehq.com",
-    siteName: "Wordlore",
+    title: siteTitle,
+    description: channel.site.description,
+    url: channel.site.url,
+    siteName: channel.name,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wordlore - Every word has a story.",
-    description:
-      "Short-form etymology videos. The English you speak is haunted.",
+    title: siteTitle,
+    description: channel.site.description,
   },
 };
 
@@ -52,7 +62,11 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#0F1A2E] text-[#F4E8D0]">
+      <head>
+        {/* Palette from channel.config.json. globals.css maps these to Tailwind tokens. */}
+        <style>{`:root { ${paletteVars()} }`}</style>
+      </head>
+      <body className="min-h-full flex flex-col bg-background text-surface">
         {children}
       </body>
     </html>

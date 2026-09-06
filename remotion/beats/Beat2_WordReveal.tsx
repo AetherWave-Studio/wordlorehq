@@ -10,8 +10,8 @@
  * mixing happens at the Composition level, not in this component.
  *
  * Locked rules (do not modify without explicit user approval):
- * - Background must be colors.midnight
- * - Hero word must be colors.gold
+ * - Background must be colors.background
+ * - Hero word must be colors.accent
  * - Hero word size is governed by getHeroWordSize tier table
  * - Brand mark sits in identical position to other beats
  */
@@ -90,7 +90,7 @@ export const Beat2_WordReveal: React.FC<Beat2Props> = ({
   const wordFontSize = getHeroWordSize(word);
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       <BrandMark />
 
       {/* Main word + supporting stack — vertically centered, shifted up slightly */}
@@ -107,10 +107,10 @@ export const Beat2_WordReveal: React.FC<Beat2Props> = ({
         {/* The hero word — gold serif, ink-bloom entrance */}
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: wordFontSize,
-            color: colors.gold,
+            color: colors.accent,
             letterSpacing: 4,
             lineHeight: 1,
             textAlign: 'center',
@@ -124,10 +124,10 @@ export const Beat2_WordReveal: React.FC<Beat2Props> = ({
         {/* Pronunciation + part of speech — italic parchment */}
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: sizes.pronunciation,
-            color: colors.parchment,
+            color: colors.surface,
             opacity: supportingOpacity,
             letterSpacing: 2,
             marginTop: 64,
@@ -140,9 +140,9 @@ export const Beat2_WordReveal: React.FC<Beat2Props> = ({
         {/* Definition — clean sans, parchment */}
         <div
           style={{
-            fontFamily: fonts.sans,
+            fontFamily: fonts.body,
             fontSize: sizes.definition,
-            color: colors.parchment,
+            color: colors.surface,
             opacity: supportingOpacity,
             lineHeight: 1.5,
             maxWidth: 880,

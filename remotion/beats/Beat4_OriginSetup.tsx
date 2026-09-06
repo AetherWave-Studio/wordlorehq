@@ -52,7 +52,7 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
   const originFontSize = getOriginWordSize(origin.originalWord);
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       <BrandMark />
 
       {/* "ORIGIN" section label below brand mark */}
@@ -68,10 +68,10 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
       >
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: sizes.sectionLabel,
-            color: colors.sage,
+            color: colors.secondary,
             letterSpacing: 14,
           }}
         >
@@ -87,7 +87,7 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
           left: FRAME.padding + 50,
           right: FRAME.padding + 50,
           bottom: 380,
-          backgroundColor: colors.parchment,
+          backgroundColor: colors.surface,
           borderRadius: 16,
           padding: '80px 60px',
           display: 'flex',
@@ -102,10 +102,10 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
           {/* Era / language label */}
           <div
             style={{
-              fontFamily: fonts.serifItalic,
+              fontFamily: fonts.displayItalic,
               fontStyle: 'italic',
               fontSize: sizes.eraLabel,
-              color: colors.sage,
+              color: colors.secondary,
               letterSpacing: 8,
               marginBottom: 64,
             }}
@@ -116,11 +116,11 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
           {/* The origin word — italic serif, dark ink */}
           <div
             style={{
-              fontFamily: fonts.serifItalic,
+              fontFamily: fonts.displayItalic,
               fontStyle: 'italic',
               fontWeight: 400,
               fontSize: originFontSize,
-              color: colors.midnight,
+              color: colors.background,
               letterSpacing: 2,
               lineHeight: 1,
               marginBottom: 56,
@@ -130,14 +130,14 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
           </div>
 
           {/* Diamond ornament in gold */}
-          <DiamondOrnament color={colors.gold} />
+          <DiamondOrnament color={colors.accent} />
 
           {/* Translation in clean dark sans */}
           <div
             style={{
-              fontFamily: fonts.sans,
+              fontFamily: fonts.body,
               fontSize: sizes.originTranslation,
-              color: colors.midnight,
+              color: colors.background,
               opacity: 0.8,
               lineHeight: 1.4,
               marginTop: 56,
@@ -152,7 +152,7 @@ export const Beat4_OriginSetup: React.FC<Beat4Props> = ({ origin }) => {
       </div>
 
       {/* Bottom flourish — sage instead of gold on this beat */}
-      <BottomFlourish color={colors.sage} opacity={contentOpacity * 0.7} />
+      <BottomFlourish color={colors.secondary} opacity={contentOpacity * 0.7} />
     </AbsoluteFill>
   );
 };

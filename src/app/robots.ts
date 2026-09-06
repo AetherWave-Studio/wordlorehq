@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { channel } from "@/lib/channel";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://wordlorehq.com/sitemap.xml",
+    sitemap: `${channel.site.url}/sitemap.xml`,
   };
 }

@@ -34,9 +34,9 @@ const CROSSFADE_FRAMES = 12; // 0.4s overlap between chunks
 const SLOW_DRIFT_RANGE = 20; // px of vertical drift per chunk
 
 const textStyle: React.CSSProperties = {
-  fontFamily: fonts.sans,
+  fontFamily: fonts.body,
   fontSize: 46,
-  color: colors.parchment,
+  color: colors.surface,
   lineHeight: 1.55,
   textAlign: 'center',
   maxWidth: 920,
@@ -59,7 +59,7 @@ export const Beat5_Journey: React.FC<Beat5Props> = ({ journey, durationInFrames 
     const opacity = interpolate(frame, [0, 20], [0, 1], { extrapolateRight: 'clamp' });
     const yShift = interpolate(frame, [0, 600], [20, -20]);
     return (
-      <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+      <AbsoluteFill style={{ backgroundColor: colors.background }}>
         <BrandMark />
         <AbsoluteFill style={containerStyle}>
           <div style={{ ...textStyle, opacity, transform: `translateY(${yShift}px)` }}>
@@ -75,7 +75,7 @@ export const Beat5_Journey: React.FC<Beat5Props> = ({ journey, durationInFrames 
   const slot = durationInFrames / chunks.length;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       <BrandMark />
       <AbsoluteFill style={containerStyle}>
         {chunks.map((chunk, i) => {

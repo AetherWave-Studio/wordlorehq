@@ -22,6 +22,7 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import type { WordloreInput } from '../remotion/Composition';
+import { channel } from '../src/lib/channel';
 
 // Load .env, overriding the shell env. On Andrew's workstation the shell
 // OPENAI_API_KEY is stale/revoked; the valid key lives in a gitignored .env.
@@ -76,18 +77,20 @@ export const buildScripts = (input: WordloreInput): BeatScript[] => {
   ];
 };
 
-// ---- OpenAI TTS HD call (voice: fable) ----
+// ---- OpenAI TTS call (model, voice and pace from channel.config.json) ----
 
 async function generateBeatAudio(text: string, outputPath: string): Promise<void> {
   const response = await client.audio.speech.create({
-    model: 'tts-1-hd',
-    voice: 'fable',
+    model: channel.narration.model,
+    voice: channel.narration.voice as Parameters<
+      typeof client.audio.speech.create
+    >[0]['voice'],
     input: text,
     response_format: 'wav',
-    // Slow the fable voice ~15% under default. 1.0 reads "rushed/urgent" on
-    // Wordlore's contemplative beats; 0.85 lands closer to documentary
+    // Configured below 1.0 on purpose. 1.0 reads "rushed/urgent" on
+    // contemplative beats; the channel's default lands closer to documentary
     // narrator cadence while staying natural.
-    speed: 0.85,
+    speed: channel.narration.speed,
   });
   const buffer = Buffer.from(await response.arrayBuffer());
   fs.writeFileSync(outputPath, buffer);
@@ -185,15 +188,13 @@ export async function generateNarration(
  * a constant so the trailer.tsx composition can stay in sync if either
  * side changes.
  */
-export const TRAILER_NARRATION_LINES: readonly string[] = [
-  'Every word you say has a buried history.',
-  'NIGHTMARE used to mean demon attack.',
-  'GOODBYE was once a prayer.',
-  'DISASTER literally means bad star.',
-  'The English you speak is haunted.',
-  'Wordlore. Every word has a story.',
-  'New stories every Monday, Tuesday, Thursday, Friday.',
-];
+export const TRAILER_NARRATION_LINES: readonly string[] =
+  channel.trailer.narration.map((line) =>
+    line
+      .replace(/\{name\}/g, channel.name)
+      .replace(/\{tagline\}/g, channel.tagline)
+      .replace(/\{publishDays\}/g, channel.cadence.publishDays.join(', ')),
+  );
 
 export interface TrailerNarrationResult {
   voiceoverPath: string;

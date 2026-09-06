@@ -36,7 +36,7 @@ export const Beat1_Hook: React.FC<Beat1Props> = ({ hook }) => {
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       <BrandMark opacity={0.4} />
 
       <AbsoluteFill
@@ -49,10 +49,10 @@ export const Beat1_Hook: React.FC<Beat1Props> = ({ hook }) => {
       >
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: 72,
-            color: colors.parchment,
+            color: colors.surface,
             lineHeight: 1.2,
             textAlign: 'center',
             opacity: hookOpacity,

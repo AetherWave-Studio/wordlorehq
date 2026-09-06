@@ -48,7 +48,7 @@ export const Beat7_Outro: React.FC<Beat7Props> = ({ outro }) => {
   const nextWordSize = nextWord ? getHeroWordSize(nextWord) : 140;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       {/* Brand mark + tagline */}
       <BrandMarkLarge opacity={brandOpacity * 0.9} />
 
@@ -64,7 +64,7 @@ export const Beat7_Outro: React.FC<Beat7Props> = ({ outro }) => {
           opacity: ornamentOpacity,
         }}
       >
-        <DiamondOrnament color={colors.gold} />
+        <DiamondOrnament color={colors.accent} />
       </div>
 
       {/* Next word tease OR comment CTA */}
@@ -83,10 +83,10 @@ export const Beat7_Outro: React.FC<Beat7Props> = ({ outro }) => {
           <>
             <div
               style={{
-                fontFamily: fonts.serifItalic,
+                fontFamily: fonts.displayItalic,
                 fontStyle: 'italic',
                 fontSize: sizes.outroTomorrow,
-                color: colors.parchment,
+                color: colors.surface,
                 opacity: 0.65,
                 letterSpacing: 6,
                 marginBottom: 56,
@@ -96,10 +96,10 @@ export const Beat7_Outro: React.FC<Beat7Props> = ({ outro }) => {
             </div>
             <div
               style={{
-                fontFamily: fonts.serif,
+                fontFamily: fonts.display,
                 fontWeight: 700,
                 fontSize: nextWordSize,
-                color: colors.gold,
+                color: colors.accent,
                 letterSpacing: 4,
                 lineHeight: 1,
               }}
@@ -110,9 +110,9 @@ export const Beat7_Outro: React.FC<Beat7Props> = ({ outro }) => {
         ) : (
           <div
             style={{
-              fontFamily: fonts.sans,
+              fontFamily: fonts.body,
               fontSize: 56,
-              color: colors.parchment,
+              color: colors.surface,
               lineHeight: 1.4,
               maxWidth: 800,
               margin: '0 auto',
@@ -121,7 +121,7 @@ export const Beat7_Outro: React.FC<Beat7Props> = ({ outro }) => {
             Drop a word in the comments.
             <div
               style={{
-                fontFamily: fonts.serifItalic,
+                fontFamily: fonts.displayItalic,
                 fontStyle: 'italic',
                 fontSize: 42,
                 opacity: 0.6,

@@ -44,24 +44,24 @@ export default async function PublishPage() {
     <div className="space-y-16">
       <header>
         <h1
-          className="font-[family-name:var(--font-serif)] text-[#C9A961] text-3xl mb-2"
+          className="font-[family-name:var(--font-serif)] text-accent text-3xl mb-2"
           style={{ letterSpacing: "0.02em" }}
         >
           Captions and publish
         </h1>
-        <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 text-sm max-w-prose">
+        <p className="font-[family-name:var(--font-sans)] text-surface/60 text-sm max-w-prose">
           Captions are generated from each episode&apos;s JSON. Copy a caption,
           click the studio link, upload the MP4 - every rendered episode is in{" "}
-          <code className="text-[#C9A961]">public/episodes/</code> in the repo
+          <code className="text-accent">public/episodes/</code> in the repo
           and playable on the render page - then paste the title + caption and
           publish. Publishing is not recorded anywhere yet, so{" "}
-          <code className="text-[#C9A961]">publishes</code> in state.json stays
+          <code className="text-accent">publishes</code> in state.json stays
           empty until the mark-as-published toggle ships.
         </p>
       </header>
 
       {bundles.length === 0 && (
-        <p className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-sm">
+        <p className="font-[family-name:var(--font-sans)] text-secondary text-sm">
           Nothing in the publish queue. Drafts in earlier phases will show up
           here as soon as their week status leaves &ldquo;drafting.&rdquo;
         </p>
@@ -69,15 +69,15 @@ export default async function PublishPage() {
 
       {bundles.map((b) => (
         <section key={b.key} className="space-y-8">
-          <header className="border-b border-[#C9A961]/20 pb-3 flex flex-wrap items-baseline justify-between gap-3">
+          <header className="border-b border-accent/20 pb-3 flex flex-wrap items-baseline justify-between gap-3">
             <h2
-              className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-2xl"
+              className="font-[family-name:var(--font-serif)] text-surface text-2xl"
               style={{ letterSpacing: "0.02em" }}
             >
               Week of {b.key}
               {b.key === state.currentWeek && (
                 <span
-                  className="ml-3 font-[family-name:var(--font-sans)] text-[#C9A961] text-xs uppercase"
+                  className="ml-3 font-[family-name:var(--font-sans)] text-accent text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
                   current
@@ -85,7 +85,7 @@ export default async function PublishPage() {
               )}
             </h2>
             <p
-              className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+              className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
               style={{ letterSpacing: "0.2em" }}
             >
               {b.week.status}
@@ -104,18 +104,18 @@ export default async function PublishPage() {
               return (
                 <article
                   key={ep.word}
-                  className="border border-[#C9A961]/25 rounded-lg p-6 bg-[#0F1A2E]/40"
+                  className="border border-accent/25 rounded-lg p-6 bg-background/40"
                 >
                   <header className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
                     <div>
                       <h3
-                        className="font-[family-name:var(--font-serif)] text-[#C9A961] text-2xl"
+                        className="font-[family-name:var(--font-serif)] text-accent text-2xl"
                         style={{ letterSpacing: "0.02em" }}
                       >
                         {ep.word}
                       </h3>
                       <div className="mt-3 flex items-center gap-3 flex-wrap">
-                        <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/85 text-sm">
+                        <p className="font-[family-name:var(--font-sans)] text-surface/85 text-sm">
                           {title}
                         </p>
                         <CopyButton label="Copy title" value={title} />
@@ -123,7 +123,7 @@ export default async function PublishPage() {
                     </div>
                     <div className="text-right">
                       <p
-                        className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-[10px] uppercase mb-1"
+                        className="font-[family-name:var(--font-sans)] text-secondary text-[10px] uppercase mb-1"
                         style={{ letterSpacing: "0.2em" }}
                       >
                         Render
@@ -131,10 +131,10 @@ export default async function PublishPage() {
                       <p
                         className={`font-[family-name:var(--font-sans)] text-xs uppercase ${
                           renderStatus === "done"
-                            ? "text-[#C9A961]"
+                            ? "text-accent"
                             : renderStatus === "failed"
-                              ? "text-[#8B2635]"
-                              : "text-[#7A8B6F]"
+                              ? "text-payoff"
+                              : "text-secondary"
                         }`}
                         style={{ letterSpacing: "0.2em" }}
                       >
@@ -142,7 +142,7 @@ export default async function PublishPage() {
                       </p>
                       {mp4Filename && renderStatus === "done" && (
                         <p
-                          className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-[10px] mt-1"
+                          className="font-[family-name:var(--font-sans)] text-secondary text-[10px] mt-1"
                           title={mp4Filename}
                         >
                           {mp4Filename}
@@ -157,11 +157,11 @@ export default async function PublishPage() {
                       return (
                         <div
                           key={p.id}
-                          className="border border-[#C9A961]/15 rounded p-4 bg-[#0F1A2E]/60"
+                          className="border border-accent/15 rounded p-4 bg-background/60"
                         >
                           <div className="flex items-center justify-between mb-3">
                             <p
-                              className="font-[family-name:var(--font-sans)] text-[#C9A961] text-xs uppercase"
+                              className="font-[family-name:var(--font-sans)] text-accent text-xs uppercase"
                               style={{ letterSpacing: "0.2em" }}
                             >
                               {p.label}
@@ -171,7 +171,7 @@ export default async function PublishPage() {
                                 href={p.studio}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 hover:text-[#C9A961] text-xs uppercase"
+                                className="font-[family-name:var(--font-sans)] text-surface/60 hover:text-accent text-xs uppercase"
                                 style={{ letterSpacing: "0.15em" }}
                               >
                                 Studio &rarr;
@@ -179,7 +179,7 @@ export default async function PublishPage() {
                               <CopyButton label="Copy" value={caption} />
                             </div>
                           </div>
-                          <pre className="whitespace-pre-wrap text-[#F4E8D0]/85 text-xs leading-relaxed font-[family-name:var(--font-sans)]">
+                          <pre className="whitespace-pre-wrap text-surface/85 text-xs leading-relaxed font-[family-name:var(--font-sans)]">
                             {caption}
                           </pre>
                         </div>

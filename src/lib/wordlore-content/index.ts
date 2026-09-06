@@ -1,5 +1,13 @@
 import { promises as fs } from "fs";
 import path from "path";
+import {
+  applyPattern,
+  channel,
+  hashtags,
+  type CaptionPlatform,
+} from "../channel";
+
+export type { CaptionPlatform };
 
 export type Episode = {
   word: string;
@@ -149,22 +157,24 @@ export async function readWeekDrafts(week: string): Promise<Episode[]> {
 
 export function platformCaption(
   episode: Episode,
-  platform: "youtube" | "tiktok" | "instagram" | "facebook" | "x",
+  platform: CaptionPlatform,
 ): string {
-  const title = `${episode.word} literally means "${episode.payoff.revelation.toLowerCase()}"`;
+  const tags = hashtags(platform, episode.word, episode.origin.language);
   const hookLine = episode.modernAnchor;
-  const lowerWord = episode.word.toLowerCase();
 
   switch (platform) {
     case "youtube":
     case "facebook":
-      return `${hookLine}\n\nEvery word has a story.\n\n#etymology #wordhistory #shorts #${lowerWord} #language`;
+      return `${hookLine}\n\n${channel.captions.signature}\n\n${tags}`;
     case "tiktok":
-      return `${hookLine}\n\n#etymology #wordhistory #fyp #learnontiktok #wordsoftiktok #${lowerWord} #${episode.origin.language.toLowerCase().replace(/\s+/g, "")} #words #englishhistory`;
+      return `${hookLine}\n\n${tags}`;
     case "instagram":
-      return `${hookLine} ${episode.journey[0]}\n\n#etymology #wordhistory #reels #language #englishlanguage #${lowerWord} #words #linguistics`;
-    case "x":
-      return `${title}\n\n${hookLine}\n\nyoutube.com/@wordlorehq`;
+      return `${hookLine} ${episode.journey[0]}\n\n${tags}`;
+    case "x": {
+      const handle = channel.socials.x ?? channel.socials.youtube ?? channel.site.url;
+      const link = handle.replace(/^https?:\/\/(www\.)?/, "");
+      return `${episodeTitle(episode)}\n\n${hookLine}\n\n${link}`;
+    }
   }
 }
 
@@ -173,5 +183,9 @@ export function pinnedComment(episode: Episode, bonusFact: string): string {
 }
 
 export function episodeTitle(episode: Episode): string {
-  return `${episode.word} literally means "${episode.payoff.revelation.toLowerCase()}"`;
+  return applyPattern(
+    channel.captions.titlePattern,
+    episode.word,
+    episode.payoff.revelation,
+  );
 }

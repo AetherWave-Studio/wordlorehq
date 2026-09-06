@@ -33,12 +33,12 @@ export default async function DraftsPage() {
     <div className="space-y-16">
       <header>
         <h1
-          className="font-[family-name:var(--font-serif)] text-[#C9A961] text-3xl mb-2"
+          className="font-[family-name:var(--font-serif)] text-accent text-3xl mb-2"
           style={{ letterSpacing: "0.02em" }}
         >
           Drafts
         </h1>
-        <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 text-sm max-w-prose">
+        <p className="font-[family-name:var(--font-sans)] text-surface/60 text-sm max-w-prose">
           Read-only for now. Form editor and commit-back ship in Phase 2. For
           each chunk, the word count is shown on the left; sage means it&apos;s
           inside the 12-17 word target band, oxblood means it&apos;s outside.
@@ -46,22 +46,22 @@ export default async function DraftsPage() {
       </header>
 
       {bundles.length === 0 && (
-        <p className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-sm">
+        <p className="font-[family-name:var(--font-sans)] text-secondary text-sm">
           No drafts in play. All current weeks have been published.
         </p>
       )}
 
       {bundles.map((b) => (
         <section key={b.key} className="space-y-8">
-          <header className="border-b border-[#C9A961]/20 pb-3 flex flex-wrap items-baseline justify-between gap-3">
+          <header className="border-b border-accent/20 pb-3 flex flex-wrap items-baseline justify-between gap-3">
             <h2
-              className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-2xl"
+              className="font-[family-name:var(--font-serif)] text-surface text-2xl"
               style={{ letterSpacing: "0.02em" }}
             >
               Week of {b.key}
               {b.key === state.currentWeek && (
                 <span
-                  className="ml-3 font-[family-name:var(--font-sans)] text-[#C9A961] text-xs uppercase"
+                  className="ml-3 font-[family-name:var(--font-sans)] text-accent text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
                   current
@@ -69,7 +69,7 @@ export default async function DraftsPage() {
               )}
             </h2>
             <p
-              className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+              className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
               style={{ letterSpacing: "0.2em" }}
             >
               {b.week.status}
@@ -80,18 +80,18 @@ export default async function DraftsPage() {
             {b.episodes.map((ep) => (
               <article
                 key={ep.word}
-                className="border border-[#C9A961]/25 rounded-lg p-6 bg-[#0F1A2E]/40"
+                className="border border-accent/25 rounded-lg p-6 bg-background/40"
               >
                 <header className="flex flex-wrap items-baseline justify-between gap-4 mb-6">
                   <div>
                     <h3
-                      className="font-[family-name:var(--font-serif)] text-[#C9A961] text-3xl"
+                      className="font-[family-name:var(--font-serif)] text-accent text-3xl"
                       style={{ letterSpacing: "0.02em" }}
                     >
                       {ep.word}
                     </h3>
                     <p
-                      className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mt-1"
+                      className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mt-1"
                       style={{ letterSpacing: "0.2em" }}
                     >
                       {ep.pronunciation} &middot; {ep.partOfSpeech} &middot;{" "}
@@ -99,11 +99,11 @@ export default async function DraftsPage() {
                     </p>
                   </div>
                   <p
-                    className="font-[family-name:var(--font-sans)] text-xs uppercase text-[#7A8B6F]"
+                    className="font-[family-name:var(--font-sans)] text-xs uppercase text-secondary"
                     style={{ letterSpacing: "0.2em" }}
                   >
                     Next:{" "}
-                    <span className="text-[#C9A961]">{ep.outro.nextWord}</span>
+                    <span className="text-accent">{ep.outro.nextWord}</span>
                   </p>
                 </header>
 
@@ -125,11 +125,11 @@ export default async function DraftsPage() {
                         return (
                           <li
                             key={i}
-                            className="flex gap-4 items-start text-[#F4E8D0]/85 text-sm leading-relaxed"
+                            className="flex gap-4 items-start text-surface/85 text-sm leading-relaxed"
                           >
                             <span
                               className={`font-[family-name:var(--font-sans)] text-xs uppercase shrink-0 mt-0.5 ${
-                                ok ? "text-[#7A8B6F]" : "text-[#8B2635]"
+                                ok ? "text-secondary" : "text-payoff"
                               }`}
                               style={{ letterSpacing: "0.15em" }}
                               title={
@@ -149,15 +149,15 @@ export default async function DraftsPage() {
                   <div>
                     <Label>Payoff</Label>
                     <p className="mt-2 text-sm">
-                      <span className="text-[#F4E8D0]/70">your </span>
-                      <span className="text-[#C9A961] font-[family-name:var(--font-serif)]">
+                      <span className="text-surface/70">your </span>
+                      <span className="text-accent font-[family-name:var(--font-serif)]">
                         {ep.payoff.setupWord}
                       </span>
-                      <span className="text-[#F4E8D0]/70 font-[family-name:var(--font-serif-italic)] italic">
+                      <span className="text-surface/70 font-[family-name:var(--font-serif-italic)] italic">
                         {" "}
                         {ep.payoff.connector}{" "}
                       </span>
-                      <span className="text-[#8B2635] font-[family-name:var(--font-serif)] font-bold tracking-wide">
+                      <span className="text-payoff font-[family-name:var(--font-serif)] font-bold tracking-wide">
                         {ep.payoff.revelation}
                       </span>
                     </p>
@@ -175,7 +175,7 @@ export default async function DraftsPage() {
 function Label({ children }: { children: React.ReactNode }) {
   return (
     <p
-      className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+      className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
       style={{ letterSpacing: "0.2em" }}
     >
       {children}
@@ -196,7 +196,7 @@ function Field({
     <div>
       <Label>{label}</Label>
       <p
-        className={`mt-1.5 text-[#F4E8D0]/85 text-sm leading-relaxed ${
+        className={`mt-1.5 text-surface/85 text-sm leading-relaxed ${
           italic ? "font-[family-name:var(--font-serif-italic)] italic" : ""
         }`}
       >

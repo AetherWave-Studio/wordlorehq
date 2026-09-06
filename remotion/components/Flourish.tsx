@@ -18,7 +18,7 @@ interface FlourishProps {
 }
 
 export const BottomFlourish: React.FC<FlourishProps> = ({
-  color = colors.gold,
+  color = colors.accent,
   opacity = 0.7,
 }) => {
   return (
@@ -50,7 +50,7 @@ export const BottomFlourish: React.FC<FlourishProps> = ({
 };
 
 export const DiamondOrnament: React.FC<FlourishProps> = ({
-  color = colors.gold,
+  color = colors.accent,
   opacity = 1,
 }) => {
   return (

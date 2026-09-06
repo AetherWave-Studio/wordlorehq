@@ -35,6 +35,7 @@ import { generateNarration, generateTrailerNarration } from './generate-narratio
 import type { WordloreInput } from '../remotion/Composition';
 import type { TrailerInput } from '../remotion/Trailer';
 import { beatBounds } from '../remotion/tokens/timing';
+import { applyPattern, channel, hashtags } from '../src/lib/channel';
 
 /**
  * Tail-pad each measured TTS beat then clamp to the soft bounds in
@@ -117,18 +118,25 @@ function resolveInputPath(arg: string): string {
   return wordPath;
 }
 
+/**
+ * The upload sheet that ships next to the MP4.
+ *
+ * Title, signature and tags come from channel.config.json so this file and the
+ * admin publish page cannot drift apart - they used to, this one writing
+ * 'Why "x" actually means "y"' against the locked 'X literally means "y"'.
+ */
 function buildMetadata(input: WordloreInput): string {
   const wordLower = input.word.toLowerCase();
   const revealLower = input.payoff.revelation.toLowerCase();
   return [
     `TITLE`,
-    `Why "${wordLower}" actually means "${revealLower}"`,
+    applyPattern(channel.captions.titlePattern, input.word, input.payoff.revelation),
     ``,
     `DESCRIPTION`,
-    `${input.hook} The word ${wordLower} ${input.payoff.connector} ${revealLower}. Every word has a story.`,
+    `${input.hook} The word ${wordLower} ${input.payoff.connector} ${revealLower}. ${channel.captions.signature}`,
     ``,
     `TAGS`,
-    `#etymology  #wordorigins  #wordlore`,
+    hashtags('youtube', input.word, input.origin.language),
     ``,
     `END SCREEN`,
     input.outro?.nextWord
