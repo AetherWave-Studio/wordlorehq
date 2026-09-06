@@ -1,0 +1,105 @@
+{
+  "id": "mythwright",
+  "name": "Mythwright",
+  "wordmark": "MYTHWRIGHT",
+  "tagline": "Every myth was somebody's news.",
+  "site": {
+    "url": "https://mythwright.example",
+    "email": "hello@mythwright.example",
+    "description": "Short-form mythology. Every myth was somebody's news.",
+    "blurb": "Short-form mythology, told straight. Where the old stories came from, who told them first, and what they were actually afraid of.",
+    "footerNote": "All sources cited from published translations."
+  },
+  "socials": {
+    "youtube": "https://www.youtube.com/@mythwright",
+    "tiktok": "https://www.tiktok.com/@mythwright",
+    "instagram": null,
+    "facebook": null,
+    "threads": null,
+    "x": null
+  },
+  "palette": {
+    "background": "#141019",
+    "surface": "#EFE6DA",
+    "accent": "#B7833F",
+    "payoff": "#2F5D50",
+    "secondary": "#8A7C93"
+  },
+  "fonts": {
+    "display": "EB Garamond",
+    "displayItalic": "Lora",
+    "body": "Montserrat"
+  },
+  "narration": {
+    "model": "tts-1-hd",
+    "voice": "onyx",
+    "speed": 0.9
+  },
+  "captions": {
+    "titlePattern": "{WORD} was never a story about {revelation}",
+    "signature": "Every myth was somebody's news.",
+    "hashtags": {
+      "youtube": [
+        "etymology",
+        "wordhistory",
+        "shorts",
+        "{word}",
+        "language"
+      ],
+      "facebook": [
+        "etymology",
+        "wordhistory",
+        "shorts",
+        "{word}",
+        "language"
+      ],
+      "tiktok": [
+        "etymology",
+        "wordhistory",
+        "fyp",
+        "learnontiktok",
+        "wordsoftiktok",
+        "{word}",
+        "{originLanguage}",
+        "words",
+        "englishhistory"
+      ],
+      "instagram": [
+        "etymology",
+        "wordhistory",
+        "reels",
+        "language",
+        "englishlanguage",
+        "{word}",
+        "words",
+        "linguistics"
+      ],
+      "x": []
+    }
+  },
+  "cadence": {
+    "episodesPerWeek": 3,
+    "publishDays": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
+    "publishDaysShort": [
+      "Mon",
+      "Wed",
+      "Fri"
+    ],
+    "publishTime": "8 AM MT"
+  },
+  "trailer": {
+    "narration": [
+      "Every myth started as somebody's evening news.",
+      "The flood story is older than the Bible.",
+      "Medusa was a priestess before she was a monster.",
+      "Hell was a rubbish dump outside Jerusalem.",
+      "The old stories are stranger than the retellings.",
+      "{name}. {tagline}",
+      "New stories every {publishDays}."
+    ]
+  }
+}

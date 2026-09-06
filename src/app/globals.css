@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0F1A2E;
-  --foreground: #F4E8D0;
-}
-
+/*
+ * Palette values are NOT defined here. They come from channel.config.json and
+ * are injected into :root by app/layout.tsx, so the config stays the single
+ * source of truth for the site, the videos and the captions alike.
+ *
+ * Use the semantic utilities - bg-background, text-surface, border-accent/25,
+ * text-payoff, text-secondary - never a raw hex.
+ */
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-payoff: var(--payoff);
+  --color-secondary: var(--secondary);
+
+  /* Kept for Tailwind's default text/background pairing. */
+  --color-foreground: var(--surface);
+
   --font-serif: var(--font-serif);
   --font-serif-italic: var(--font-serif-italic);
   --font-sans: var(--font-sans);
@@ -15,6 +25,6 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--surface);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }

@@ -1,11 +1,13 @@
 /**
- * BrandMark — the small "WORDLORE" italic small-caps wordmark with gold
- * underline that appears at the top of every beat (Beats 1-6).
+ * BrandMark — the small italic small-caps wordmark with an accent underline
+ * that appears at the top of every beat (Beats 1-6). The word itself and the
+ * tagline come from channel.config.json.
  *
  * Beat 7 (Outro) uses an enlarged variant — see `BrandMarkLarge` below.
  */
 
 import React from 'react';
+import { channel } from '../../src/lib/channel';
 import { colors } from '../tokens/colors';
 import { fonts, sizes } from '../tokens/typography';
 
@@ -27,21 +29,21 @@ export const BrandMark: React.FC<BrandMarkProps> = ({ opacity = 0.55 }) => {
     >
       <div
         style={{
-          fontFamily: fonts.serifItalic,
+          fontFamily: fonts.displayItalic,
           fontStyle: 'italic',
           fontSize: sizes.brandMark,
-          color: colors.parchment,
+          color: colors.surface,
           opacity,
           letterSpacing: 22,
         }}
       >
-        WORDLORE
+        {channel.wordmark}
       </div>
       <div
         style={{
           height: 2,
           width: 132,
-          backgroundColor: colors.gold,
+          backgroundColor: colors.accent,
           margin: '36px auto 0',
         }}
       />
@@ -65,35 +67,35 @@ export const BrandMarkLarge: React.FC<{ opacity?: number }> = ({ opacity = 0.9 }
     >
       <div
         style={{
-          fontFamily: fonts.serifItalic,
+          fontFamily: fonts.displayItalic,
           fontStyle: 'italic',
           fontSize: sizes.brandMarkOutro,
-          color: colors.parchment,
+          color: colors.surface,
           opacity,
           letterSpacing: 32,
         }}
       >
-        WORDLORE
+        {channel.wordmark}
       </div>
       <div
         style={{
           height: 2,
           width: 200,
-          backgroundColor: colors.gold,
+          backgroundColor: colors.accent,
           margin: '48px auto',
         }}
       />
       <div
         style={{
-          fontFamily: fonts.serifItalic,
+          fontFamily: fonts.displayItalic,
           fontStyle: 'italic',
           fontSize: sizes.tagline,
-          color: colors.parchment,
+          color: colors.surface,
           opacity: 0.6,
           letterSpacing: 4,
         }}
       >
-        Every word has a story.
+        {channel.tagline}
       </div>
     </div>
   );

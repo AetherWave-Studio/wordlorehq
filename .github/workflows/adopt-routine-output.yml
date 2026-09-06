@@ -1,0 +1,69 @@
+# The weekly routine cannot push to master: its session writes to an outcome
+# branch (claude/intelligent-franklin-*). Between 2026-07-06 and 2026-09-05 that
+# meant every run started from a master that had never received the previous
+# run's work - including the refilled word queue - so the "queue low" stop
+# condition fired every Saturday and the channel produced nothing for nine weeks
+# while the routine reported success.
+#
+# This closes the loop from the repo side: when a routine branch is pushed, it
+# is validated and then merged into master. The routine no longer needs write
+# access to master, and nobody has to remember to merge.
+#
+# The validation is the guard. A routine branch that does not typecheck, lint
+# and build does not reach master; the workflow fails loudly instead, and the
+# branch stays where it is for a human to look at.
+
+name: Adopt routine output
+
+on:
+  push:
+    branches:
+      - 'claude/intelligent-franklin*'
+
+concurrency:
+  group: adopt-routine-output
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck, lint, build
+        run: |
+          npx tsc --noEmit
+          npm run lint
+          npm run build
+
+      - name: Merge into master
+        run: |
+          set -euo pipefail
+          git config user.name  "wordlore-routine[bot]"
+          git config user.email "wordlore-routine[bot]@users.noreply.github.com"
+          git fetch origin master
+          git checkout -B master origin/master
+
+          # A conflict here means the routine and master edited the same file.
+          # Fail rather than resolve it blind - state.json and word-pipeline.json
+          # are registries, and a bad automatic resolution loses a week's work.
+          if ! git merge --no-ff "$GITHUB_SHA" -m "Merge routine output ${GITHUB_REF_NAME} into master"; then
+            git merge --abort
+            echo "::error::Routine branch ${GITHUB_REF_NAME} conflicts with master. Resolve by hand; the branch is untouched."
+            exit 1
+          fi
+
+          git push origin master
+          echo "Merged ${GITHUB_REF_NAME} into master."

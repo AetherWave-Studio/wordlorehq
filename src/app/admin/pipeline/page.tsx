@@ -26,12 +26,12 @@ export default async function PipelinePage() {
     <div className="space-y-12">
       <header>
         <h1
-          className="font-[family-name:var(--font-serif)] text-[#C9A961] text-3xl mb-2"
+          className="font-[family-name:var(--font-serif)] text-accent text-3xl mb-2"
           style={{ letterSpacing: "0.02em" }}
         >
           Word pipeline
         </h1>
-        <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 text-sm max-w-prose">
+        <p className="font-[family-name:var(--font-sans)] text-surface/60 text-sm max-w-prose">
           {pipeline.available.length} candidates ready. {pipeline.used.length}{" "}
           already produced. Reordering, marking as used, and adding new words
           ships in Phase 5.
@@ -40,7 +40,7 @@ export default async function PipelinePage() {
 
       <section>
         <h2
-          className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-xl mb-4"
+          className="font-[family-name:var(--font-serif)] text-surface text-xl mb-4"
           style={{ letterSpacing: "0.02em" }}
         >
           Available
@@ -49,7 +49,7 @@ export default async function PipelinePage() {
           {tiers.map((tier) => (
             <div key={tier}>
               <p
-                className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mb-3"
+                className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mb-3"
                 style={{ letterSpacing: "0.2em" }}
               >
                 {TIER_LABEL[tier]}
@@ -58,21 +58,21 @@ export default async function PipelinePage() {
                 {byTier[tier].map((w) => (
                   <div
                     key={w.word}
-                    className="border border-[#C9A961]/20 rounded p-4 bg-[#0F1A2E]/40"
+                    className="border border-accent/20 rounded p-4 bg-background/40"
                   >
                     <p
-                      className="font-[family-name:var(--font-serif)] text-[#C9A961] text-lg"
+                      className="font-[family-name:var(--font-serif)] text-accent text-lg"
                       style={{ letterSpacing: "0.02em" }}
                     >
                       {w.word}
                     </p>
                     <p
-                      className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase mt-1"
+                      className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase mt-1"
                       style={{ letterSpacing: "0.15em" }}
                     >
                       {w.language}
                     </p>
-                    <p className="font-[family-name:var(--font-serif-italic)] italic text-[#F4E8D0]/75 text-sm mt-2">
+                    <p className="font-[family-name:var(--font-serif-italic)] italic text-surface/75 text-sm mt-2">
                       {w.payoff}
                     </p>
                   </div>
@@ -85,29 +85,29 @@ export default async function PipelinePage() {
 
       <section>
         <h2
-          className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-xl mb-4"
+          className="font-[family-name:var(--font-serif)] text-surface text-xl mb-4"
           style={{ letterSpacing: "0.02em" }}
         >
           Used
         </h2>
-        <div className="border border-[#C9A961]/20 rounded overflow-hidden">
+        <div className="border border-accent/20 rounded overflow-hidden">
           <table className="w-full text-sm">
-            <thead className="bg-[#0F1A2E] border-b border-[#C9A961]/20">
+            <thead className="bg-background border-b border-accent/20">
               <tr>
                 <th
-                  className="text-left px-4 py-3 font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+                  className="text-left px-4 py-3 font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
                   Word
                 </th>
                 <th
-                  className="text-left px-4 py-3 font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+                  className="text-left px-4 py-3 font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
                   Week
                 </th>
                 <th
-                  className="text-left px-4 py-3 font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+                  className="text-left px-4 py-3 font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
                   Drafted
@@ -116,12 +116,12 @@ export default async function PipelinePage() {
             </thead>
             <tbody>
               {pipeline.used.map((u) => (
-                <tr key={u.word} className="border-t border-[#C9A961]/10">
-                  <td className="px-4 py-3 text-[#C9A961] font-[family-name:var(--font-serif)]">
+                <tr key={u.word} className="border-t border-accent/10">
+                  <td className="px-4 py-3 text-accent font-[family-name:var(--font-serif)]">
                     {u.word}
                   </td>
-                  <td className="px-4 py-3 text-[#F4E8D0]/75">{u.week}</td>
-                  <td className="px-4 py-3 text-[#F4E8D0]/75">{u.drafted}</td>
+                  <td className="px-4 py-3 text-surface/75">{u.week}</td>
+                  <td className="px-4 py-3 text-surface/75">{u.drafted}</td>
                 </tr>
               ))}
             </tbody>

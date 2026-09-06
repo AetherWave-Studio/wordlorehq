@@ -1,33 +1,262 @@
 {
-  "available": [],
+  "available": [
+    {
+      "word": "ASSASSIN",
+      "tier": 1,
+      "language": "Arabic",
+      "payoff": "Arabic \"hashishin,\" hashish user, tied to the medieval Nizari order"
+    },
+    {
+      "word": "JUGGERNAUT",
+      "tier": 1,
+      "language": "Sanskrit",
+      "payoff": "Sanskrit \"Jagannath,\" a temple deity whose chariot was said to crush devotees"
+    },
+    {
+      "word": "PANDEMONIUM",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Coined by Milton from Greek \"all demons,\" the capital of Hell in Paradise Lost"
+    },
+    {
+      "word": "MAGAZINE",
+      "tier": 2,
+      "language": "Arabic",
+      "payoff": "Arabic \"makhazin,\" storehouses, originally for ammunition"
+    },
+    {
+      "word": "VILLAIN",
+      "tier": 2,
+      "language": "Latin",
+      "payoff": "Latin \"villanus,\" just a farmhand at a country villa"
+    },
+    {
+      "word": "HAZARD",
+      "tier": 2,
+      "language": "Arabic",
+      "payoff": "Arabic \"az-zahr,\" the dice, via Old French, started as a dice game"
+    },
+    {
+      "word": "ELECTRIC",
+      "tier": 3,
+      "language": "Greek",
+      "payoff": "Greek \"elektron,\" amber, which produces static when rubbed"
+    },
+    {
+      "word": "MONEY",
+      "tier": 3,
+      "language": "Latin",
+      "payoff": "From Moneta, an epithet of Juno, whose temple housed the Roman mint"
+    },
+    {
+      "word": "SHAMPOO",
+      "tier": 4,
+      "language": "Hindi",
+      "payoff": "Hindi \"champo,\" to press or massage"
+    },
+    {
+      "word": "ADMIRAL",
+      "tier": 4,
+      "language": "Arabic",
+      "payoff": "Arabic \"amir al-bahr,\" commander of the sea"
+    },
+    {
+      "word": "TRIVIAL",
+      "tier": 4,
+      "language": "Latin",
+      "payoff": "Latin \"tri via,\" three roads, a crossroads gossip spot"
+    },
+    {
+      "word": "DISMAL",
+      "tier": 4,
+      "language": "Latin",
+      "payoff": "Latin \"dies mali,\" literally bad days, from a medieval unlucky calendar"
+    },
+    {
+      "word": "DELIRIUM",
+      "tier": 4,
+      "language": "Latin",
+      "payoff": "Latin \"de lira,\" out of the furrow, a plowing metaphor for madness"
+    },
+    {
+      "word": "SLOGAN",
+      "tier": 4,
+      "language": "Scottish Gaelic",
+      "payoff": "Scottish Gaelic \"sluagh-ghairm,\" army cry, a battle shout"
+    },
+    {
+      "word": "CRETIN",
+      "tier": 4,
+      "language": "French",
+      "payoff": "French \"chretien,\" Christian, an old Alpine-dialect label"
+    },
+    {
+      "word": "AMATEUR",
+      "tier": 4,
+      "language": "Latin",
+      "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
+    }
+  ],
   "used": [
-    { "word": "NIGHTMARE", "week": "2026-05-18", "drafted": "2026-05-21" },
-    { "word": "GOODBYE", "week": "2026-05-18", "drafted": "2026-05-21" },
-    { "word": "DISASTER", "week": "2026-05-18", "drafted": "2026-05-21" },
-    { "word": "ROBOT", "week": "2026-05-18", "drafted": "2026-05-21" },
-    { "word": "CLUE", "week": "2026-05-25", "drafted": "2026-05-23" },
-    { "word": "MUSCLE", "week": "2026-05-25", "drafted": "2026-05-23" },
-    { "word": "PANIC", "week": "2026-05-25", "drafted": "2026-05-23" },
-    { "word": "SALARY", "week": "2026-05-25", "drafted": "2026-05-23" },
-    { "word": "SINISTER", "week": "2026-06-08", "drafted": "2026-06-05" },
-    { "word": "AVOCADO", "week": "2026-06-08", "drafted": "2026-06-05" },
-    { "word": "WEIRD", "week": "2026-06-08", "drafted": "2026-06-05" },
-    { "word": "QUARANTINE", "week": "2026-06-08", "drafted": "2026-06-05" },
-    { "word": "COMPANION", "week": "2026-06-15", "drafted": "2026-06-05" },
-    { "word": "HOOLIGAN", "week": "2026-06-15", "drafted": "2026-06-05" },
-    { "word": "SARCASM", "week": "2026-06-15", "drafted": "2026-06-05" },
-    { "word": "TARANTULA", "week": "2026-06-15", "drafted": "2026-06-05" },
-    { "word": "LUNATIC", "week": "2026-06-22", "drafted": "2026-06-15" },
-    { "word": "BEDLAM", "week": "2026-06-22", "drafted": "2026-06-15" },
-    { "word": "BARBARIAN", "week": "2026-06-22", "drafted": "2026-06-15" },
-    { "word": "HYSTERIA", "week": "2026-06-22", "drafted": "2026-06-15" },
-    { "word": "VOLCANO", "week": "2026-06-29", "drafted": "2026-06-22" },
-    { "word": "CEREAL", "week": "2026-06-29", "drafted": "2026-06-22" },
-    { "word": "TANTALIZE", "week": "2026-06-29", "drafted": "2026-06-22" },
-    { "word": "NOSTALGIA", "week": "2026-06-29", "drafted": "2026-06-22" },
-    { "word": "JANUARY", "week": "2026-07-06", "drafted": "2026-07-03" },
-    { "word": "HALCYON", "week": "2026-07-06", "drafted": "2026-07-03" },
-    { "word": "TRAGEDY", "week": "2026-07-06", "drafted": "2026-07-03" },
-    { "word": "MORTGAGE", "week": "2026-07-06", "drafted": "2026-07-03" }
+    {
+      "word": "NIGHTMARE",
+      "week": "2026-05-18",
+      "drafted": "2026-05-21"
+    },
+    {
+      "word": "GOODBYE",
+      "week": "2026-05-18",
+      "drafted": "2026-05-21"
+    },
+    {
+      "word": "DISASTER",
+      "week": "2026-05-18",
+      "drafted": "2026-05-21"
+    },
+    {
+      "word": "ROBOT",
+      "week": "2026-05-18",
+      "drafted": "2026-05-21"
+    },
+    {
+      "word": "CLUE",
+      "week": "2026-05-25",
+      "drafted": "2026-05-23"
+    },
+    {
+      "word": "MUSCLE",
+      "week": "2026-05-25",
+      "drafted": "2026-05-23"
+    },
+    {
+      "word": "PANIC",
+      "week": "2026-05-25",
+      "drafted": "2026-05-23"
+    },
+    {
+      "word": "SALARY",
+      "week": "2026-05-25",
+      "drafted": "2026-05-23"
+    },
+    {
+      "word": "SINISTER",
+      "week": "2026-06-08",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "AVOCADO",
+      "week": "2026-06-08",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "WEIRD",
+      "week": "2026-06-08",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "QUARANTINE",
+      "week": "2026-06-08",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "COMPANION",
+      "week": "2026-06-15",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "HOOLIGAN",
+      "week": "2026-06-15",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "SARCASM",
+      "week": "2026-06-15",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "TARANTULA",
+      "week": "2026-06-15",
+      "drafted": "2026-06-05"
+    },
+    {
+      "word": "LUNATIC",
+      "week": "2026-06-22",
+      "drafted": "2026-06-15"
+    },
+    {
+      "word": "BEDLAM",
+      "week": "2026-06-22",
+      "drafted": "2026-06-15"
+    },
+    {
+      "word": "BARBARIAN",
+      "week": "2026-06-22",
+      "drafted": "2026-06-15"
+    },
+    {
+      "word": "HYSTERIA",
+      "week": "2026-06-22",
+      "drafted": "2026-06-15"
+    },
+    {
+      "word": "VOLCANO",
+      "week": "2026-06-29",
+      "drafted": "2026-06-22"
+    },
+    {
+      "word": "CEREAL",
+      "week": "2026-06-29",
+      "drafted": "2026-06-22"
+    },
+    {
+      "word": "TANTALIZE",
+      "week": "2026-06-29",
+      "drafted": "2026-06-22"
+    },
+    {
+      "word": "NOSTALGIA",
+      "week": "2026-06-29",
+      "drafted": "2026-06-22"
+    },
+    {
+      "word": "JANUARY",
+      "week": "2026-07-06",
+      "drafted": "2026-07-03"
+    },
+    {
+      "word": "HALCYON",
+      "week": "2026-07-06",
+      "drafted": "2026-07-03"
+    },
+    {
+      "word": "TRAGEDY",
+      "week": "2026-07-06",
+      "drafted": "2026-07-03"
+    },
+    {
+      "word": "MORTGAGE",
+      "week": "2026-07-06",
+      "drafted": "2026-07-03"
+    },
+    {
+      "word": "BERSERK",
+      "week": "2026-08-17",
+      "drafted": "2026-08-13"
+    },
+    {
+      "word": "CHECKMATE",
+      "week": "2026-08-17",
+      "drafted": "2026-08-13"
+    },
+    {
+      "word": "GYMNASIUM",
+      "week": "2026-08-17",
+      "drafted": "2026-08-13"
+    },
+    {
+      "word": "ORDEAL",
+      "week": "2026-08-17",
+      "drafted": "2026-08-13"
+    }
   ]
 }

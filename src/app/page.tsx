@@ -1,9 +1,8 @@
 import Link from "next/link";
+import { channel, type SocialPlatform } from "@/lib/channel";
 
-const SOCIALS = [
-  {
-    name: "YouTube",
-    href: "https://www.youtube.com/@wordlorehq",
+const PLATFORM_ICONS: Partial<Record<SocialPlatform, { label: string; icon: React.ReactNode }>> = {
+  youtube: {
     label: "Watch on YouTube",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -11,9 +10,7 @@ const SOCIALS = [
       </svg>
     ),
   },
-  {
-    name: "TikTok",
-    href: "https://www.tiktok.com/@wordlorehq",
+  tiktok: {
     label: "Follow on TikTok",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -21,9 +18,7 @@ const SOCIALS = [
       </svg>
     ),
   },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/wordlorehq",
+  instagram: {
     label: "Follow on Instagram",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -31,9 +26,7 @@ const SOCIALS = [
       </svg>
     ),
   },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/wordlorehq",
+  facebook: {
     label: "Follow on Facebook",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -41,9 +34,7 @@ const SOCIALS = [
       </svg>
     ),
   },
-  {
-    name: "Threads",
-    href: "https://www.threads.com/@wordlorehq",
+  threads: {
     label: "Follow on Threads",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -51,7 +42,16 @@ const SOCIALS = [
       </svg>
     ),
   },
-];
+};
+
+/** Only the platforms this channel actually has an account on, in config order. */
+const SOCIALS = (Object.keys(channel.socials) as SocialPlatform[])
+  .map((platform) => ({ platform, href: channel.socials[platform], ...PLATFORM_ICONS[platform] }))
+  .filter((s): s is { platform: SocialPlatform; href: string; label: string; icon: React.ReactNode } =>
+    Boolean(s.href && s.label),
+  );
+
+const PRIMARY = channel.socials.youtube ?? channel.site.url;
 
 export default function Home() {
   return (
@@ -62,30 +62,30 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 20%, #F4E8D0 0%, transparent 50%), radial-gradient(circle at 80% 80%, #C9A961 0%, transparent 50%)",
+            `radial-gradient(circle at 20% 20%, ${channel.palette.surface} 0%, transparent 50%), radial-gradient(circle at 80% 80%, ${channel.palette.accent} 0%, transparent 50%)`,
         }}
       />
 
       {/* Top brand mark */}
       <header className="mb-12 text-center">
         <p
-          className="font-[family-name:var(--font-serif-italic)] italic text-[#C9A961]/80 text-xs sm:text-sm"
+          className="font-[family-name:var(--font-serif-italic)] italic text-accent/80 text-xs sm:text-sm"
           style={{ letterSpacing: "0.4em" }}
         >
-          W O R D L O R E
+          {channel.wordmark.split("").join(" ")}
         </p>
         <Flourish />
       </header>
 
       {/* Hero wordmark */}
       <h1
-        className="font-[family-name:var(--font-serif)] font-bold text-[#C9A961] text-center leading-none"
+        className="font-[family-name:var(--font-serif)] font-bold text-accent text-center leading-none"
         style={{
           fontSize: "clamp(3.5rem, 14vw, 9rem)",
           letterSpacing: "0.02em",
         }}
       >
-        WORDLORE
+        {channel.wordmark}
       </h1>
 
       <div className="my-8">
@@ -94,28 +94,26 @@ export default function Home() {
 
       {/* Tagline */}
       <p
-        className="font-[family-name:var(--font-serif-italic)] italic text-[#F4E8D0] text-center"
+        className="font-[family-name:var(--font-serif-italic)] italic text-surface text-center"
         style={{ fontSize: "clamp(1.25rem, 2.6vw, 2rem)" }}
       >
-        Every word has a story.
+        {channel.tagline}
       </p>
 
       {/* Description */}
       <p
-        className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/75 text-center max-w-xl mt-10 leading-relaxed px-2"
+        className="font-[family-name:var(--font-sans)] text-surface/75 text-center max-w-xl mt-10 leading-relaxed px-2"
         style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}
       >
-        Short-form etymology, told properly. We dig up where the everyday words
-        you use actually came from - the demon-haunted, the holy, the absurd.
-        The English you speak is haunted. We just point at the ghosts.
+        {channel.site.blurb}
       </p>
 
       {/* Primary CTA */}
       <Link
-        href="https://www.youtube.com/@wordlorehq"
+        href={PRIMARY}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#C9A961] px-7 py-3.5 text-[#0F1A2E] font-[family-name:var(--font-sans)] font-semibold text-sm uppercase transition hover:bg-[#dcc080] focus:outline-none focus:ring-2 focus:ring-[#C9A961] focus:ring-offset-2 focus:ring-offset-[#0F1A2E]"
+        className="mt-10 inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-background font-[family-name:var(--font-sans)] font-semibold text-sm uppercase transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
       >
         <svg
           viewBox="0 0 24 24"
@@ -130,10 +128,11 @@ export default function Home() {
 
       {/* Cadence */}
       <p
-        className="mt-12 font-[family-name:var(--font-sans)] text-[#7A8B6F] text-center uppercase"
+        className="mt-12 font-[family-name:var(--font-sans)] text-secondary text-center uppercase"
         style={{ fontSize: "0.7rem", letterSpacing: "0.25em" }}
       >
-        New stories every Mon &middot; Tue &middot; Thu &middot; Fri
+        New stories every{" "}
+        {channel.cadence.publishDaysShort.join(" \u00b7 ")}
       </p>
 
       {/* Social row */}
@@ -143,12 +142,12 @@ export default function Home() {
       >
         {SOCIALS.map((s) => (
           <Link
-            key={s.name}
+            key={s.platform}
             href={s.href}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.label}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-[#C9A961]/30 text-[#F4E8D0]/70 transition hover:text-[#C9A961] hover:border-[#C9A961] focus:outline-none focus:ring-2 focus:ring-[#C9A961]"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-accent/30 text-surface/70 transition hover:text-accent hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent"
           >
             <span className="w-5 h-5 inline-block">{s.icon}</span>
           </Link>
@@ -156,19 +155,19 @@ export default function Home() {
       </nav>
 
       {/* Footer */}
-      <footer className="mt-20 text-center font-[family-name:var(--font-sans)] text-[#F4E8D0]/45 text-xs px-4">
+      <footer className="mt-20 text-center font-[family-name:var(--font-sans)] text-surface/45 text-xs px-4">
         <p>
           Press, sponsorships, and general inquiries:{" "}
           <Link
-            href="mailto:info@wordlorehq.com"
-            className="text-[#C9A961]/70 hover:text-[#C9A961] underline-offset-2 hover:underline"
+            href={`mailto:${channel.site.email}`}
+            className="text-accent/70 hover:text-accent underline-offset-2 hover:underline"
           >
-            info@wordlorehq.com
+            {channel.site.email}
           </Link>
         </p>
-        <p className="mt-3 text-[#F4E8D0]/30">
-          &copy; {new Date().getFullYear()} Wordlore. All etymologies sourced
-          from public scholarship.
+        <p className="mt-3 text-surface/30">
+          &copy; {new Date().getFullYear()} {channel.name}.{" "}
+          {channel.site.footerNote}
         </p>
       </footer>
     </main>
@@ -178,9 +177,9 @@ export default function Home() {
 function Flourish() {
   return (
     <div className="flex items-center justify-center gap-2 mt-2" aria-hidden="true">
-      <span className="block h-px w-12 bg-[#C9A961]/40" />
-      <span className="block w-1.5 h-1.5 rotate-45 bg-[#C9A961]/60" />
-      <span className="block h-px w-12 bg-[#C9A961]/40" />
+      <span className="block h-px w-12 bg-accent/40" />
+      <span className="block w-1.5 h-1.5 rotate-45 bg-accent/60" />
+      <span className="block h-px w-12 bg-accent/40" />
     </div>
   );
 }
@@ -188,9 +187,9 @@ function Flourish() {
 function DiamondOrnament() {
   return (
     <div className="flex items-center justify-center gap-3" aria-hidden="true">
-      <span className="block h-px w-20 bg-[#C9A961]/50" />
-      <span className="block w-2.5 h-2.5 rotate-45 bg-[#C9A961]" />
-      <span className="block h-px w-20 bg-[#C9A961]/50" />
+      <span className="block h-px w-20 bg-accent/50" />
+      <span className="block w-2.5 h-2.5 rotate-45 bg-accent" />
+      <span className="block h-px w-20 bg-accent/50" />
     </div>
   );
 }

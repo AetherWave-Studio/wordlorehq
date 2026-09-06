@@ -38,6 +38,7 @@ import {
   useVideoConfig,
 } from 'remotion';
 
+import { channel } from '../src/lib/channel';
 import { colors } from './tokens/colors';
 import { fonts, FRAME } from './tokens/typography';
 import { sec, FPS } from './tokens/timing';
@@ -113,15 +114,15 @@ const Beat1Hook: React.FC = () => {
   const total = TRAILER_BEAT_FRAMES[0] + CROSSFADE_FRAMES;
   const opacity = beatOpacity(frame, total);
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight, opacity }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background, opacity }}>
       <BrandMark />
       <AbsoluteFill style={fullCenter}>
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: 64,
-            color: colors.parchment,
+            color: colors.surface,
             lineHeight: 1.35,
             maxWidth: 900,
             fontWeight: 400,
@@ -157,15 +158,15 @@ const TrailerWordReveal: React.FC<WordRevealProps> = ({ lead, word, payoff }) =>
   const payoffOpacity = interpolate(frame, [8, 14], [0, 1], { extrapolateRight: 'clamp' });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight, opacity }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background, opacity }}>
       <BrandMark />
       <AbsoluteFill style={fullCenter}>
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: 36,
-            color: colors.parchment,
+            color: colors.surface,
             opacity: leadOpacity,
             marginBottom: 24,
             letterSpacing: '0.02em',
@@ -175,10 +176,10 @@ const TrailerWordReveal: React.FC<WordRevealProps> = ({ lead, word, payoff }) =>
         </div>
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: 168,
-            color: colors.gold,
+            color: colors.accent,
             opacity: wordOpacity,
             transform: `scale(${wordScale})`,
             letterSpacing: '0.01em',
@@ -189,10 +190,10 @@ const TrailerWordReveal: React.FC<WordRevealProps> = ({ lead, word, payoff }) =>
         </div>
         <div
           style={{
-            fontFamily: fonts.sans,
+            fontFamily: fonts.body,
             fontWeight: 700,
             fontSize: 42,
-            color: colors.oxblood,
+            color: colors.payoff,
             opacity: payoffOpacity,
             marginTop: 28,
             letterSpacing: '0.08em',
@@ -213,15 +214,15 @@ const Beat5BrandStatement: React.FC = () => {
   const total = TRAILER_BEAT_FRAMES[4] + CROSSFADE_FRAMES;
   const opacity = beatOpacity(frame, total);
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight, opacity }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background, opacity }}>
       <BrandMark />
       <AbsoluteFill style={fullCenter}>
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: 76,
-            color: colors.parchment,
+            color: colors.surface,
             lineHeight: 1.3,
             maxWidth: 900,
             fontWeight: 400,
@@ -249,38 +250,38 @@ const Beat6BrandIdentity: React.FC = () => {
   const taglineOpacity = interpolate(frame, [30, 48], [0, 1], { extrapolateRight: 'clamp' });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight, opacity }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background, opacity }}>
       <BrandMark />
       <AbsoluteFill style={fullCenter}>
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: 160,
-            color: colors.gold,
+            color: colors.accent,
             letterSpacing: '0.02em',
             lineHeight: 1,
             opacity: wordOpacity,
             transform: `scale(${interpolate(wordSpring, [0, 1], [0.92, 1])})`,
           }}
         >
-          WORDLORE
+          {channel.wordmark}
         </div>
         <div style={{ marginTop: 40, opacity: flourishOpacity }}>
           <DiamondOrnament />
         </div>
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: 44,
-            color: colors.parchment,
+            color: colors.surface,
             marginTop: 32,
             opacity: taglineOpacity,
             letterSpacing: '0.02em',
           }}
         >
-          Every word has a story.
+          {channel.tagline}
         </div>
       </AbsoluteFill>
     </AbsoluteFill>
@@ -295,28 +296,28 @@ const Beat7Cadence: React.FC = () => {
   const opacity = beatOpacity(frame, total);
   const lineOpacity = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: 'clamp' });
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight, opacity }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background, opacity }}>
       <BrandMark />
       <AbsoluteFill style={fullCenter}>
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: 64,
-            color: colors.gold,
+            color: colors.accent,
             letterSpacing: '0.02em',
             lineHeight: 1,
             marginBottom: 28,
             opacity: lineOpacity,
           }}
         >
-          WORDLORE
+          {channel.wordmark}
         </div>
         <div
           style={{
-            fontFamily: fonts.sans,
+            fontFamily: fonts.body,
             fontSize: 44,
-            color: colors.parchment,
+            color: colors.surface,
             fontWeight: 500,
             letterSpacing: '0.05em',
             opacity: lineOpacity,
@@ -339,27 +340,27 @@ const Beat8Hold: React.FC = () => {
   // Don't fade out — composition ends on this frame anyway.
   const opacity = beatOpacity(frame, total, /* fadeOut */ false);
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight, opacity }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background, opacity }}>
       <BrandMark />
       <AbsoluteFill style={fullCenter}>
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: 64,
-            color: colors.gold,
+            color: colors.accent,
             letterSpacing: '0.02em',
             lineHeight: 1,
             marginBottom: 28,
           }}
         >
-          WORDLORE
+          {channel.wordmark}
         </div>
         <div
           style={{
-            fontFamily: fonts.sans,
+            fontFamily: fonts.body,
             fontSize: 44,
-            color: colors.parchment,
+            color: colors.surface,
             fontWeight: 500,
             letterSpacing: '0.05em',
             lineHeight: 1.3,
@@ -399,7 +400,7 @@ export const WordloreTrailer: React.FC<TrailerInput> = (input) => {
   };
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       {/* Beat sequences — each overlaps the next by CROSSFADE_FRAMES (except
           the last) so adjacent beat opacity curves crossfade smoothly. */}
       <Sequence from={TRAILER_BEAT_STARTS[0]} durationInFrames={TRAILER_BEAT_FRAMES[0] + CROSSFADE_FRAMES}>

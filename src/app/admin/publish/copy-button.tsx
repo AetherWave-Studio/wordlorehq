@@ -19,7 +19,7 @@ export function CopyButton({ label, value }: { label: string; value: string }) {
     <button
       type="button"
       onClick={handleClick}
-      className="font-[family-name:var(--font-sans)] text-xs uppercase px-3 py-1 rounded border border-[#C9A961]/40 text-[#F4E8D0]/75 hover:text-[#0F1A2E] hover:bg-[#C9A961] hover:border-[#C9A961] transition"
+      className="font-[family-name:var(--font-sans)] text-xs uppercase px-3 py-1 rounded border border-accent/40 text-surface/75 hover:text-background hover:bg-accent hover:border-accent transition"
       style={{ letterSpacing: "0.15em" }}
     >
       {copied ? "Copied" : label}

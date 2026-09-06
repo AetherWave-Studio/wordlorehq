@@ -35,6 +35,7 @@ import { generateNarration, generateTrailerNarration } from './generate-narratio
 import type { WordloreInput } from '../remotion/Composition';
 import type { TrailerInput } from '../remotion/Trailer';
 import { beatBounds } from '../remotion/tokens/timing';
+import { applyPattern, channel, hashtags } from '../src/lib/channel';
 
 /**
  * Tail-pad each measured TTS beat then clamp to the soft bounds in
@@ -117,18 +118,25 @@ function resolveInputPath(arg: string): string {
   return wordPath;
 }
 
+/**
+ * The upload sheet that ships next to the MP4.
+ *
+ * Title, signature and tags come from channel.config.json so this file and the
+ * admin publish page cannot drift apart - they used to, this one writing
+ * 'Why "x" actually means "y"' against the locked 'X literally means "y"'.
+ */
 function buildMetadata(input: WordloreInput): string {
   const wordLower = input.word.toLowerCase();
   const revealLower = input.payoff.revelation.toLowerCase();
   return [
     `TITLE`,
-    `Why "${wordLower}" actually means "${revealLower}"`,
+    applyPattern(channel.captions.titlePattern, input.word, input.payoff.revelation),
     ``,
     `DESCRIPTION`,
-    `${input.hook} The word ${wordLower} ${input.payoff.connector} ${revealLower}. Every word has a story.`,
+    `${input.hook} The word ${wordLower} ${input.payoff.connector} ${revealLower}. ${channel.captions.signature}`,
     ``,
     `TAGS`,
-    `#etymology  #wordorigins  #wordlore`,
+    hashtags('youtube', input.word, input.origin.language),
     ``,
     `END SCREEN`,
     input.outro?.nextWord
@@ -188,11 +196,15 @@ async function renderVideo(inputArg: string): Promise<void> {
   // gets loaded from. Without this, Remotion can latch onto a sibling
   // public/ directory (e.g. the Next.js public/episodes/) and try to serve
   // staticFile('audio/voiceover/beat-1.wav') from there.
+  // --ignore-certificate-errors is needed in the cloud routine: outbound
+  // HTTPS (e.g. the Google Fonts requests @remotion/google-fonts makes)
+  // goes through an agent proxy that MITMs TLS with its own CA, which the
+  // headless Chromium Remotion downloads doesn't trust out of the box.
   console.log('\n[4/4] Rendering video with Remotion');
   const outputMp4 = path.join(EPISODES_DIR, `${wordSlug}-${date}.mp4`);
   const publicDir = path.join(REMOTION_DIR, 'assets');
   execSync(
-    `npx remotion render index.ts WordloreVideo "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}"`,
+    `npx remotion render index.ts WordloreVideo "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}" --ignore-certificate-errors`,
     { stdio: 'inherit', cwd: REMOTION_DIR }
   );
 
@@ -267,7 +279,7 @@ async function renderTrailer(): Promise<void> {
   const outputMp4 = path.join(TRAILERS_DIR, `trailer-${date}.mp4`);
   const publicDir = path.join(REMOTION_DIR, 'assets');
   execSync(
-    `npx remotion render index.ts WordloreTrailer "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}"`,
+    `npx remotion render index.ts WordloreTrailer "${outputMp4}" --props="${propsPath}" --public-dir="${publicDir}" --ignore-certificate-errors`,
     { stdio: 'inherit', cwd: REMOTION_DIR },
   );
 

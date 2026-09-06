@@ -34,7 +34,7 @@ export const Beat3_ModernAnchor: React.FC<Beat3Props> = ({ modernAnchor }) => {
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       <BrandMark />
 
       <AbsoluteFill
@@ -48,10 +48,10 @@ export const Beat3_ModernAnchor: React.FC<Beat3Props> = ({ modernAnchor }) => {
         {/* Small leading mark to signal "this is current usage" */}
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: 36,
-            color: colors.gold,
+            color: colors.accent,
             letterSpacing: 8,
             opacity: opacity * 0.7,
             marginBottom: 48,
@@ -62,9 +62,9 @@ export const Beat3_ModernAnchor: React.FC<Beat3Props> = ({ modernAnchor }) => {
 
         <div
           style={{
-            fontFamily: fonts.sans,
+            fontFamily: fonts.body,
             fontSize: 60,
-            color: colors.parchment,
+            color: colors.surface,
             lineHeight: 1.35,
             textAlign: 'center',
             opacity,

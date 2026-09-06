@@ -70,7 +70,7 @@ export const Beat6_Payoff: React.FC<Beat6Props> = ({ payoff }) => {
   const revelationLines = splitRevelation(payoff.revelation);
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.midnight }}>
+    <AbsoluteFill style={{ backgroundColor: colors.background }}>
       <BrandMark />
 
       <AbsoluteFill
@@ -85,9 +85,9 @@ export const Beat6_Payoff: React.FC<Beat6Props> = ({ payoff }) => {
         {/* "your" small connector */}
         <div
           style={{
-            fontFamily: fonts.sans,
+            fontFamily: fonts.body,
             fontSize: sizes.connectorText,
-            color: colors.parchment,
+            color: colors.surface,
             opacity: setupOpacity * 0.65,
             letterSpacing: 4,
             marginBottom: 24,
@@ -99,10 +99,10 @@ export const Beat6_Payoff: React.FC<Beat6Props> = ({ payoff }) => {
         {/* Setup word — gold, smaller than Beat 2 (deliberate size demotion) */}
         <div
           style={{
-            fontFamily: fonts.serif,
+            fontFamily: fonts.display,
             fontWeight: 700,
             fontSize: sizes.payoffSetup,
-            color: colors.gold,
+            color: colors.accent,
             letterSpacing: 4,
             lineHeight: 1,
             opacity: setupOpacity,
@@ -115,10 +115,10 @@ export const Beat6_Payoff: React.FC<Beat6Props> = ({ payoff }) => {
         {/* Italic connector */}
         <div
           style={{
-            fontFamily: fonts.serifItalic,
+            fontFamily: fonts.displayItalic,
             fontStyle: 'italic',
             fontSize: sizes.connectorText,
-            color: colors.parchment,
+            color: colors.surface,
             opacity: connectorOpacity * 0.65,
             letterSpacing: 2,
             margin: '48px 0 40px',
@@ -139,10 +139,10 @@ export const Beat6_Payoff: React.FC<Beat6Props> = ({ payoff }) => {
             <div
               key={i}
               style={{
-                fontFamily: fonts.serif,
+                fontFamily: fonts.display,
                 fontWeight: 700,
                 fontSize: sizes.payoffRevelation,
-                color: colors.oxblood,
+                color: colors.payoff,
                 letterSpacing: 6,
                 lineHeight: 1.05,
                 marginTop: i === 0 ? 0 : 8,

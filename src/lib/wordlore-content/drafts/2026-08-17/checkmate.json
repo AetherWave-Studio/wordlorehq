@@ -1,0 +1,30 @@
+{
+  "word": "CHECKMATE",
+  "pronunciation": "/ˈtʃɛk.meɪt/",
+  "partOfSpeech": "noun",
+  "definition": "a move in chess that puts the opponent's king in an inescapable position, ending the game",
+  "hook": "Checkmate isn't really about a mate at all.",
+  "modernAnchor": "We shout it in arguments and boardrooms long after the chessboard's gone. Checkmate. Case closed.",
+  "origin": {
+    "language": "Persian",
+    "era": "medieval Persia",
+    "originalWord": "shah mat",
+    "originalMeaning": "the king is helpless"
+  },
+  "journey": [
+    "Chess traveled from India to Persia, where players called the winning move shah mat.",
+    "Shah meant king. Mat meant helpless, trapped, unable to escape, not dead as many assume today.",
+    "Arabic traders carried the game and its phrase into Europe, where shah mat slowly became checkmate.",
+    "English speakers heard mate and assumed a companion, not a king with nowhere left to run."
+  ],
+  "payoff": {
+    "setupWord": "CHECKMATE",
+    "connector": "is, literally,",
+    "revelation": "THE KING IS HELPLESS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "GYMNASIUM"
+  },
+  "musicVariant": "dark"
+}

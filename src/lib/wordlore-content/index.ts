@@ -1,5 +1,13 @@
 import { promises as fs } from "fs";
 import path from "path";
+import {
+  applyPattern,
+  channel,
+  hashtags,
+  type CaptionPlatform,
+} from "../channel";
+
+export type { CaptionPlatform };
 
 export type Episode = {
   word: string;
@@ -35,7 +43,16 @@ export type WeekStatus =
   | "publishing"
   | "published";
 
-export type RenderStatus = "queued" | "rendering" | "done" | "failed";
+/**
+ * "missing" is not written by the pipeline. It is derived at read time when a
+ * word is recorded `done` but its MP4 is not on disk - see `readState`.
+ */
+export type RenderStatus =
+  | "queued"
+  | "rendering"
+  | "done"
+  | "failed"
+  | "missing";
 
 export type WeekState = {
   status: WeekStatus;
@@ -69,10 +86,50 @@ export type Pipeline = {
 };
 
 const CONTENT_ROOT = path.join(process.cwd(), "src", "lib", "wordlore-content");
+const EPISODE_DIR = path.join(process.cwd(), "public", "episodes");
+
+/** The MP4 filename a rendered episode is expected to have. */
+export function episodeVideoFile(
+  word: string,
+  renderDate: string | null,
+): string | null {
+  return renderDate ? `${word.toLowerCase()}-${renderDate}.mp4` : null;
+}
+
+/**
+ * Reconcile recorded render status against what is actually on disk.
+ *
+ * Weeks 2026-06-22, 06-29 and 07-06 were all committed with every word flagged
+ * `done` and no MP4 in the commit, so the dashboard reported twelve finished
+ * episodes that do not exist. Recorded status is a claim; the file is the
+ * evidence. Where the two disagree the file wins.
+ *
+ * If the episode directory cannot be listed (a deploy target that serves
+ * `public/` off a CDN rather than the app filesystem) we have no evidence
+ * either way, so the recorded status is left untouched rather than replaced
+ * with a different lie.
+ */
+async function reconcileRenders(state: State): Promise<State> {
+  let onDisk: Set<string>;
+  try {
+    onDisk = new Set(await fs.readdir(EPISODE_DIR));
+  } catch {
+    return state;
+  }
+
+  for (const week of Object.values(state.weeks)) {
+    for (const [word, status] of Object.entries(week.renders)) {
+      if (status !== "done") continue;
+      const file = episodeVideoFile(word, week.renderDate);
+      if (!file || !onDisk.has(file)) week.renders[word] = "missing";
+    }
+  }
+  return state;
+}
 
 export async function readState(): Promise<State> {
   const raw = await fs.readFile(path.join(CONTENT_ROOT, "state.json"), "utf-8");
-  return JSON.parse(raw) as State;
+  return reconcileRenders(JSON.parse(raw) as State);
 }
 
 export async function readPipeline(): Promise<Pipeline> {
@@ -100,22 +157,24 @@ export async function readWeekDrafts(week: string): Promise<Episode[]> {
 
 export function platformCaption(
   episode: Episode,
-  platform: "youtube" | "tiktok" | "instagram" | "facebook" | "x",
+  platform: CaptionPlatform,
 ): string {
-  const title = `${episode.word} literally means "${episode.payoff.revelation.toLowerCase()}"`;
+  const tags = hashtags(platform, episode.word, episode.origin.language);
   const hookLine = episode.modernAnchor;
-  const lowerWord = episode.word.toLowerCase();
 
   switch (platform) {
     case "youtube":
     case "facebook":
-      return `${hookLine}\n\nEvery word has a story.\n\n#etymology #wordhistory #shorts #${lowerWord} #language`;
+      return `${hookLine}\n\n${channel.captions.signature}\n\n${tags}`;
     case "tiktok":
-      return `${hookLine}\n\n#etymology #wordhistory #fyp #learnontiktok #wordsoftiktok #${lowerWord} #${episode.origin.language.toLowerCase().replace(/\s+/g, "")} #words #englishhistory`;
+      return `${hookLine}\n\n${tags}`;
     case "instagram":
-      return `${hookLine} ${episode.journey[0]}\n\n#etymology #wordhistory #reels #language #englishlanguage #${lowerWord} #words #linguistics`;
-    case "x":
-      return `${title}\n\n${hookLine}\n\nyoutube.com/@wordlorehq`;
+      return `${hookLine} ${episode.journey[0]}\n\n${tags}`;
+    case "x": {
+      const handle = channel.socials.x ?? channel.socials.youtube ?? channel.site.url;
+      const link = handle.replace(/^https?:\/\/(www\.)?/, "");
+      return `${episodeTitle(episode)}\n\n${hookLine}\n\n${link}`;
+    }
   }
 }
 
@@ -124,5 +183,9 @@ export function pinnedComment(episode: Episode, bonusFact: string): string {
 }
 
 export function episodeTitle(episode: Episode): string {
-  return `${episode.word} literally means "${episode.payoff.revelation.toLowerCase()}"`;
+  return applyPattern(
+    channel.captions.titlePattern,
+    episode.word,
+    episode.payoff.revelation,
+  );
 }

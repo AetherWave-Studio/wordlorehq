@@ -52,6 +52,53 @@ Modern words whose origins are unexpectedly literal or specific.
 | **NOSTALGIA** | Greek "ache to return home" (nostos + algos) | Emotional resonance |
 | **TARANTULA** | From Taranto, Italy — where the dance "tarantella" comes from (folk cure for spider bites) | Three-layer payoff |
 
+## Refill batch (added 2026-08-13, queue had run dry)
+
+Bank exhausted after 7 weeks of production. New vetted candidates below, checked against the four
+criteria and deliberately spread across language families. BERSERK, CHECKMATE, GYMNASIUM, and
+ORDEAL were selected into week 2026-08-17 the same day they were added; the rest sit in
+word-pipeline.json's `available` list for future weeks.
+
+### Tier 1 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **BERSERK** | Old Norse "bear shirt," warriors who fought wrapped in animal pelts | Used week 2026-08-17 |
+| **ASSASSIN** | Arabic "hashishin," hashish user, tied to the medieval Nizari order | Strong, but etymology is a popular claim historians debate |
+| **JUGGERNAUT** | Hindi/Sanskrit "Jagannath," a temple deity whose chariot was wrongly said to crush devotees | Vivid imagery |
+| **PANDEMONIUM** | Coined by Milton from Greek "all demons," the capital of Hell in Paradise Lost | Literary origin, not folk etymology |
+
+### Tier 2 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **CHECKMATE** | Persian "shah mat," the king is helpless | Used week 2026-08-17 |
+| **GYMNASIUM** | Greek "gymnos," naked, describing training in the nude | Used week 2026-08-17 |
+| **MAGAZINE** | Arabic "makhazin," storehouses, originally for ammunition | Clean one-line payoff |
+| **VILLAIN** | Latin "villanus," just a farmhand at a country villa | Ironic; word drifted from neutral to sinister |
+| **HAZARD** | Arabic "az-zahr," the dice, via Old French, started as a dice game | |
+
+### Tier 3 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **ORDEAL** | Old English "ordal," judgment (trial by fire or water) | Used week 2026-08-17 |
+| **ELECTRIC** | Greek "elektron," amber, which produces static when rubbed | |
+| **MONEY** | From Moneta, an epithet of Juno, whose temple housed the Roman mint | |
+
+### Tier 4 additions
+
+| Word | Payoff | Notes |
+|---|---|---|
+| **SHAMPOO** | Hindi "champo," to press or massage | |
+| **ADMIRAL** | Arabic "amir al-bahr," commander of the sea | |
+| **TRIVIAL** | Latin "tri via," three roads, a crossroads gossip spot | |
+| **DISMAL** | Latin "dies mali," literally bad days, from a medieval unlucky calendar | |
+| **DELIRIUM** | Latin "de lira," out of the furrow, a plowing metaphor for madness | |
+| **SLOGAN** | Scottish Gaelic "sluagh-ghairm," army cry, a battle shout | |
+| **CRETIN** | French "chretien," Christian, an old Alpine-dialect label | |
+| **AMATEUR** | Latin "amator" via French, lover, one who does it for love not money | |
+
 ## Themed weeks (potential)
 
 Once the channel has rhythm, consider thematic weeks for stronger algorithmic signal:

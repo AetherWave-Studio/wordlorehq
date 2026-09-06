@@ -3,10 +3,11 @@ import { readState, readDraft, type Episode, type WeekState } from "@/lib/wordlo
 export const dynamic = "force-dynamic";
 
 const STATUS_COLOR: Record<string, string> = {
-  queued: "text-[#7A8B6F]",
-  rendering: "text-[#C9A961]",
-  done: "text-[#C9A961]",
-  failed: "text-[#8B2635]",
+  queued: "text-secondary",
+  rendering: "text-accent",
+  done: "text-accent",
+  failed: "text-payoff",
+  missing: "text-payoff",
 };
 
 const VIDEO_BASE =
@@ -44,16 +45,18 @@ export default async function RenderPage() {
     <div className="space-y-12">
       <header>
         <h1
-          className="font-[family-name:var(--font-serif)] text-[#C9A961] text-3xl mb-2"
+          className="font-[family-name:var(--font-serif)] text-accent text-3xl mb-2"
           style={{ letterSpacing: "0.02em" }}
         >
           Render queue
         </h1>
-        <p className="font-[family-name:var(--font-sans)] text-[#F4E8D0]/60 text-sm max-w-prose">
-          For now, renders run locally on Andrew&apos;s machine. Status comes
-          from <code className="text-[#C9A961]">state.json</code> - the Phase 3
-          GitHub Actions worker will update it via webhook. MP4s served from{" "}
-          <code className="text-[#C9A961]">{VIDEO_BASE}</code>.
+        <p className="font-[family-name:var(--font-sans)] text-surface/60 text-sm max-w-prose">
+          Renders come from the weekly cloud routine, which commits each MP4 to{" "}
+          <code className="text-accent">{VIDEO_BASE}</code>. Status starts
+          from <code className="text-accent">state.json</code> and is checked
+          against the files actually on disk -{" "}
+          <span className="text-payoff">missing</span> means the week was
+          recorded as rendered but the MP4 never landed.
         </p>
       </header>
 
@@ -61,13 +64,13 @@ export default async function RenderPage() {
         <section key={b.key}>
           <div className="flex flex-wrap items-baseline justify-between gap-3 mb-5">
             <h2
-              className="font-[family-name:var(--font-serif)] text-[#F4E8D0] text-xl"
+              className="font-[family-name:var(--font-serif)] text-surface text-xl"
               style={{ letterSpacing: "0.02em" }}
             >
               Week of {b.key}
               {b.key === state.currentWeek && (
                 <span
-                  className="ml-3 font-[family-name:var(--font-sans)] text-[#C9A961] text-xs uppercase"
+                  className="ml-3 font-[family-name:var(--font-sans)] text-accent text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
                   current
@@ -75,7 +78,7 @@ export default async function RenderPage() {
               )}
             </h2>
             <p
-              className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-xs uppercase"
+              className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
               style={{ letterSpacing: "0.2em" }}
             >
               {WEEK_STATUS_LABEL[b.week.status]}
@@ -94,11 +97,11 @@ export default async function RenderPage() {
               return (
                 <article
                   key={ep.word}
-                  className="border border-[#C9A961]/25 rounded-lg p-3 bg-[#0F1A2E]/40"
+                  className="border border-accent/25 rounded-lg p-3 bg-background/40"
                 >
                   <div className="flex items-baseline justify-between mb-2">
                     <h3
-                      className="font-[family-name:var(--font-serif)] text-[#C9A961] text-lg"
+                      className="font-[family-name:var(--font-serif)] text-accent text-lg"
                       style={{ letterSpacing: "0.02em" }}
                     >
                       {ep.word}
@@ -120,9 +123,9 @@ export default async function RenderPage() {
                       preload="metadata"
                     />
                   ) : (
-                    <div className="w-full rounded bg-[#0F1A2E] border border-[#C9A961]/20 aspect-[9/16] flex items-center justify-center">
+                    <div className="w-full rounded bg-background border border-accent/20 aspect-[9/16] flex items-center justify-center">
                       <p
-                        className="font-[family-name:var(--font-sans)] text-[#7A8B6F] text-[10px] uppercase text-center px-3"
+                        className="font-[family-name:var(--font-sans)] text-secondary text-[10px] uppercase text-center px-3"
                         style={{ letterSpacing: "0.2em" }}
                       >
                         {status === "queued"

@@ -1,0 +1,30 @@
+{
+  "word": "ORDEAL",
+  "pronunciation": "/ɔːrˈdiːl/",
+  "partOfSpeech": "noun",
+  "definition": "a painful or horrific experience, especially a protracted one",
+  "hook": "An ordeal used to be a trial with a verdict written in fire.",
+  "modernAnchor": "Now it just means a bad week at the DMV. Back then, it could kill you.",
+  "origin": {
+    "language": "Old English",
+    "era": "medieval England",
+    "originalWord": "ordal",
+    "originalMeaning": "judgment"
+  },
+  "journey": [
+    "Medieval courts sometimes settled guilt by ordal, an old English word simply meaning judgment.",
+    "The accused might carry hot iron or plunge a hand into boiling water to prove innocence.",
+    "If the wound healed clean within days, God had spoken, and the person walked free.",
+    "The fire and water faded from law, but the suffering stayed behind in the word."
+  ],
+  "payoff": {
+    "setupWord": "ORDEAL",
+    "connector": "is, literally,",
+    "revelation": "A JUDGMENT"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BERSERK"
+  },
+  "musicVariant": "dark"
+}

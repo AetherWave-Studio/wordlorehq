@@ -1,0 +1,107 @@
+{
+  "id": "wordlore",
+  "name": "Wordlore",
+  "wordmark": "WORDLORE",
+  "tagline": "Every word has a story.",
+  "site": {
+    "url": "https://wordlorehq.com",
+    "email": "info@wordlorehq.com",
+    "description": "Short-form etymology. Every word has a story.",
+    "footerNote": "All etymologies sourced from public scholarship.",
+    "blurb": "Short-form etymology, told properly. We dig up where the everyday words you use actually came from - the demon-haunted, the holy, the absurd. The English you speak is haunted. We just point at the ghosts."
+  },
+  "socials": {
+    "youtube": "https://www.youtube.com/@wordlorehq",
+    "tiktok": "https://www.tiktok.com/@wordlorehq",
+    "instagram": "https://www.instagram.com/wordlorehq",
+    "facebook": "https://www.facebook.com/wordlorehq",
+    "threads": "https://www.threads.com/@wordlorehq",
+    "x": null
+  },
+  "palette": {
+    "background": "#0F1A2E",
+    "surface": "#F4E8D0",
+    "accent": "#C9A961",
+    "payoff": "#8B2635",
+    "secondary": "#7A8B6F"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "displayItalic": "Cormorant Garamond",
+    "body": "Inter"
+  },
+  "narration": {
+    "model": "tts-1-hd",
+    "voice": "fable",
+    "speed": 0.85
+  },
+  "captions": {
+    "titlePattern": "{WORD} literally means \"{revelation}\"",
+    "signature": "Every word has a story.",
+    "hashtags": {
+      "youtube": [
+        "etymology",
+        "wordhistory",
+        "shorts",
+        "{word}",
+        "language"
+      ],
+      "facebook": [
+        "etymology",
+        "wordhistory",
+        "shorts",
+        "{word}",
+        "language"
+      ],
+      "tiktok": [
+        "etymology",
+        "wordhistory",
+        "fyp",
+        "learnontiktok",
+        "wordsoftiktok",
+        "{word}",
+        "{originLanguage}",
+        "words",
+        "englishhistory"
+      ],
+      "instagram": [
+        "etymology",
+        "wordhistory",
+        "reels",
+        "language",
+        "englishlanguage",
+        "{word}",
+        "words",
+        "linguistics"
+      ],
+      "x": []
+    }
+  },
+  "cadence": {
+    "episodesPerWeek": 4,
+    "publishDays": [
+      "Monday",
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ],
+    "publishTime": "9 AM MT",
+    "publishDaysShort": [
+      "Mon",
+      "Tue",
+      "Thu",
+      "Fri"
+    ]
+  },
+  "trailer": {
+    "narration": [
+      "Every word you say has a buried history.",
+      "NIGHTMARE used to mean demon attack.",
+      "GOODBYE was once a prayer.",
+      "DISASTER literally means bad star.",
+      "The English you speak is haunted.",
+      "{name}. {tagline}",
+      "New stories every {publishDays}."
+    ]
+  }
+}

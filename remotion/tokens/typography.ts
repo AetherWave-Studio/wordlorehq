@@ -1,5 +1,5 @@
 /**
- * Wordlore Typography — LOCKED
+ * Channel typography - three roles, sourced from channel.config.json.
  *
  * Three typefaces, each with a specific role. Auto-fit tier tables determine
  * font sizes for words of varying length so the layout stays consistent.
@@ -7,15 +7,17 @@
  * All sizes are calibrated for 1080×1920 output.
  */
 
+import { fontStack } from '../../src/lib/channel';
+
 export const fonts = {
   /** Display serif for hero words (Beat 2). Use bold weight. */
-  serif: '"Playfair Display", Georgia, serif',
+  display: fontStack('display'),
 
   /** Italic serif for origin words (Beat 4), brand mark, connective text. */
-  serifItalic: '"Cormorant Garamond", Georgia, serif',
+  displayItalic: fontStack('displayItalic'),
 
   /** Clean sans for definitions, captions, modern body text. */
-  sans: '"Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
+  body: fontStack('body'),
 } as const;
 
 /**

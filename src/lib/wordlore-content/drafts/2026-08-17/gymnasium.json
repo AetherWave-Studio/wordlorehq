@@ -1,0 +1,30 @@
+{
+  "word": "GYMNASIUM",
+  "pronunciation": "/dʒɪmˈneɪ.zi.əm/",
+  "partOfSpeech": "noun",
+  "definition": "a room or building equipped for indoor sports and exercise",
+  "hook": "The first gymnasiums required you to take your clothes off at the door.",
+  "modernAnchor": "Now it's treadmills and fluorescent lights, but the name remembers something far more exposed.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "gymnasion",
+    "originalMeaning": "place to train naked"
+  },
+  "journey": [
+    "Greek athletes trained and competed completely nude, believing clothing hid the body's true strength.",
+    "The word gymnasion came from gymnos, meaning naked, describing exactly what happened inside the walls.",
+    "These were also centers of philosophy and debate, where Plato and Aristotle taught between the exercises.",
+    "Romans borrowed the building but kept their clothes on, and the nakedness quietly vanished from the word."
+  ],
+  "payoff": {
+    "setupWord": "GYMNASIUM",
+    "connector": "is, literally,",
+    "revelation": "A PLACE TO BE NAKED"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ORDEAL"
+  },
+  "musicVariant": "light"
+}
