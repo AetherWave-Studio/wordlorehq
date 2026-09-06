@@ -20,7 +20,11 @@ Three failures produced nine weeks of silence between 2026-07-06 and
    outcome branch, not `master`, so every run starts from a `master` that never
    received the last run's output - including the refilled word pool. The pool
    read empty, the stop condition fired, and the run reported success in 82
-   seconds. Step 8 exists to break that loop.
+   seconds. This is now closed from the repo side: pushing a
+   `claude/intelligent-franklin*` branch triggers
+   `.github/workflows/adopt-routine-output.yml`, which typechecks, lints,
+   builds and then merges it into `master`. Step 8 still tries `master`
+   directly, and the workflow is the backstop when it cannot.
 2. **The pool ran dry and the routine treated that as an exit.** Refilling is
    now step 2, before selection.
 3. **Weeks were marked rendered with no MP4 in the commit.** Twelve episodes
@@ -40,6 +44,17 @@ to `.wordlore-context/word-candidates.md` and to `available` until it holds at
 least 12. Vet each against the four selection criteria in that file, and check
 every one against `used[]` before adding it. Post to Discord that you refilled
 and with which words. Only stop if you cannot produce 4 usable words.
+
+**2b. Clear the backlog before adding to it.** Read `state.json` for any word
+whose render status is `missing` - recorded `done` with no MP4 in
+`public/episodes/`. Those episodes are already written; only the render is
+absent. Re-render up to 4 of them (step 6's procedure) and commit them before
+drafting anything new. They are paid-for work: do not re-draft them, do not
+retire the words, and do not move them back to `available`.
+
+If more than 4 are missing, take the oldest week first and leave the rest for
+next week's run. If clearing the backlog fills the week, skip steps 3-5 and go
+straight to committing - a week of recovered episodes is a good week.
 
 **3. Select 4 words** from `available`:
 
@@ -83,17 +98,27 @@ git commit -m "feat(wordlore): week <YYYY-MM-DD> - <word1>, <word2>, <word3>, <w
 ```
 
 **8. Push so that `master` actually receives it.** Try `git push origin
-HEAD:master` first. If the push is redirected or rejected because this session
-may only write to its own outcome branch, push the branch, then say so
-explicitly in the Discord message with the branch name, because somebody has to
-merge it and nothing else will tell them. Do not treat a successful push to an
-outcome branch as a finished week.
+HEAD:master` first. If that is redirected or rejected because this session may
+only write to its own outcome branch, push the branch instead - the
+`Adopt routine output` workflow validates it and merges it into `master`
+automatically.
+
+Either way, **check where it landed before reporting**: after pushing, run
+`git ls-remote origin master` and confirm master moved, or name the branch and
+the workflow run in the Discord message. A week sitting unmerged on a branch is
+not a finished week, and the nine-week stall was invisible precisely because
+nobody said so.
 
 **9. Post to `$DISCORD_WEBHOOK_URL`:**
 
 ```json
-{"content":"Wordlore week <YYYY-MM-DD> ready: <word1>, <word2>, <word3>, <word4>. Landed on <branch>. Review and publish at https://wordlorehq.com/admin/publish on Mon/Tue/Thu/Fri 9 AM MT."}
+{"content":"Wordlore week <YYYY-MM-DD> ready: <word1>, <word2>, <word3>, <word4>. Landed on <branch/master>. Backlog: <n> rendered episodes still unpublished. Review and publish at https://wordlorehq.com/admin/publish on Mon/Tue/Thu/Fri 9 AM MT."}
 ```
+
+Count the backlog from `state.json`: every word with a render on disk and no
+entry in its week's `publishes`. As of 2026-09-06 that is 20 episodes across
+eight weeks, none of which has ever been posted. They are the publishing queue,
+not dead stock - new weeks go behind them, not instead of them.
 
 ## Stop conditions
 
@@ -112,4 +137,6 @@ Post to Discord with the detail, then exit:
 - Force-push.
 - Reuse a word from `used[]` under any circumstance.
 - Mark a render `done` without confirming the file.
-- Report a run as complete when the week is sitting on an unmerged branch.
+- Report a run as complete without checking where the commit landed.
+- Discard, re-draft or retire an episode that is already written. Every word in
+  `used[]` was paid for once.
