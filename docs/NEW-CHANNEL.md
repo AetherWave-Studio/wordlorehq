@@ -74,9 +74,13 @@ Things a second channel will hit that the config does not solve:
   the admin publish page generates captions and links out to each studio. Per
   channel that is roughly 20 minutes a week of hand-uploading, and it is the
   single biggest candidate for automation before a second channel exists.
-- **`publishes` in `state.json` is never written.** There is no
-  mark-as-published control yet, so the dashboard cannot tell you what actually
-  shipped.
+- **`publishes` in `state.json` is never written, and the empty field lies.**
+  There is no mark-as-published control, so the dashboard cannot tell you what
+  shipped - and an empty `publishes` reads as "never posted" when it actually
+  means "never recorded". Wordlore had published every episode through week
+  2026-08-17 while that field sat empty for all of them. Either wire the
+  control up or stop deriving anything from the field; do not let a second
+  channel inherit the ambiguity.
 
 ## 4. The queue rule, which is what stalled Wordlore
 
