@@ -1,6 +1,8 @@
 import {
   readState,
   readDraft,
+  formatWeek,
+  weekPhase,
   platformCaption,
   episodeTitle,
   type Episode,
@@ -74,15 +76,13 @@ export default async function PublishPage() {
               className="font-[family-name:var(--font-serif)] text-surface text-2xl"
               style={{ letterSpacing: "0.02em" }}
             >
-              Week of {b.key}
-              {b.key === state.currentWeek && (
-                <span
-                  className="ml-3 font-[family-name:var(--font-sans)] text-accent text-xs uppercase"
-                  style={{ letterSpacing: "0.2em" }}
-                >
-                  current
-                </span>
-              )}
+              {formatWeek(b.key)}
+              <span
+                className="ml-3 font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
+                style={{ letterSpacing: "0.2em" }}
+              >
+                {weekPhase(b.key)}
+              </span>
             </h2>
             <p
               className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
