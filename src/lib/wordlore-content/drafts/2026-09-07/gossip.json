@@ -1,0 +1,30 @@
+{
+  "word": "GOSSIP",
+  "pronunciation": "/ˈɡɒs.ɪp/",
+  "partOfSpeech": "noun",
+  "definition": "casual talk or rumor about the private lives of other people",
+  "hook": "Gossip started as a compliment, not an insult.",
+  "modernAnchor": "We swap it at the water cooler and scroll it in comment sections. Gossip never goes out of style.",
+  "origin": {
+    "language": "Old English",
+    "era": "before 1000",
+    "originalWord": "godsibb",
+    "originalMeaning": "a godparent"
+  },
+  "journey": [
+    "In Old English, a godsibb was your godparent, a person bound to your family before God.",
+    "Godsibb shrank to gossip and widened to any close friend you shared secrets and news with.",
+    "By Shakespeare's day, women who gossiped together were assumed to be trading rumor, not just news.",
+    "The friend became the talk. Gossip is literally the word for someone who stood as your godparent."
+  ],
+  "payoff": {
+    "setupWord": "GOSSIP",
+    "connector": "is, literally,",
+    "revelation": "YOUR GODPARENT"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MALARIA"
+  },
+  "musicVariant": "warm"
+}

@@ -1,0 +1,30 @@
+{
+  "word": "MALARIA",
+  "pronunciation": "/məˈleə.ri.ə/",
+  "partOfSpeech": "noun",
+  "definition": "a disease carried by mosquitoes that causes recurring fever and chills",
+  "hook": "Malaria is named after a theory doctors got completely wrong.",
+  "modernAnchor": "It still kills hundreds of thousands of people a year, mostly children, mostly in the tropics.",
+  "origin": {
+    "language": "Italian",
+    "era": "1700s",
+    "originalWord": "mala aria",
+    "originalMeaning": "bad air"
+  },
+  "journey": [
+    "Italians living near Rome's marshes grew sick again and again, and blamed the fetid swamp air.",
+    "They called it mala aria, bad air, certain the stench itself carried the fever into their lungs.",
+    "The real killer was a parasite riding mosquito bites, not the smell drifting off the water.",
+    "Science replaced the theory a century later, but malaria kept the name of a wrong idea."
+  ],
+  "payoff": {
+    "setupWord": "MALARIA",
+    "connector": "is, literally,",
+    "revelation": "BAD AIR"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "JUGGERNAUT"
+  },
+  "musicVariant": "dark"
+}

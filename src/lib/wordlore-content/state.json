@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-08-17",
+  "currentWeek": "2026-09-07",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -63,7 +63,7 @@
     },
     "2026-06-29": {
       "status": "ready",
-      "renderDate": "2026-06-22",
+      "renderDate": "2026-09-07",
       "words": ["volcano", "cereal", "tantalize", "nostalgia"],
       "renders": {
         "volcano": "done",
@@ -94,6 +94,18 @@
         "checkmate": "done",
         "gymnasium": "done",
         "ordeal": "done"
+      },
+      "publishes": {}
+    },
+    "2026-09-07": {
+      "status": "ready",
+      "renderDate": "2026-09-07",
+      "words": ["juggernaut", "villain", "gossip", "malaria"],
+      "renders": {
+        "juggernaut": "done",
+        "villain": "done",
+        "gossip": "done",
+        "malaria": "done"
       },
       "publishes": {}
     }

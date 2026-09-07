@@ -1,0 +1,30 @@
+{
+  "word": "VILLAIN",
+  "pronunciation": "/ˈvɪl.ən/",
+  "partOfSpeech": "noun",
+  "definition": "a character whose evil actions or motives are important to a story",
+  "hook": "A villain used to just mean the guy who worked the fields.",
+  "modernAnchor": "Every story needs one, the mustache-twirling, plan-hatching villain we love to hate.",
+  "origin": {
+    "language": "Latin",
+    "era": "medieval Europe",
+    "originalWord": "villanus",
+    "originalMeaning": "a farmhand"
+  },
+  "journey": [
+    "In Latin, villanus simply named a farmhand, someone who worked the fields around a country villa.",
+    "Nobles saw peasants as coarse and dishonest, so villain drifted from farmhand toward scoundrel and criminal.",
+    "By Shakespeare's day, villain meant a schemer, no longer someone who simply worked the land.",
+    "Class prejudice wrote the definition. The word never forgot its start, plowing fields, not planning crimes."
+  ],
+  "payoff": {
+    "setupWord": "VILLAIN",
+    "connector": "is, literally,",
+    "revelation": "A FARMHAND"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "GOSSIP"
+  },
+  "musicVariant": "light"
+}

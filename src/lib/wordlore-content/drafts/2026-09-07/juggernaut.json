@@ -1,0 +1,30 @@
+{
+  "word": "JUGGERNAUT",
+  "pronunciation": "/ˈdʒʌɡ.ər.nɔːt/",
+  "partOfSpeech": "noun",
+  "definition": "a huge, unstoppable force or institution that crushes everything in its path",
+  "hook": "The crushing you picture never happened quite the way the story says.",
+  "modernAnchor": "We call a hit franchise or a landslide election a juggernaut, an unstoppable, crushing force.",
+  "origin": {
+    "language": "Sanskrit",
+    "era": "ancient India",
+    "originalWord": "Jagannath",
+    "originalMeaning": "lord of the universe"
+  },
+  "journey": [
+    "Jagannath, lord of the universe, is a Hindu deity pulled through Puri on an enormous wooden chariot.",
+    "British colonial visitors watched the crowds and claimed devotees hurled themselves under the wheels to die.",
+    "Historians now doubt that claim, calling it a colonial exaggeration of accidental deaths during a chaotic festival.",
+    "The myth stuck anyway. Juggernaut came to mean an unstoppable crushing force, not a universal lord."
+  ],
+  "payoff": {
+    "setupWord": "JUGGERNAUT",
+    "connector": "is, literally,",
+    "revelation": "LORD OF THE UNIVERSE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "VILLAIN"
+  },
+  "musicVariant": "dark"
+}

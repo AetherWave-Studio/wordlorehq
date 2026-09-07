@@ -7,12 +7,6 @@
       "payoff": "Arabic \"hashishin,\" hashish user, tied to the medieval Nizari order"
     },
     {
-      "word": "JUGGERNAUT",
-      "tier": 1,
-      "language": "Sanskrit",
-      "payoff": "Sanskrit \"Jagannath,\" a temple deity whose chariot was said to crush devotees"
-    },
-    {
       "word": "PANDEMONIUM",
       "tier": 1,
       "language": "Greek",
@@ -23,12 +17,6 @@
       "tier": 2,
       "language": "Arabic",
       "payoff": "Arabic \"makhazin,\" storehouses, originally for ammunition"
-    },
-    {
-      "word": "VILLAIN",
-      "tier": 2,
-      "language": "Latin",
-      "payoff": "Latin \"villanus,\" just a farmhand at a country villa"
     },
     {
       "word": "HAZARD",
@@ -121,22 +109,10 @@
       "payoff": "Middle English \"bone fire,\" a fire built of bones"
     },
     {
-      "word": "GOSSIP",
-      "tier": 2,
-      "language": "Old English",
-      "payoff": "Old English \"godsibb,\" a godparent - then a close friend, then their talk"
-    },
-    {
       "word": "NICE",
       "tier": 2,
       "language": "Latin",
       "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
-    },
-    {
-      "word": "MALARIA",
-      "tier": 2,
-      "language": "Italian",
-      "payoff": "Italian \"mala aria,\" bad air, from the belief that swamp vapour caused it"
     },
     {
       "word": "VACCINE",
@@ -353,6 +329,26 @@
       "word": "ORDEAL",
       "week": "2026-08-17",
       "drafted": "2026-08-13"
+    },
+    {
+      "word": "JUGGERNAUT",
+      "week": "2026-09-07",
+      "drafted": "2026-09-07"
+    },
+    {
+      "word": "VILLAIN",
+      "week": "2026-09-07",
+      "drafted": "2026-09-07"
+    },
+    {
+      "word": "GOSSIP",
+      "week": "2026-09-07",
+      "drafted": "2026-09-07"
+    },
+    {
+      "word": "MALARIA",
+      "week": "2026-09-07",
+      "drafted": "2026-09-07"
     }
   ]
 }
