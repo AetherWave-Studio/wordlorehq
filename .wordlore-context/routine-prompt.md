@@ -20,11 +20,15 @@ Three failures produced nine weeks of silence between 2026-07-06 and
    outcome branch, not `master`, so every run starts from a `master` that never
    received the last run's output - including the refilled word pool. The pool
    read empty, the stop condition fired, and the run reported success in 82
-   seconds. This is now closed from the repo side: pushing a
-   `claude/intelligent-franklin*` branch triggers
+   seconds. This is now closed from the repo side: pushing a `claude/**` branch
+   whose diff is confined to episode content triggers
    `.github/workflows/adopt-routine-output.yml`, which typechecks, lints,
    builds and then merges it into `master`. Step 8 still tries `master`
    directly, and the workflow is the backstop when it cannot.
+
+   **A run that also changes code will not auto-merge** - that guard is
+   deliberate. Land the content first, then raise the code change as a pull
+   request rather than bundling it in.
 2. **The pool ran dry and the routine treated that as an exit.** Refilling is
    now step 2, before selection.
 3. **Weeks were marked rendered with no MP4 in the commit.** Twelve episodes
@@ -101,7 +105,8 @@ git commit -m "feat(wordlore): week <YYYY-MM-DD> - <word1>, <word2>, <word3>, <w
 HEAD:master` first. If that is redirected or rejected because this session may
 only write to its own outcome branch, push the branch instead - the
 `Adopt routine output` workflow validates it and merges it into `master`
-automatically.
+automatically, whatever your branch is called, as long as the diff is only
+episode content.
 
 Either way, **check where it landed before reporting**: after pushing, run
 `git ls-remote origin master` and confirm master moved, or name the branch and
