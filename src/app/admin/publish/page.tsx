@@ -9,6 +9,8 @@ import {
   type WeekState,
 } from "@/lib/wordlore-content";
 import { CopyButton } from "./copy-button";
+import { ScheduleWeek } from "./schedule-week";
+import { channel } from "@/lib/channel";
 
 export const dynamic = "force-dynamic";
 
@@ -52,13 +54,17 @@ export default async function PublishPage() {
           Captions and publish
         </h1>
         <p className="font-[family-name:var(--font-sans)] text-surface/60 text-sm max-w-prose">
-          Captions are generated from each episode&apos;s JSON. Copy a caption,
-          click the studio link, upload the MP4 - every rendered episode is in{" "}
-          <code className="text-accent">public/episodes/</code> in the repo
-          and playable on the render page - then paste the title + caption and
-          publish. Publishing is not recorded anywhere yet, so{" "}
-          <code className="text-accent">publishes</code> in state.json stays
-          empty until the mark-as-published toggle ships.
+          <strong className="text-surface/90">Preview schedule</strong> hands the
+          whole week to AetherWave, which schedules every episode to every
+          connected platform at {channel.cadence.publishTime} on{" "}
+          {channel.cadence.publishDaysShort.join("/")}. Nothing posts until you
+          confirm, and scheduling the same week twice will not post it twice.
+          What went out is recorded on AetherWave rather than in{" "}
+          <code className="text-accent">publishes</code>, which nothing writes.
+          <br />
+          <br />
+          To post by hand instead: copy a caption, open the studio link, and
+          upload the MP4 from <code className="text-accent">public/episodes/</code>.
         </p>
       </header>
 
@@ -91,6 +97,10 @@ export default async function PublishPage() {
               {b.week.status}
             </p>
           </header>
+
+          {b.week.words.every((w) => b.week.renders[w] === "done") && (
+            <ScheduleWeek week={b.key} episodeCount={b.week.words.length} />
+          )}
 
           <div className="space-y-10">
             {b.episodes.map((ep) => {
