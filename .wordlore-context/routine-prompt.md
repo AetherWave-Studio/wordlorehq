@@ -62,8 +62,8 @@ If the target already has an entry, stop and post to Discord:
 
 **Do not backfill a week older than `thisMonday`.** Those publish slots have
 passed and cannot be recovered by relabelling. Weeks 2026-08-24 and 2026-08-31
-have no batch and never will; that gap is history, not a task. What fills the
-schedule instead is the unpublished backlog.
+have no batch and never will; that gap is history, not a task. The channel
+restarts from the current week, not from the hole.
 
 **2. Check the queue, and refill it rather than stopping.** If
 `word-pipeline.json.available` holds fewer than 8 entries, add new candidates
@@ -144,13 +144,16 @@ nobody said so.
 **9. Post to `$DISCORD_WEBHOOK_URL`:**
 
 ```json
-{"content":"Wordlore week <YYYY-MM-DD> ready: <word1>, <word2>, <word3>, <word4>. Landed on <branch/master>. Backlog: <n> rendered episodes still unpublished. Review and publish at https://wordlorehq.com/admin/publish on Mon/Tue/Thu/Fri 9 AM MT."}
+{"content":"Wordlore week <YYYY-MM-DD> ready: <word1>, <word2>, <word3>, <word4>. Landed on <branch/master>. <n> episodes still missing a render. Captions and links at https://wordlorehq.com/admin/publish - publish Mon/Tue/Thu/Fri 9 AM MT."}
 ```
 
-Count the backlog from `state.json`: every word with a render on disk and no
-entry in its week's `publishes`. As of 2026-09-07 that is 24 episodes across
-eight weeks, none of which has ever been posted. They are the publishing queue,
-not dead stock - new weeks go behind them, not instead of them.
+`<n>` is the count of words whose status is `missing`, which is a fact the repo
+can check. **Do not report a count of unpublished episodes.** Nothing records
+publishing: `publishes` is empty for every week ever produced, and that is a
+missing feature, not a missing upload. Everything up to and including week
+2026-08-17 went out on schedule. Reading the empty field as "never posted" is
+exactly the mistake the render-status reconciliation exists to prevent, made
+one field over.
 
 ## Stop conditions
 
