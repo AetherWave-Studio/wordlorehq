@@ -42,6 +42,27 @@ const PLATFORM_CAPTION: Record<string, CaptionPlatform> = {
   threads: "instagram",
 };
 
+/**
+ * The handle a social URL points at: the last path segment, minus any '@'.
+ *
+ *   https://www.youtube.com/@wordlorehq  -> wordlorehq
+ *   https://www.instagram.com/wordlorehq -> wordlorehq
+ *
+ * This is what pins the schedule to THIS channel's accounts. One Blotato
+ * workspace can hold several brands, and without a named handle the platform
+ * picks whichever account it lists first - which is how one channel's episodes
+ * end up on another channel's feed.
+ */
+function handleFromUrl(url: string | null): string | undefined {
+  if (!url) return undefined;
+  try {
+    const last = new URL(url).pathname.split("/").filter(Boolean).pop();
+    return last ? last.replace(/^@/, "") : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export async function POST(request: Request) {
   const apiKey = process.env.AETHERWAVE_API_KEY;
   if (!apiKey) {
@@ -107,11 +128,21 @@ export async function POST(request: Request) {
     }),
   );
 
+  // Name the account per platform, from the socials this channel already
+  // declares. A mismatch fails the dry run loudly instead of posting to
+  // whichever account happened to be listed first.
+  const accountHandles: Record<string, string> = {};
+  for (const p of platforms) {
+    const h = handleFromUrl(channel.socials[p as keyof typeof channel.socials]);
+    if (h) accountHandles[p] = h;
+  }
+
   const payload = {
     channel: channel.id,
     week,
     episodes,
     platforms,
+    accountHandles,
     days: channel.cadence.publishDaysShort,
     postTime: "09:00",
     timeZone: "America/Denver",
