@@ -1,4 +1,15 @@
-import { readState, readDraft, type Episode, type WeekState } from "@/lib/wordlore-content";
+import {
+  readState,
+  readDraft,
+  formatWeek,
+  formatWeekDate,
+  mondayOf,
+  renderedCount,
+  weekPhase,
+  weeksBetween,
+  type Episode,
+  type WeekState,
+} from "@/lib/wordlore-content";
 
 export const dynamic = "force-dynamic";
 
@@ -31,6 +42,10 @@ type WeekBundle = {
 export default async function RenderPage() {
   const state = await readState();
   const weekKeys = Object.keys(state.weeks).sort((a, b) => b.localeCompare(a));
+  const thisWeek = mondayOf();
+  const latestBatch = weekKeys[0];
+  // The gap that matters: is there a batch for the week we are actually in?
+  const thisWeekProduced = weekKeys.includes(thisWeek);
   const bundles: WeekBundle[] = await Promise.all(
     weekKeys.map(async (k) => ({
       key: k,
@@ -58,6 +73,23 @@ export default async function RenderPage() {
           <span className="text-payoff">missing</span> means the week was
           recorded as rendered but the MP4 never landed.
         </p>
+
+        {!thisWeekProduced && (
+          <p
+            className="mt-4 border border-payoff/40 rounded-lg px-4 py-3 font-[family-name:var(--font-sans)] text-sm text-surface/80"
+            role="status"
+          >
+            <span className="text-payoff uppercase text-[10px] tracking-[0.2em]">
+              No batch this week
+            </span>
+            <br />
+            Nothing has been produced for the week of{" "}
+            {formatWeekDate(thisWeek)}. The newest batch is the week of{" "}
+            {formatWeekDate(latestBatch)}, {weekPhase(latestBatch)}. Publish
+            from the backlog below; the next routine run produces the coming
+            week.
+          </p>
+        )}
       </header>
 
       {bundles.map((b) => (
@@ -67,13 +99,21 @@ export default async function RenderPage() {
               className="font-[family-name:var(--font-serif)] text-surface text-xl"
               style={{ letterSpacing: "0.02em" }}
             >
-              Week of {b.key}
-              {b.key === state.currentWeek && (
+              {formatWeek(b.key)}
+              {weeksBetween(thisWeek, b.key) === 0 && (
                 <span
                   className="ml-3 font-[family-name:var(--font-sans)] text-accent text-xs uppercase"
                   style={{ letterSpacing: "0.2em" }}
                 >
-                  current
+                  this week
+                </span>
+              )}
+              {b.key === latestBatch && b.key !== thisWeek && (
+                <span
+                  className="ml-3 font-[family-name:var(--font-sans)] text-accent/70 text-xs uppercase"
+                  style={{ letterSpacing: "0.2em" }}
+                >
+                  latest batch
                 </span>
               )}
             </h2>
@@ -81,6 +121,9 @@ export default async function RenderPage() {
               className="font-[family-name:var(--font-sans)] text-secondary text-xs uppercase"
               style={{ letterSpacing: "0.2em" }}
             >
+              {weekPhase(b.key)} &middot; {renderedCount(b.week)}/
+              {b.week.words.length} rendered
+              {b.week.renderDate ? ` \u00b7 ${b.week.renderDate}` : ""} &middot;{" "}
               {WEEK_STATUS_LABEL[b.week.status]}
             </p>
           </div>

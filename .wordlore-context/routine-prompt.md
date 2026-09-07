@@ -34,13 +34,36 @@ Three failures produced nine weeks of silence between 2026-07-06 and
 3. **Weeks were marked rendered with no MP4 in the commit.** Twelve episodes
    were recorded `done` and do not exist. Step 6 now verifies the file before
    the flag.
+4. **The week label drifted from the calendar.** Nine missed weeks left
+   `currentWeek` reading `2026-08-17` well into September, and because the
+   dashboard took its "current" badge from that field, a three-week-old batch
+   presented as this week's work. Step 1 now derives the target from the
+   calendar, and the dashboard labels every batch by its real age.
 
 ## Steps
 
-**1. Compute the target week.** The Monday of the next upcoming week
-(`YYYY-MM-DD`). If `state.json.currentWeek` is already at or past that label,
-stop and post to Discord: `Wordlore routine: week <label> already on disk,
-skipping.`
+**1. Compute the target week from the CALENDAR, not from `currentWeek`.**
+
+A week key is the Monday of the week the batch publishes in. `currentWeek` only
+means "the newest batch produced" - on 2026-09-07 it still read `2026-08-17`,
+three weeks stale, and the dashboard badged that batch "current". Never treat
+`currentWeek` as the date.
+
+Let `thisMonday` be the Monday of the week you are running in (UTC), and
+`nextMonday` be `thisMonday + 7`.
+
+- If `thisMonday` has no entry in `state.json.weeks` **and** today is Monday,
+  Tuesday or Wednesday, the target is `thisMonday` - most of the publish week
+  is still ahead, so fill it.
+- Otherwise the target is `nextMonday`.
+
+If the target already has an entry, stop and post to Discord:
+`Wordlore routine: week <target> already on disk, skipping.`
+
+**Do not backfill a week older than `thisMonday`.** Those publish slots have
+passed and cannot be recovered by relabelling. Weeks 2026-08-24 and 2026-08-31
+have no batch and never will; that gap is history, not a task. What fills the
+schedule instead is the unpublished backlog.
 
 **2. Check the queue, and refill it rather than stopping.** If
 `word-pipeline.json.available` holds fewer than 8 entries, add new candidates
@@ -48,17 +71,6 @@ to `.wordlore-context/word-candidates.md` and to `available` until it holds at
 least 12. Vet each against the four selection criteria in that file, and check
 every one against `used[]` before adding it. Post to Discord that you refilled
 and with which words. Only stop if you cannot produce 4 usable words.
-
-**2b. Clear the backlog before adding to it.** Read `state.json` for any word
-whose render status is `missing` - recorded `done` with no MP4 in
-`public/episodes/`. Those episodes are already written; only the render is
-absent. Re-render up to 4 of them (step 6's procedure) and commit them before
-drafting anything new. They are paid-for work: do not re-draft them, do not
-retire the words, and do not move them back to `available`.
-
-If more than 4 are missing, take the oldest week first and leave the rest for
-next week's run. If clearing the backlog fills the week, skip steps 3-5 and go
-straight to committing - a week of recovered episodes is a good week.
 
 **3. Select 4 words** from `available`:
 
@@ -94,6 +106,21 @@ the base image - install them before the first render.
 `done` in `state.json`.** A flag with no file behind it is worse than a failed
 render, because the dashboard then reports work that was never produced.
 
+**6b. Then clear backlog, if the week itself came out clean.** Read
+`state.json` for any word whose status is `missing` - recorded `done` with no
+MP4 in `public/episodes/`. Those episodes are already written; only the render
+is absent. Once the target week's own four have rendered and been verified,
+re-render up to **4** of the missing ones, oldest week first, using step 6's
+procedure. Stop at 8 renders total for the run.
+
+They are paid-for work: do not re-draft them, do not retire the words, do not
+move them back to `available`, and do not change their week key. Only the
+week's `renderDate` changes, to the date you rendered on, so the filenames and
+the dashboard's on-disk check agree.
+
+If the target week fails to render, skip the backlog entirely and report - one
+broken week is a bug to look at, not a reason to start a second batch.
+
 **7. Commit** everything, including the MP4s:
 
 ```
@@ -121,7 +148,7 @@ nobody said so.
 ```
 
 Count the backlog from `state.json`: every word with a render on disk and no
-entry in its week's `publishes`. As of 2026-09-06 that is 20 episodes across
+entry in its week's `publishes`. As of 2026-09-07 that is 24 episodes across
 eight weeks, none of which has ever been posted. They are the publishing queue,
 not dead stock - new weeks go behind them, not instead of them.
 
