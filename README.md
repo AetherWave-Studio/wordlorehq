@@ -29,9 +29,11 @@ week's four episodes. Its instructions live in
 in the repo rather than in a text box, so they can be fixed in review.
 
 **The routine cannot push to `master`.** Its session writes to an outcome
-branch (`claude/intelligent-franklin*`), so
-`.github/workflows/adopt-routine-output.yml` typechecks, lints, builds and then
-merges that branch into `master` for it. Between 2026-07-06 and 2026-09-05 that
+branch whose name is generated fresh each run, so
+`.github/workflows/adopt-routine-output.yml` identifies routine output by what
+it touches rather than what it is called: a `claude/**` branch with no open PR
+whose diff is confined to episode content is typechecked, linted, built and
+then merged into `master`. Anything touching code goes through a pull request. Between 2026-07-06 and 2026-09-05 that
 gap was open: every run started from a `master` that had never received the
 previous run's work, read an empty word queue, hit its own stop condition, and
 reported success in 82 seconds. Nine weeks produced nothing.
@@ -41,7 +43,7 @@ If a week goes missing again, check in this order:
 | Check | Where |
 |---|---|
 | Did the routine run? | Routine history - a very short "success" means it stopped early |
-| Did its branch land? | `git branch -r --list 'origin/claude/intelligent-franklin*'` vs `master` |
+| Did its branch land? | `git branch -r --list 'origin/claude/*'` vs `master` |
 | Did the adopt workflow pass? | Actions tab - a red run means the branch failed validation and stayed put |
 | Is the word queue fed? | `word-pipeline.json` `available` - below 8 entries needs a refill |
 | Do the MP4s exist? | `/admin/render` - `missing` means flagged done with no file |
