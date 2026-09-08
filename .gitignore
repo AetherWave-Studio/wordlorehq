@@ -57,6 +57,7 @@ next-env.d.ts
 
 # render bookkeeping artifacts (only the .mp4 is the deliverable)
 /public/episodes/*-render-props.json
+/public/episodes/*-thumb-props.json
 /public/episodes/*-metadata.txt
 /public/trailers/*-render-props.json
 
@@ -69,3 +70,4 @@ next-env.d.ts
 /public/episodes/*.mp4
 /public/episodes/*.mov
 /public/episodes/*.webm
+/public/episodes/*.jpg

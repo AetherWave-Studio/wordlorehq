@@ -14,6 +14,7 @@
 import React from 'react';
 import { Composition } from 'remotion';
 import { WordloreVideo, computeTotalFrames, type WordloreInput } from './Composition';
+import { WordloreThumbnail, THUMBNAIL_FRAME } from './Thumbnail';
 import { WordloreTrailer, TRAILER_TOTAL_FRAMES } from './Trailer';
 
 const defaultProps: WordloreInput = {
@@ -53,6 +54,7 @@ const defaultDuration = computeTotalFrames();
 // Cast through unknown for our strongly-typed Wordlore inputs.
 const WordloreVideoComp = WordloreVideo as unknown as React.FC<Record<string, unknown>>;
 const WordloreTrailerComp = WordloreTrailer as unknown as React.FC<Record<string, unknown>>;
+const WordloreThumbnailComp = WordloreThumbnail as unknown as React.FC<Record<string, unknown>>;
 
 export const Root: React.FC = () => {
   return (
@@ -72,6 +74,23 @@ export const Root: React.FC = () => {
       />
       {/* Channel trailer — fixed 30s, separate from the 7-beat WordloreVideo
           flow. Hardcoded script; only audioAssets flags come in as props. */}
+      {/* Episode thumbnail. Duration is one frame past THUMBNAIL_FRAME because
+          a composition must be long enough to contain the frame being stilled;
+          nothing here animates after that point anyway. */}
+      <Composition
+        id="WordloreThumbnail"
+        component={WordloreThumbnailComp}
+        durationInFrames={THUMBNAIL_FRAME + 1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          word: defaultProps.word,
+          pronunciation: defaultProps.pronunciation,
+          partOfSpeech: defaultProps.partOfSpeech,
+          definition: defaultProps.definition,
+        } as unknown as Record<string, unknown>}
+      />
       <Composition
         id="WordloreTrailer"
         component={WordloreTrailerComp}

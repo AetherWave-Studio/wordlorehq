@@ -55,10 +55,19 @@ const api = async (route, init) => {
   return body;
 };
 
-/** Local MP4s, if this checkout still has any. */
+/**
+ * Local episode media, if this checkout still has any.
+ *
+ * Both the video and its thumbnail: the platforms that let you set a cover
+ * (YouTube thumbnailUrl, Instagram coverImageUrl) need the image at a public
+ * URL, so it has to travel the same path as the MP4. Thumbnail props files are
+ * excluded - only the deliverables ship.
+ */
 async function localEpisodes() {
   try {
-    return (await readdir(EPISODE_DIR)).filter((f) => f.endsWith(".mp4")).sort();
+    return (await readdir(EPISODE_DIR))
+      .filter((f) => /\.(mp4|jpg)$/.test(f) && !f.includes("-props"))
+      .sort();
   } catch {
     return [];
   }
@@ -70,7 +79,7 @@ if (mode === "--import") {
     console.error(`No MP4s in ${EPISODE_DIR} to import.`);
     process.exit(1);
   }
-  console.log(`Importing ${files.length} episodes from ${SITE}/episodes/ ...`);
+  console.log(`Importing ${files.length} files from ${SITE}/episodes/ ...`);
   // Batched: the server fetches each source itself, and a hundred sequential
   // downloads in one request is a long time to hold a connection open.
   const BATCH = 8;
@@ -96,7 +105,7 @@ if (mode === "--upload") {
     console.error(`No MP4s in ${EPISODE_DIR} to upload.`);
     process.exit(1);
   }
-  console.log(`Uploading ${files.length} episodes to R2 ...`);
+  console.log(`Uploading ${files.length} files to R2 ...`);
   for (const name of files) {
     const { uploadUrl, contentType } = await api("/api/channel/media/upload-url", {
       method: "POST",
@@ -127,6 +136,9 @@ const manifest = {
   files: listing.files.map((f) => f.name).sort(),
 };
 await writeFile(MANIFEST, JSON.stringify(manifest, null, 2) + "\n");
+const videos = manifest.files.filter((f) => f.endsWith(".mp4")).length;
+const thumbs = manifest.files.filter((f) => f.endsWith(".jpg")).length;
 console.log(
-  `\nManifest: ${manifest.files.length} episodes, ${(listing.bytes / 1048576).toFixed(0)} MB at ${listing.baseUrl}`,
+  `\nManifest: ${videos} episodes + ${thumbs} thumbnails, ` +
+    `${(listing.bytes / 1048576).toFixed(0)} MB at ${listing.baseUrl}`,
 );
