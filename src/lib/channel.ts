@@ -112,6 +112,17 @@ export type ChannelConfig = {
    */
   media?: {
     baseUrl?: string | null;
+    /**
+     * Where TikTok should take its cover frame, in milliseconds.
+     *
+     * TikTok picks a frame rather than accepting an image, so the rendered
+     * thumbnail cannot reach it. Set this to a moment that is interesting in
+     * every episode - for a fixed-beat format that is a real constant, but
+     * check it against several episodes before trusting it, because beat
+     * lengths move with narration. Leave unset rather than guess: a wrong
+     * timestamp is a worse cover than TikTok's own choice.
+     */
+    coverTimestampMs?: number;
   };
   blotato?: {
     accounts?: Partial<Record<SocialPlatform, string>>;

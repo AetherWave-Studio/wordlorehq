@@ -24,6 +24,7 @@ import {
   readDraft,
   episodeTitle,
   episodeVideoFile,
+  episodeThumbFile,
   platformCaption,
   type CaptionPlatform,
 } from "@/lib/wordlore-content";
@@ -118,6 +119,7 @@ export async function POST(request: Request) {
     weekState.words.map(async (word) => {
       const draft = await readDraft(week, word);
       const file = episodeVideoFile(word, weekState.renderDate);
+      const thumb = episodeThumbFile(word, weekState.renderDate);
       const captions: Record<string, string> = {};
       for (const p of platforms) {
         captions[p] = platformCaption(draft, PLATFORM_CAPTION[p]);
@@ -126,6 +128,12 @@ export async function POST(request: Request) {
         episode: word,
         title: episodeTitle(draft),
         mediaUrl: episodeUrl(file!),
+        /* The still the platforms show before playback. Without it they take
+           their own first frame, which for this format is the blank one Beat 1
+           fades in from. Only some platforms accept it; the server decides. */
+        thumbnailUrl: thumb ? episodeUrl(thumb) : undefined,
+        /* TikTok takes a frame, not an image. */
+        coverTimestampMs: channel.media?.coverTimestampMs,
         captions,
       };
     }),

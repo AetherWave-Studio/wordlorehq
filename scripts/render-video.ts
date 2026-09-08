@@ -35,6 +35,7 @@ import { generateNarration, generateTrailerNarration } from './generate-narratio
 import type { WordloreInput } from '../remotion/Composition';
 import type { TrailerInput } from '../remotion/Trailer';
 import { beatBounds } from '../remotion/tokens/timing';
+import { THUMBNAIL_FRAME } from '../remotion/Thumbnail';
 import { applyPattern, channel, hashtags } from '../src/lib/channel';
 
 /**
@@ -221,6 +222,37 @@ async function renderVideo(inputArg: string): Promise<void> {
       `-c:v copy -c:a aac -b:a 192k "${tmpNormalized}"`
   );
   fs.renameSync(tmpNormalized, outputMp4);
+
+  // 4c. Episode thumbnail — the still every platform shows before playback.
+  //
+  // Not a frame grab. The video's first frame is deliberately blank (Beat 1's
+  // hook fades in over 12 frames), so a platform left to pick its own thumbnail
+  // shows the background and nothing else - which is what shipped the week this
+  // was added. Beat durations also vary per episode with narration length, so
+  // there is no fixed timestamp where the word is reliably up.
+  //
+  // WordloreThumbnail renders Beat 2 held at rest instead: the word in gold
+  // with its definition, which is the frame that used to be picked by hand.
+  console.log('\n[4c] Rendering episode thumbnail');
+  const outputThumb = path.join(EPISODES_DIR, `${wordSlug}-${date}.jpg`);
+  const thumbPropsPath = path.join(EPISODES_DIR, `${wordSlug}-thumb-props.json`);
+  fs.writeFileSync(
+    thumbPropsPath,
+    JSON.stringify(
+      {
+        word: renderProps.word,
+        pronunciation: renderProps.pronunciation,
+        partOfSpeech: renderProps.partOfSpeech,
+        definition: renderProps.definition,
+      },
+      null,
+      2,
+    ),
+  );
+  execSync(
+    `npx remotion still index.ts WordloreThumbnail "${outputThumb}" --props="${thumbPropsPath}" --frame=${THUMBNAIL_FRAME} --public-dir="${publicDir}" --ignore-certificate-errors`,
+    { stdio: 'inherit', cwd: REMOTION_DIR }
+  );
 
   // 5. Metadata
   const metadataPath = path.join(EPISODES_DIR, `${wordSlug}-${date}-metadata.txt`);

@@ -109,6 +109,19 @@ export function episodeVideoFile(
 }
 
 /**
+ * The thumbnail filename for a rendered episode.
+ *
+ * Rendered alongside the MP4 and uploaded with it, because the platforms that
+ * accept a cover image (YouTube, Instagram) need it at a public URL.
+ */
+export function episodeThumbFile(
+  word: string,
+  renderDate: string | null,
+): string | null {
+  return renderDate ? `${word.toLowerCase()}-${renderDate}.jpg` : null;
+}
+
+/**
  * Every episode file this channel has, wherever it is kept.
  *
  * Two sources, unioned. `public/episodes/` is the local one - a freshly
