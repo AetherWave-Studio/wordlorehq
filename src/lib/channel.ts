@@ -156,13 +156,38 @@ export function applyPattern(
     .replace(/\{revelation\}/g, revelation.toLowerCase());
 }
 
-/** Render a platform's hashtag list for one episode. */
+/**
+ * How many hashtags each platform will accept on one post.
+ *
+ * These are platform facts, not channel taste, so they live in code rather
+ * than in `channel.config.json`. Instagram is the strict one: it rejects the
+ * whole post with a 422 rather than ignoring the extras, which is a failure
+ * you only see at publish time - a dry run never calls the network, so it
+ * cannot catch this for you. Zero means no published limit worth enforcing.
+ */
+const HASHTAG_LIMIT: Record<CaptionPlatform, number> = {
+  youtube: 15,
+  tiktok: 30,
+  instagram: 5,
+  facebook: 30,
+  x: 30,
+};
+
+/**
+ * Render a platform's hashtag list for one episode.
+ *
+ * The configured list is priority-ordered: put the tags that matter first,
+ * because anything past the platform's limit is dropped here rather than
+ * failing the post. Threads reuses the Instagram caption, so it inherits
+ * Instagram's ceiling too - which is fine, Threads is the looser of the two.
+ */
 export function hashtags(
   platform: CaptionPlatform,
   word: string,
   originLanguage: string,
 ): string {
   return channel.captions.hashtags[platform]
+    .slice(0, HASHTAG_LIMIT[platform])
     .map((tag) =>
       tag
         .replace(/\{word\}/g, word.toLowerCase())
