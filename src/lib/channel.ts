@@ -103,7 +103,11 @@ export type ChannelConfig = {
    */
   blotato?: {
     accounts?: Partial<Record<SocialPlatform, string>>;
-    /** Which Facebook page to post to. Null when the account has only one. */
+    /**
+     * Which Facebook page to post to, by name. A Facebook login usually
+     * administers several pages, and the API will not choose between them:
+     * leave this null only when the account has exactly one.
+     */
     facebookPage?: string | null;
   };
   trailer: {
