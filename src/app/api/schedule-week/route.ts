@@ -131,13 +131,22 @@ export async function POST(request: Request) {
     }),
   );
 
-  // Name the account per platform, from the socials this channel already
-  // declares. A mismatch fails the dry run loudly instead of posting to
-  // whichever account happened to be listed first.
+  /* Name the account per platform.
+   *
+   * `channel.blotato.accounts` wins, because Blotato reports display names
+   * that no URL can imply: this channel's YouTube is "Andrew Froehlich
+   * (Wordlore)", sitting next to "Andrew Froehlich (AetherWave Studio)" in the
+   * same workspace. The URL-derived handle is the fallback, and it does match
+   * for tiktok, instagram and threads.
+   *
+   * Either way the platform refuses to guess, so a name that is wrong fails
+   * the dry run instead of posting to the wrong brand. */
+  const configured = channel.blotato?.accounts ?? {};
   const accountHandles: Record<string, string> = {};
   for (const p of platforms) {
-    const h = handleFromUrl(channel.socials[p as keyof typeof channel.socials]);
-    if (h) accountHandles[p] = h;
+    const key = p as keyof typeof channel.socials;
+    const name = configured[key] || handleFromUrl(channel.socials[key]);
+    if (name) accountHandles[p] = name;
   }
 
   const payload = {
@@ -146,6 +155,7 @@ export async function POST(request: Request) {
     episodes,
     platforms,
     accountHandles,
+    facebookPage: channel.blotato?.facebookPage ?? undefined,
     days: channel.cadence.publishDaysShort,
     postTime: "09:00",
     timeZone: "America/Denver",
