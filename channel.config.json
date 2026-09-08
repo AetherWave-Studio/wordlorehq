@@ -104,6 +104,10 @@
       "New stories every {publishDays}."
     ]
   },
+  "media": {
+    "_comment": "Where this channel's rendered episodes are served from. Empty means they are served out of public/episodes/ in this deployment, which does not scale: the MP4s go into the repo, ship inside every build, and grow with the archive. AetherWave hosts them in R2 instead - POST /api/channel/media/import puts them there.",
+    "baseUrl": "https://media.aetherwavestudio.com/channels/wordlore/episodes"
+  },
   "blotato": {
     "_comment": "How this channel's accounts are named inside Blotato. Blotato reports display names, not handles, so these cannot be derived from the socials URLs. Paste the names exactly as the schedule preview lists them.",
     "accounts": {

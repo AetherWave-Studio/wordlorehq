@@ -63,11 +63,24 @@ jobs:
 
           # Content the routine is allowed to land unattended.
           outside=$(echo "$changed" | grep -Ev \
-            '^(src/lib/wordlore-content/|public/episodes/|public/trailers/|\.wordlore-context/word-candidates\.md$)' \
+            '^(src/lib/wordlore-content/|public/trailers/|\.wordlore-context/word-candidates\.md$)' \
             || true)
 
           if [ -n "$outside" ]; then
             echo "Touches non-content paths, so it needs review:"; echo "$outside"
+            echo "adopt=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Episodes belong on the media host, not in this repo. 184 MB of MP4
+          # accumulated here before anyone noticed, and every one of them was
+          # re-uploaded as build output on every deploy until the host's build
+          # quota ran out. The routine uploads renders with
+          # scripts/sync-media.mjs and commits the manifest instead, so a video
+          # arriving here means that step was skipped.
+          if echo "$changed" | grep -qE '\.(mp4|mov|webm)$'; then
+            echo "Media committed to the repo - upload it with scripts/sync-media.mjs instead:"
+            echo "$changed" | grep -E '\.(mp4|mov|webm)$'
             echo "adopt=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi

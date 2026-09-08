@@ -64,7 +64,7 @@ export default async function PublishPage() {
           <br />
           <br />
           To post by hand instead: copy a caption, open the studio link, and
-          upload the MP4 from <code className="text-accent">public/episodes/</code>.
+          download the MP4 from its episode link below.
         </p>
       </header>
 

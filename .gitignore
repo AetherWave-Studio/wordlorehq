@@ -51,11 +51,21 @@ next-env.d.ts
 /remotion/assets/audio/beat-durations.json
 
 # local render output (only used when WORDLORE_OUT_DIR is unset and
-# Andrew runs renders outside the cloud routine; renders that should
-# land in the repo go to public/episodes/ directly)
+# Andrew runs renders outside the cloud routine; renders go to
+# public/episodes/ and from there to the media host - see below)
 /.renders/
 
 # render bookkeeping artifacts (only the .mp4 is the deliverable)
 /public/episodes/*-render-props.json
 /public/episodes/*-metadata.txt
 /public/trailers/*-render-props.json
+
+# Rendered episodes themselves. These live on the channel's media host - see
+# `media.baseUrl` in channel.config.json - not in this repo. Committing them
+# put 184 MB of MP4 in here, shipped it inside every deployment, and added
+# ~21 MB a week until the build quota ran out. Upload with
+# `node scripts/sync-media.mjs --upload`; the committed evidence that a render
+# exists is src/lib/wordlore-content/media-manifest.json.
+/public/episodes/*.mp4
+/public/episodes/*.mov
+/public/episodes/*.webm

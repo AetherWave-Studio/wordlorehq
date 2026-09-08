@@ -85,6 +85,18 @@ export type Pipeline = {
   used: UsedWord[];
 };
 
+/**
+ * The episode files held by the channel's media host.
+ *
+ * Written by `scripts/sync-media.mjs` after an import, and committed - it is
+ * the deployment's only evidence that a remotely hosted episode exists.
+ */
+export type MediaManifest = {
+  baseUrl: string;
+  updated: string;
+  files: string[];
+};
+
 const CONTENT_ROOT = path.join(process.cwd(), "src", "lib", "wordlore-content");
 const EPISODE_DIR = path.join(process.cwd(), "public", "episodes");
 
@@ -97,31 +109,59 @@ export function episodeVideoFile(
 }
 
 /**
- * Reconcile recorded render status against what is actually on disk.
+ * Every episode file this channel has, wherever it is kept.
+ *
+ * Two sources, unioned. `public/episodes/` is the local one - a freshly
+ * rendered episode lands there and is real before it has been uploaded
+ * anywhere. `media-manifest.json` is the remote one: episodes now live in
+ * object storage rather than in this repo, so the manifest is what travels
+ * with the deployment in their place. A few kilobytes of filenames instead of
+ * a hundred and eighty megabytes of video.
+ */
+async function knownEpisodeFiles(): Promise<Set<string> | null> {
+  const files = new Set<string>();
+  let sawEvidence = false;
+
+  try {
+    for (const f of await fs.readdir(EPISODE_DIR)) files.add(f);
+    sawEvidence = true;
+  } catch {
+    // No local directory. Normal once renders live in object storage.
+  }
+
+  try {
+    const raw = await fs.readFile(path.join(CONTENT_ROOT, "media-manifest.json"), "utf-8");
+    for (const f of (JSON.parse(raw) as MediaManifest).files) files.add(f);
+    sawEvidence = true;
+  } catch {
+    // No manifest. Normal for a channel still serving out of public/.
+  }
+
+  return sawEvidence ? files : null;
+}
+
+/**
+ * Reconcile recorded render status against the episodes that actually exist.
  *
  * Weeks 2026-06-22, 06-29 and 07-06 were all committed with every word flagged
  * `done` and no MP4 in the commit, so the dashboard reported twelve finished
  * episodes that do not exist. Recorded status is a claim; the file is the
  * evidence. Where the two disagree the file wins.
  *
- * If the episode directory cannot be listed (a deploy target that serves
- * `public/` off a CDN rather than the app filesystem) we have no evidence
- * either way, so the recorded status is left untouched rather than replaced
- * with a different lie.
+ * If neither the episode directory nor the manifest can be read we have no
+ * evidence either way, so the recorded status is left untouched rather than
+ * replaced with a different lie. That is the case this guards: a deployment
+ * that can see neither would otherwise report the whole archive as missing.
  */
 async function reconcileRenders(state: State): Promise<State> {
-  let onDisk: Set<string>;
-  try {
-    onDisk = new Set(await fs.readdir(EPISODE_DIR));
-  } catch {
-    return state;
-  }
+  const known = await knownEpisodeFiles();
+  if (!known) return state;
 
   for (const week of Object.values(state.weeks)) {
     for (const [word, status] of Object.entries(week.renders)) {
       if (status !== "done") continue;
       const file = episodeVideoFile(word, week.renderDate);
-      if (!file || !onDisk.has(file)) week.renders[word] = "missing";
+      if (!file || !known.has(file)) week.renders[word] = "missing";
     }
   }
   return state;
