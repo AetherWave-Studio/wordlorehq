@@ -108,7 +108,7 @@ render, because the dashboard then reports work that was never produced.
 
 **6b. Then clear backlog, if the week itself came out clean.** Read
 `state.json` for any word whose status is `missing` - recorded `done` with no
-MP4 in `public/episodes/`. Those episodes are already written; only the render
+MP4 behind it, in `public/episodes/` or on the media host. Those episodes are already written; only the render
 is absent. Once the target week's own four have rendered and been verified,
 re-render up to **4** of the missing ones, oldest week first, using step 6's
 procedure. Stop at 8 renders total for the run.
@@ -116,12 +116,31 @@ procedure. Stop at 8 renders total for the run.
 They are paid-for work: do not re-draft them, do not retire the words, do not
 move them back to `available`, and do not change their week key. Only the
 week's `renderDate` changes, to the date you rendered on, so the filenames and
-the dashboard's on-disk check agree.
+the dashboard's evidence check agree.
 
 If the target week fails to render, skip the backlog entirely and report - one
 broken week is a bug to look at, not a reason to start a second batch.
 
-**7. Commit** everything, including the MP4s:
+**7. Upload the renders to the media host.** The MP4s do not go in the repo:
+
+```
+node scripts/sync-media.mjs --upload
+```
+
+This asks AetherWave for a presigned URL per file and uploads straight to R2,
+then rewrites `src/lib/wordlore-content/media-manifest.json` from what the host
+actually holds. It needs `AETHERWAVE_API_KEY` in the environment.
+
+Episodes used to be committed here. 184 MB of MP4 accumulated in the repo,
+shipped inside every deployment, and grew ~21 MB a week until the Vercel build
+quota ran out. `.gitignore` and the adopt workflow both refuse video now, so a
+run that skips this step will not land - and the manifest is the only evidence
+the dashboard has that a render exists, so skipping it also marks the whole
+week `missing`.
+
+**Confirm the manifest lists this week's four filenames before committing.**
+
+**7b. Commit** the content and the manifest:
 
 ```
 git add -A
@@ -172,6 +191,7 @@ Post to Discord with the detail, then exit:
 - Force-push.
 - Reuse a word from `used[]` under any circumstance.
 - Mark a render `done` without confirming the file.
+- Commit an MP4. Upload it (step 7); the repo takes the manifest only.
 - Report a run as complete without checking where the commit landed.
 - Discard, re-draft or retire an episode that is already written. Every word in
   `used[]` was paid for once.

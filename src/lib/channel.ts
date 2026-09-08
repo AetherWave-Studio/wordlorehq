@@ -101,6 +101,18 @@ export type ChannelConfig = {
    * one Blotato workspace holds several brands, this is what stops a week of
    * episodes landing on the wrong one.
    */
+  /**
+   * Where rendered episodes are served from.
+   *
+   * `baseUrl` empty means "out of `public/episodes/` in this deployment",
+   * which is where this channel started and does not scale: the MP4s go into
+   * the repo, ship inside every build, and grow with the archive until the
+   * host's build quota runs out. Point it at object storage and the deployment
+   * carries app code only.
+   */
+  media?: {
+    baseUrl?: string | null;
+  };
   blotato?: {
     accounts?: Partial<Record<SocialPlatform, string>>;
     /**
@@ -195,4 +207,16 @@ export function hashtags(
     )
     .map((tag) => `#${tag}`)
     .join(" ");
+}
+
+/**
+ * The public URL of one rendered episode.
+ *
+ * Falls back to this site's own `/episodes/` path when no media host is
+ * configured, which is both the original behaviour and what a new channel gets
+ * before it has anywhere to put its renders.
+ */
+export function episodeUrl(file: string): string {
+  const base = channel.media?.baseUrl?.replace(/\/$/, "");
+  return base ? `${base}/${file}` : `${channel.site.url}/episodes/${file}`;
 }

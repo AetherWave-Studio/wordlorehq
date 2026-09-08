@@ -27,7 +27,7 @@ import {
   platformCaption,
   type CaptionPlatform,
 } from "@/lib/wordlore-content";
-import { channel } from "@/lib/channel";
+import { channel, episodeUrl } from "@/lib/channel";
 
 export const dynamic = "force-dynamic";
 
@@ -125,7 +125,7 @@ export async function POST(request: Request) {
       return {
         episode: word,
         title: episodeTitle(draft),
-        mediaUrl: `${channel.site.url}/episodes/${file}`,
+        mediaUrl: episodeUrl(file!),
         captions,
       };
     }),

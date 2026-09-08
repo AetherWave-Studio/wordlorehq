@@ -96,7 +96,42 @@ Two consequences for a new channel:
   `word-candidates.md` before it stops - see the prompt - but a human still has
   to keep the candidate bank ahead of it.
 
-## 5. Before pricing this for anyone else
+## 5. Where the renders go, which is not the repo
+
+A four-episode week is about 21 MB of MP4. Wordlore committed its episodes to
+this repo for seven months before anyone did that multiplication: 184 MB in
+`public/episodes/`, shipped as build output on *every* deployment, which is
+what finally exhausted a 10 GB build quota. Deleting old deployments buys the
+space back once; the arithmetic keeps going.
+
+Episodes belong on a media host. `media.baseUrl` in `channel.config.json`
+points at one, and the pipeline does the rest:
+
+```
+node scripts/sync-media.mjs --upload      # after rendering, every week
+```
+
+That asks AetherWave for a presigned URL per file and uploads straight to R2,
+so no storage credential ever reaches the render box. It then writes
+`src/lib/wordlore-content/media-manifest.json` from what the host actually
+holds - a few kilobytes of filenames, which is the deployment's only evidence
+that a remotely hosted episode exists. `reconcileRenders` reads it exactly the
+way it used to read the directory.
+
+Three things keep it that way, and a new channel inherits all three:
+
+- `.gitignore` refuses `*.mp4`, `*.mov`, `*.webm` under `public/episodes/`.
+- The adopt workflow refuses any branch whose diff contains video.
+- `next.config.ts` keeps `/episodes/*` serving through a `fallback` rewrite, so
+  URLs handed out before the move still resolve. Fallback runs after the
+  filesystem, so a freshly rendered file that is still local wins; and it is a
+  rewrite rather than a redirect, so a platform fetching the video gets bytes
+  from this origin and never has to follow a 308.
+
+Leave `media.baseUrl` empty and everything still works out of `public/` - which
+is the right place to start, and the wrong place to stay.
+
+## 5b. Before pricing this for anyone else
 
 Measure the fully loaded cost of one four-episode week: OpenAI TTS characters,
 Remotion render minutes, and the routine's own token spend. Nothing in this
