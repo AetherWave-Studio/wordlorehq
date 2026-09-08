@@ -6,9 +6,12 @@
  * integration that posts and schedules to all five, so this hands it the batch
  * rather than reimplementing distribution here.
  *
- * This route runs server-side so the API key never reaches the browser. The
- * admin pages are already behind basic auth (middleware.ts), which is what
- * gates who can call it.
+ * This route runs server-side so the API key never reaches the browser, and it
+ * is listed explicitly in middleware.ts's matcher so basic auth gates it. That
+ * listing is load-bearing: the matcher covered only `/admin/:path*` when this
+ * route was written, leaving an unauthenticated endpoint that publishes to
+ * five social accounts. A page being behind the gate does not put the endpoint
+ * it calls behind the gate.
  *
  * Environment:
  *   AETHERWAVE_API_KEY   an agent key for the account whose Blotato is connected
