@@ -103,5 +103,16 @@
       "{name}. {tagline}",
       "New stories every {publishDays}."
     ]
+  },
+  "blotato": {
+    "_comment": "How this channel's accounts are named inside Blotato. Blotato reports display names, not handles, so these cannot be derived from the socials URLs. Paste the names exactly as the schedule preview lists them.",
+    "accounts": {
+      "youtube": "Andrew Froehlich (Wordlore)",
+      "tiktok": "wordlorehq",
+      "instagram": "wordlorehq",
+      "threads": "wordlorehq",
+      "facebook": "Drew Froehlich"
+    },
+    "facebookPage": null
   }
 }

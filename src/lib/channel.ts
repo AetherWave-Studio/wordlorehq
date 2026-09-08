@@ -92,6 +92,20 @@ export type ChannelConfig = {
      */
     hashtags: Record<CaptionPlatform, string[]>;
   };
+  /**
+   * How this channel's accounts are named inside Blotato.
+   *
+   * Blotato reports whatever the connected account is called - a YouTube
+   * channel shows as "Andrew Froehlich (Wordlore)", a Facebook login as a
+   * person's name - so these cannot be derived from the `socials` URLs. When
+   * one Blotato workspace holds several brands, this is what stops a week of
+   * episodes landing on the wrong one.
+   */
+  blotato?: {
+    accounts?: Partial<Record<SocialPlatform, string>>;
+    /** Which Facebook page to post to. Null when the account has only one. */
+    facebookPage?: string | null;
+  };
   trailer: {
     /**
      * The channel trailer's seven narration lines, in order. `{name}`,
