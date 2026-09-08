@@ -21,6 +21,8 @@ type ScheduleResponse = {
   /** Which account each platform resolved to, before anything is posted. */
   postingAs?: Record<string, Account>;
   error?: string;
+  /** One line per platform that could not be resolved. */
+  problems?: string[];
   connected?: string[];
 };
 
@@ -94,12 +96,23 @@ export function ScheduleWeek({ week, episodeCount }: { week: string; episodeCoun
       </div>
 
       {shown?.error && (
-        <p className="mt-3 font-[family-name:var(--font-sans)] text-payoff text-sm">
-          {shown.error}
-          {shown.connected && (
-            <span className="text-surface/60"> (connected: {shown.connected.join(", ") || "none"})</span>
+        <div className="mt-3 font-[family-name:var(--font-sans)] text-sm">
+          <p className="text-payoff">{shown.error}</p>
+          {shown.problems && (
+            <ul className="mt-2 space-y-1">
+              {shown.problems.map((p) => (
+                <li key={p} className="text-surface/80 text-xs">
+                  &bull; {p}
+                </li>
+              ))}
+            </ul>
           )}
-        </p>
+          {shown.connected && (
+            <p className="mt-2 text-surface/50 text-xs">
+              Connected to this Blotato: {shown.connected.join(", ") || "nothing"}
+            </p>
+          )}
+        </div>
       )}
 
       {shown?.postingAs && (
