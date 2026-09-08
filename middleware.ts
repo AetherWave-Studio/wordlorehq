@@ -49,6 +49,11 @@ export const config = {
    *
    * A page being behind the gate does not put the endpoint it calls behind the
    * gate. Add the route here when you add the route.
+   *
+   * /api/health is deliberately absent, not overlooked: it only reports which
+   * pieces of configuration are present, as booleans, and cannot act. Gating it
+   * would make a deployment's readiness unknowable from outside, which is the
+   * problem it exists to solve.
    */
   matcher: ["/admin/:path*", "/api/schedule-week"],
 };
