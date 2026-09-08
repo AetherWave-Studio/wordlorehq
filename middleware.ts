@@ -38,5 +38,17 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  /*
+   * ⚠️ EVERY ROUTE THAT CAN ACT MUST BE LISTED HERE.
+   *
+   * This matcher used to be `/admin/:path*` alone, while /api/schedule-week -
+   * which publishes a week of episodes to five social accounts - sat outside
+   * it, reachable by anyone on the internet with a POST. It returned 503 only
+   * because AETHERWAVE_API_KEY was not set yet; the day that key landed, so
+   * did the hole.
+   *
+   * A page being behind the gate does not put the endpoint it calls behind the
+   * gate. Add the route here when you add the route.
+   */
+  matcher: ["/admin/:path*", "/api/schedule-week"],
 };
