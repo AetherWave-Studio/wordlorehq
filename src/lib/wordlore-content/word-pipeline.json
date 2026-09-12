@@ -7,12 +7,6 @@
       "payoff": "Arabic \"hashishin,\" hashish user, tied to the medieval Nizari order"
     },
     {
-      "word": "PANDEMONIUM",
-      "tier": 1,
-      "language": "Greek",
-      "payoff": "Coined by Milton from Greek \"all demons,\" the capital of Hell in Paradise Lost"
-    },
-    {
       "word": "MAGAZINE",
       "tier": 2,
       "language": "Arabic",
@@ -29,12 +23,6 @@
       "tier": 3,
       "language": "Greek",
       "payoff": "Greek \"elektron,\" amber, which produces static when rubbed"
-    },
-    {
-      "word": "MONEY",
-      "tier": 3,
-      "language": "Latin",
-      "payoff": "From Moneta, an epithet of Juno, whose temple housed the Roman mint"
     },
     {
       "word": "SHAMPOO",
@@ -85,12 +73,6 @@
       "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
     },
     {
-      "word": "WINDOW",
-      "tier": 1,
-      "language": "Old Norse",
-      "payoff": "Old Norse \"vindauga,\" wind eye - the hole that let the weather in"
-    },
-    {
       "word": "SILLY",
       "tier": 1,
       "language": "Old English",
@@ -137,12 +119,6 @@
       "tier": 3,
       "language": "Greek",
       "payoff": "Greek \"mouseion,\" a seat of the Muses"
-    },
-    {
-      "word": "PANTS",
-      "tier": 3,
-      "language": "Italian",
-      "payoff": "From Pantalone, a Venetian stock character known for his trousers"
     },
     {
       "word": "BOOK",
@@ -349,6 +325,26 @@
       "word": "MALARIA",
       "week": "2026-09-07",
       "drafted": "2026-09-07"
+    },
+    {
+      "word": "WINDOW",
+      "week": "2026-09-14",
+      "drafted": "2026-09-12"
+    },
+    {
+      "word": "PANDEMONIUM",
+      "week": "2026-09-14",
+      "drafted": "2026-09-12"
+    },
+    {
+      "word": "PANTS",
+      "week": "2026-09-14",
+      "drafted": "2026-09-12"
+    },
+    {
+      "word": "MONEY",
+      "week": "2026-09-14",
+      "drafted": "2026-09-12"
     }
   ]
 }

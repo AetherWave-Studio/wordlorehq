@@ -1,0 +1,30 @@
+{
+  "word": "PANTS",
+  "pronunciation": "/pænts/",
+  "partOfSpeech": "noun",
+  "definition": "an outer garment covering the lower body, with a separate section for each leg",
+  "hook": "Every pair of pants you own is named after one actor's costume.",
+  "modernAnchor": "We pull on a pair every morning without a thought for the costume behind the word.",
+  "origin": {
+    "language": "Italian",
+    "era": "1500s",
+    "originalWord": "Pantalone",
+    "originalMeaning": "a miserly old Venetian merchant in Italian comic theater"
+  },
+  "journey": [
+    "Italian comic theater staged Pantalone, a miserly old Venetian merchant chasing money and young wives.",
+    "Every actor playing him wore the same costume, tight ankle-length trousers unlike anyone else on stage.",
+    "The character crossed into France and England, and the trousers became known as pantaloons.",
+    "Pantaloons shortened to pants. We still name our trousers after one comic stage merchant."
+  ],
+  "payoff": {
+    "setupWord": "PANTS",
+    "connector": "is, literally,",
+    "revelation": "A VENETIAN MERCHANT"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MONEY"
+  },
+  "musicVariant": "light"
+}

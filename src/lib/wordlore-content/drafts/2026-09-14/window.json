@@ -1,0 +1,30 @@
+{
+  "word": "WINDOW",
+  "pronunciation": "/ˈwɪn.doʊ/",
+  "partOfSpeech": "noun",
+  "definition": "an opening in a wall or roof fitted with glass to let in light and air",
+  "hook": "A window used to have no glass in it at all.",
+  "modernAnchor": "We build entire walls of it now, floor-to-ceiling glass we still just call windows.",
+  "origin": {
+    "language": "Old Norse",
+    "era": "medieval Scandinavia",
+    "originalWord": "vindauga",
+    "originalMeaning": "wind eye"
+  },
+  "journey": [
+    "Norse longhouses cut a hole in the roof to let smoke escape and light in.",
+    "There was no glass, so cold wind poured in through the same gap the light did.",
+    "Norse speakers called that gap vindauga, wind eye, since it stared back at the weather.",
+    "English borrowed the word centuries before anyone thought to fill the hole with glass."
+  ],
+  "payoff": {
+    "setupWord": "WINDOW",
+    "connector": "is, literally,",
+    "revelation": "WIND EYE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "PANDEMONIUM"
+  },
+  "musicVariant": "light"
+}

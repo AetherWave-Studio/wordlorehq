@@ -1,0 +1,30 @@
+{
+  "word": "MONEY",
+  "pronunciation": "/ˈmʌn.i/",
+  "partOfSpeech": "noun",
+  "definition": "a medium of exchange used to buy and sell goods and services",
+  "hook": "Money is named after a warning, not a coin.",
+  "modernAnchor": "We chase it, count it, and worry over it, all under a name that began as a warning.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "Moneta",
+    "originalMeaning": "the one who warns, an epithet of the goddess Juno"
+  },
+  "journey": [
+    "Juno Moneta, meaning Juno who warns, had a temple on Rome's Capitoline Hill.",
+    "Sometime after 269 BCE, the Romans built their official mint right beside her temple.",
+    "Workers began calling every coin moneta, after the goddess whose temple stood above them.",
+    "The mint eventually moved, but her name stayed on every coin that followed it."
+  ],
+  "payoff": {
+    "setupWord": "MONEY",
+    "connector": "is, literally,",
+    "revelation": "THE ONE WHO WARNS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "WINDOW"
+  },
+  "musicVariant": "dark"
+}

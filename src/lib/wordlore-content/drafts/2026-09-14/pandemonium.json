@@ -1,0 +1,30 @@
+{
+  "word": "PANDEMONIUM",
+  "pronunciation": "/ˌpæn.dəˈmoʊ.ni.əm/",
+  "partOfSpeech": "noun",
+  "definition": "wild and noisy disorder or confusion",
+  "hook": "Pandemonium was a building before it was a feeling.",
+  "modernAnchor": "We shout it over anything from a concert crowd to a kitchen full of smoke alarms.",
+  "origin": {
+    "language": "Greek",
+    "era": "1667",
+    "originalWord": "Pandaemonium",
+    "originalMeaning": "all demons"
+  },
+  "journey": [
+    "In 1667, the poet John Milton needed a capital city for his poem's Hell.",
+    "He built the word from Greek pan, meaning all, and daimon, meaning demon.",
+    "Pandaemonium became the palace where Satan's fallen angels gathered to plot their war.",
+    "The name for one poem's capital of Hell became our word for pure chaos."
+  ],
+  "payoff": {
+    "setupWord": "PANDEMONIUM",
+    "connector": "is, literally,",
+    "revelation": "ALL DEMONS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "PANTS"
+  },
+  "musicVariant": "dark"
+}
