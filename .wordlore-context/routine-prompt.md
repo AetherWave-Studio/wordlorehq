@@ -42,6 +42,26 @@ Three failures produced nine weeks of silence between 2026-07-06 and
 
 ## Steps
 
+**0. Preflight - check you can finish before you start.**
+
+```
+node -e "process.exit(process.env.AETHERWAVE_API_KEY ? 0 : 1)" \
+  || echo "MISSING AETHERWAVE_API_KEY"
+```
+
+If that key is absent, **stop now and report it. Do not render anything.**
+
+Rendering is the expensive step and uploading is the step that makes it
+survive: this container is ephemeral, so an episode that renders but cannot
+reach the media host is gone when the run ends. That is not hypothetical - the
+run of 2026-09-12 rendered eight episodes, could not upload any of them, and
+all eight had to be thrown away. Five seconds of checking is worth more than
+eight renders of work.
+
+Report it as: `Wordlore routine: AETHERWAVE_API_KEY not set in this
+environment - cannot upload renders, so nothing was rendered. Set it on the
+routine's environment and re-run.`
+
 **1. Compute the target week from the CALENDAR, not from `currentWeek`.**
 
 A week key is the Monday of the week the batch publishes in. `currentWeek` only
@@ -129,7 +149,8 @@ node scripts/sync-media.mjs --upload
 
 This asks AetherWave for a presigned URL per file and uploads straight to R2,
 then rewrites `src/lib/wordlore-content/media-manifest.json` from what the host
-actually holds. It needs `AETHERWAVE_API_KEY` in the environment.
+actually holds. It needs `AETHERWAVE_API_KEY` in the environment - which step 0
+has already confirmed, so if you reach here it is present.
 
 Episodes used to be committed here. 184 MB of MP4 accumulated in the repo,
 shipped inside every deployment, and grew ~21 MB a week until the Vercel build
@@ -141,6 +162,11 @@ week `missing`.
 **Confirm the manifest lists this week's four MP4s AND their four `.jpg`
 thumbnails before committing.** Both are uploaded; the manifest holds both.
 
+> **First automated thumbnail run - still pending.** The 2026-09-12 run did
+> not reach it: the upload step could not run, so nothing was uploaded and no
+> cover was ever applied. The first genuine test is the first run that gets
+> past step 0.
+>
 > **First automated thumbnail run.** Episode thumbnails were added the week of
 > 2026-09-07, after that week published with blank ones - the video's first
 > frame is deliberately empty, so every platform left to choose picked the
