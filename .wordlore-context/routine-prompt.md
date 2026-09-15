@@ -162,22 +162,6 @@ week `missing`.
 **Confirm the manifest lists this week's four MP4s AND their four `.jpg`
 thumbnails before committing.** Both are uploaded; the manifest holds both.
 
-> **First automated thumbnail run - still pending.** The 2026-09-12 run did
-> not reach it: the upload step could not run, so nothing was uploaded and no
-> cover was ever applied. The first genuine test is the first run that gets
-> past step 0.
->
-> **First automated thumbnail run.** Episode thumbnails were added the week of
-> 2026-09-07, after that week published with blank ones - the video's first
-> frame is deliberately empty, so every platform left to choose picked the
-> background. That week was fixed by hand. **The week of 2026-09-14 is the
-> first one where the automation is actually exercised**, so do not assume it
-> worked: after scheduling, confirm on the published posts that YouTube and
-> Instagram show the word-and-definition card, and that TikTok's cover is the
-> word reveal rather than a black frame. Report what you see either way.
-> Facebook and Threads accept no cover at all and will still show their own
-> first frame - that is expected, not a failure. Delete this note once a run
-> has confirmed it end to end.
 
 **7b. Commit** the content and the manifest:
 
