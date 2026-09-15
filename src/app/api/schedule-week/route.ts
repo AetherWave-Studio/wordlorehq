@@ -6,12 +6,13 @@
  * integration that posts and schedules to all five, so this hands it the batch
  * rather than reimplementing distribution here.
  *
- * This route runs server-side so the API key never reaches the browser, and it
- * is listed explicitly in middleware.ts's matcher so basic auth gates it. That
- * listing is load-bearing: the matcher covered only `/admin/:path*` when this
- * route was written, leaving an unauthenticated endpoint that publishes to
- * five social accounts. A page being behind the gate does not put the endpoint
- * it calls behind the gate.
+ * This route runs server-side so the API key never reaches the browser. The
+ * admin pages are already behind basic auth (middleware.ts), which is what
+ * gates who can call it.
+ *
+ * The payload itself is built by `@/lib/schedule-payload`, shared with
+ * `scripts/schedule-week.ts` - the Monday routine posts the same bytes this
+ * button does, rather than a second implementation that can drift from it.
  *
  * Environment:
  *   AETHERWAVE_API_KEY   an agent key for the account whose Blotato is connected
@@ -19,53 +20,11 @@
  */
 
 import { NextResponse } from "next/server";
-import {
-  readState,
-  readDraft,
-  episodeTitle,
-  episodeVideoFile,
-  episodeThumbFile,
-  platformCaption,
-  type CaptionPlatform,
-} from "@/lib/wordlore-content";
-import { channel, episodeUrl } from "@/lib/channel";
+import { buildWeekPayload, ScheduleError } from "@/lib/schedule-payload";
 
 export const dynamic = "force-dynamic";
 
 const API_BASE = process.env.AETHERWAVE_API_BASE || "https://aetherwavestudio.com";
-
-/**
- * Platforms this channel posts to, and which caption each one uses.
- * Threads takes the Instagram copy - same length budget, same tone.
- */
-const PLATFORM_CAPTION: Record<string, CaptionPlatform> = {
-  youtube: "youtube",
-  tiktok: "tiktok",
-  instagram: "instagram",
-  facebook: "facebook",
-  threads: "instagram",
-};
-
-/**
- * The handle a social URL points at: the last path segment, minus any '@'.
- *
- *   https://www.youtube.com/@wordlorehq  -> wordlorehq
- *   https://www.instagram.com/wordlorehq -> wordlorehq
- *
- * This is what pins the schedule to THIS channel's accounts. One Blotato
- * workspace can hold several brands, and without a named handle the platform
- * picks whichever account it lists first - which is how one channel's episodes
- * end up on another channel's feed.
- */
-function handleFromUrl(url: string | null): string | undefined {
-  if (!url) return undefined;
-  try {
-    const last = new URL(url).pathname.split("/").filter(Boolean).pop();
-    return last ? last.replace(/^@/, "") : undefined;
-  } catch {
-    return undefined;
-  }
-}
 
 export async function POST(request: Request) {
   const apiKey = process.env.AETHERWAVE_API_KEY;
@@ -87,88 +46,15 @@ export async function POST(request: Request) {
   const dryRun = body.dryRun !== false; // default to a dry run, deliberately
   if (!week) return NextResponse.json({ error: "week is required" }, { status: 400 });
 
-  const state = await readState();
-  const weekState = state.weeks[week];
-  if (!weekState) {
-    return NextResponse.json({ error: `No batch for week ${week}` }, { status: 404 });
+  let payload;
+  try {
+    payload = await buildWeekPayload(week, { dryRun });
+  } catch (e: unknown) {
+    if (e instanceof ScheduleError) {
+      return NextResponse.json({ error: e.message }, { status: e.status });
+    }
+    throw e;
   }
-
-  // Only schedule what actually exists. `readState` has already reconciled the
-  // recorded flags against the files on disk, so a word still marked done here
-  // has an MP4 behind it.
-  const notRendered = weekState.words.filter((w) => weekState.renders[w] !== "done");
-  if (notRendered.length) {
-    return NextResponse.json(
-      { error: `Not every episode is rendered: ${notRendered.join(", ")}` },
-      { status: 409 },
-    );
-  }
-
-  // Only the platforms this channel actually has an account for.
-  const platforms = Object.keys(PLATFORM_CAPTION).filter(
-    (p) => channel.socials[p as keyof typeof channel.socials],
-  );
-  if (!platforms.length) {
-    return NextResponse.json(
-      { error: "channel.config.json lists no social accounts to post to" },
-      { status: 400 },
-    );
-  }
-
-  const episodes = await Promise.all(
-    weekState.words.map(async (word) => {
-      const draft = await readDraft(week, word);
-      const file = episodeVideoFile(word, weekState.renderDate);
-      const thumb = episodeThumbFile(word, weekState.renderDate);
-      const captions: Record<string, string> = {};
-      for (const p of platforms) {
-        captions[p] = platformCaption(draft, PLATFORM_CAPTION[p]);
-      }
-      return {
-        episode: word,
-        title: episodeTitle(draft),
-        mediaUrl: episodeUrl(file!),
-        /* The still the platforms show before playback. Without it they take
-           their own first frame, which for this format is the blank one Beat 1
-           fades in from. Only some platforms accept it; the server decides. */
-        thumbnailUrl: thumb ? episodeUrl(thumb) : undefined,
-        /* TikTok takes a frame, not an image. */
-        coverTimestampMs: channel.media?.coverTimestampMs,
-        captions,
-      };
-    }),
-  );
-
-  /* Name the account per platform.
-   *
-   * `channel.blotato.accounts` wins, because Blotato reports display names
-   * that no URL can imply: this channel's YouTube is "Andrew Froehlich
-   * (Wordlore)", sitting next to "Andrew Froehlich (AetherWave Studio)" in the
-   * same workspace. The URL-derived handle is the fallback, and it does match
-   * for tiktok, instagram and threads.
-   *
-   * Either way the platform refuses to guess, so a name that is wrong fails
-   * the dry run instead of posting to the wrong brand. */
-  const configured = channel.blotato?.accounts ?? {};
-  const accountHandles: Record<string, string> = {};
-  for (const p of platforms) {
-    const key = p as keyof typeof channel.socials;
-    const name = configured[key] || handleFromUrl(channel.socials[key]);
-    if (name) accountHandles[p] = name;
-  }
-
-  const payload = {
-    channel: channel.id,
-    week,
-    episodes,
-    platforms,
-    accountHandles,
-    facebookPage: channel.blotato?.facebookPage ?? undefined,
-    days: channel.cadence.publishDaysShort,
-    postTime: "09:00",
-    timeZone: "America/Denver",
-    dryRun,
-  };
 
   try {
     const res = await fetch(`${API_BASE}/api/channel/schedule-week`, {

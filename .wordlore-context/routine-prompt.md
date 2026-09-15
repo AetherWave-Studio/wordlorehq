@@ -202,7 +202,7 @@ nobody said so.
 **9. Post to `$DISCORD_WEBHOOK_URL`:**
 
 ```json
-{"content":"Wordlore week <YYYY-MM-DD> ready: <word1>, <word2>, <word3>, <word4>. Landed on <branch/master>. <n> episodes still missing a render. Captions and links at https://wordlorehq.com/admin/publish - publish Mon/Tue/Thu/Fri 9 AM MT."}
+{"content":"Wordlore week <YYYY-MM-DD> ready: <word1>, <word2>, <word3>, <word4>. Landed on <branch/master>. <n> episodes still missing a render. The Monday publish routine will schedule it; captions and links at https://wordlorehq.com/admin/publish if it needs doing by hand."}
 ```
 
 `<n>` is the count of words whose status is `missing`, which is a fact the repo
