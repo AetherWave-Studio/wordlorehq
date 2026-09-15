@@ -30,5 +30,11 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "remotion", "scripts"]
+  /* `scripts` used to be excluded, which meant `tsc --noEmit` never checked a
+     single line of the automation - render-video.ts, sync-media.mjs,
+     schedule-week.ts - while reporting clean. A syntax error in
+     schedule-week.ts passed the typecheck and only failed when actually run.
+     Including it costs nothing: it was already zero errors. `remotion` stays
+     out because it has its own tsconfig. */
+  "exclude": ["node_modules", "remotion"]
 }
