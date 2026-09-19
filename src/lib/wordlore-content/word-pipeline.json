@@ -1,12 +1,6 @@
 {
   "available": [
     {
-      "word": "ASSASSIN",
-      "tier": 1,
-      "language": "Arabic",
-      "payoff": "Arabic \"hashishin,\" hashish user, tied to the medieval Nizari order"
-    },
-    {
       "word": "MAGAZINE",
       "tier": 2,
       "language": "Arabic",
@@ -61,12 +55,6 @@
       "payoff": "Scottish Gaelic \"sluagh-ghairm,\" army cry, a battle shout"
     },
     {
-      "word": "CRETIN",
-      "tier": 4,
-      "language": "French",
-      "payoff": "French \"chretien,\" Christian, an old Alpine-dialect label"
-    },
-    {
       "word": "AMATEUR",
       "tier": 4,
       "language": "Latin",
@@ -113,18 +101,6 @@
       "tier": 2,
       "language": "Latin",
       "payoff": "Latin \"candidatus,\" dressed in white - Roman office-seekers wore bleached togas"
-    },
-    {
-      "word": "MUSEUM",
-      "tier": 3,
-      "language": "Greek",
-      "payoff": "Greek \"mouseion,\" a seat of the Muses"
-    },
-    {
-      "word": "BOOK",
-      "tier": 3,
-      "language": "Old English",
-      "payoff": "Old English \"boc,\" tied to the beech tree its early writing surfaces came from"
     },
     {
       "word": "DANDELION",
@@ -345,6 +321,26 @@
       "word": "MONEY",
       "week": "2026-09-14",
       "drafted": "2026-09-12"
+    },
+    {
+      "word": "ASSASSIN",
+      "week": "2026-09-21",
+      "drafted": "2026-09-19"
+    },
+    {
+      "word": "MUSEUM",
+      "week": "2026-09-21",
+      "drafted": "2026-09-19"
+    },
+    {
+      "word": "CRETIN",
+      "week": "2026-09-21",
+      "drafted": "2026-09-19"
+    },
+    {
+      "word": "BOOK",
+      "week": "2026-09-21",
+      "drafted": "2026-09-19"
     }
   ]
 }

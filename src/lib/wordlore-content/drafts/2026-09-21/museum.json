@@ -1,0 +1,30 @@
+{
+  "word": "MUSEUM",
+  "pronunciation": "/mjuːˈziː.əm/",
+  "partOfSpeech": "noun",
+  "definition": "a building where objects of historical, artistic, or scientific interest are kept and shown to the public",
+  "hook": "A museum was built for goddesses before it ever housed a painting.",
+  "modernAnchor": "We wander its halls staring at old objects, never at the Muses it was named for.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "mouseion",
+    "originalMeaning": "seat of the Muses"
+  },
+  "journey": [
+    "Greek myth held that nine Muses inspired poetry, music, history, and dance.",
+    "Cities built a mouseion, a shrine to the Muses, where scholars gathered to study under their protection.",
+    "The most famous stood in Alexandria, Egypt, a research institution with a library attached, not a display hall.",
+    "Centuries later, Europeans reused the name for buildings that displayed objects instead of housing scholars."
+  ],
+  "payoff": {
+    "setupWord": "MUSEUM",
+    "connector": "is, literally,",
+    "revelation": "SEAT OF THE MUSES"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "CRETIN"
+  },
+  "musicVariant": "light"
+}

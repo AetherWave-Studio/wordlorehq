@@ -1,0 +1,30 @@
+{
+  "word": "ASSASSIN",
+  "pronunciation": "/əˈsæs.ɪn/",
+  "partOfSpeech": "noun",
+  "definition": "a person who murders an important or famous person, usually for political or religious reasons",
+  "hook": "Assassin used to just mean someone high on hashish.",
+  "modernAnchor": "We use it for anyone who kills a president or a king, no drugs required.",
+  "origin": {
+    "language": "Arabic",
+    "era": "11th century Persia and Syria",
+    "originalWord": "hashishin",
+    "originalMeaning": "hashish users"
+  },
+  "journey": [
+    "A Nizari Ismaili sect fought crusaders and rival rulers through targeted killings instead of open battles.",
+    "Their enemies called them hashishin, hashish users, claiming the killers were drugged before every mission.",
+    "Crusaders carried the story home and garbled the word into assassin as they retold it.",
+    "The drug claim was likely enemy propaganda, but the word outlived it and kept only the killing."
+  ],
+  "payoff": {
+    "setupWord": "ASSASSIN",
+    "connector": "is, literally,",
+    "revelation": "HASHISH USER"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MUSEUM"
+  },
+  "musicVariant": "dark"
+}

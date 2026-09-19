@@ -1,0 +1,30 @@
+{
+  "word": "BOOK",
+  "pronunciation": "/bʊk/",
+  "partOfSpeech": "noun",
+  "definition": "a written or printed work made up of pages bound together",
+  "hook": "Book is named after a tree, not a story.",
+  "modernAnchor": "We still call it a book on a screen with no pages and no wood anywhere near it.",
+  "origin": {
+    "language": "Old English",
+    "era": "early medieval England",
+    "originalWord": "boc",
+    "originalMeaning": "beech"
+  },
+  "journey": [
+    "Early Germanic peoples carved runes into thin wooden tablets to keep records and send messages.",
+    "Beech wood was common and easy to inscribe, so Old English speakers called these tablets boc, beech.",
+    "As writing shifted to parchment and then paper, English kept the old name for whatever the words sat on.",
+    "Screens replaced pages for many readers, and the word survived that too, still tied to a tree it left behind."
+  ],
+  "payoff": {
+    "setupWord": "BOOK",
+    "connector": "is, literally,",
+    "revelation": "BEECH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ASSASSIN"
+  },
+  "musicVariant": "light"
+}

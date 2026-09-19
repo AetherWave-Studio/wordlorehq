@@ -1,0 +1,30 @@
+{
+  "word": "CRETIN",
+  "pronunciation": "/ˈkriː.tɪn/",
+  "partOfSpeech": "noun",
+  "definition": "a stupid person, used as an insult",
+  "hook": "Cretin used to just mean Christian.",
+  "modernAnchor": "We spit it out as one of the harshest insults in English, no religion involved.",
+  "origin": {
+    "language": "French",
+    "era": "18th century Alpine France",
+    "originalWord": "crestin",
+    "originalMeaning": "Christian"
+  },
+  "journey": [
+    "Isolated Alpine valleys saw a condition, caused by iodine deficiency, with developmental and physical effects.",
+    "Local French dialect called those affected crestin, a form of the word Christian.",
+    "The label likely insisted they were still human, still Christian, against the prejudice around their condition.",
+    "English borrowed the word in the 1700s, stripped away the compassion, and kept only the insult."
+  ],
+  "payoff": {
+    "setupWord": "CRETIN",
+    "connector": "is, literally,",
+    "revelation": "CHRISTIAN"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BOOK"
+  },
+  "musicVariant": "dark"
+}
