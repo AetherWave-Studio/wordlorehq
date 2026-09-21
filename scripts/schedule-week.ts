@@ -65,7 +65,20 @@ async function main() {
       body: JSON.stringify(payload),
     });
     const body: any = await res.json().catch(() => ({ error: "non-JSON response" }));
-    if (!res.ok) fail(`${res.status}: ${body.error || JSON.stringify(body)}`);
+    if (!res.ok) {
+      /* The platform returns a `problems` array naming each unresolved
+       * platform and what IS connected. Printing only `error` throws that
+       * away, which is the difference between "cannot resolve an account"
+       * and "the Wordlore accounts are no longer connected to Blotato, here
+       * are the four that vanished". The routine's report is the only thing
+       * anyone sees, so it has to carry the actionable half. */
+      for (const p of body.problems ?? []) console.error(`  - ${p}`);
+      if (body.connected?.length) {
+        console.error(`\n  Connected to this Blotato:`);
+        for (const c of body.connected) console.error(`    ${c}`);
+      }
+      fail(`${res.status}: ${body.error || JSON.stringify(body)}`);
+    }
     return body;
   };
 
