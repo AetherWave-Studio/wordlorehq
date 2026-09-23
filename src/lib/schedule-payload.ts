@@ -73,8 +73,34 @@ export class ScheduleError extends Error {
  */
 export async function buildWeekPayload(
   week: string,
-  opts: { dryRun: boolean; postTime?: string; days?: string[] } = { dryRun: true },
+  opts: {
+    dryRun: boolean;
+    postTime?: string;
+    days?: string[];
+    /**
+     * Send only these episodes, at this instant. Both or neither.
+     *
+     * This is the catch-up path. An episode that missed its day has no slot in
+     * the week's cadence grid, and sending one used to mean calling Blotato by
+     * hand and then repairing the publish rows - which is how the table ended
+     * up describing posts nobody could reconstruct. Naming the episode and the
+     * instant keeps a catch-up inside the same pipeline as a normal week.
+     *
+     * The instant is an ISO 8601 timestamp or the literal "now"; the platform
+     * refuses a past timestamp rather than reading it as "now".
+     */
+    only?: string[];
+    at?: string;
+  } = { dryRun: true },
 ): Promise<WeekPayload> {
+  if ((opts.only === undefined) !== (opts.at === undefined)) {
+    throw new ScheduleError(
+      "`only` and `at` go together: selecting episodes without an instant would " +
+        "hand them the week's first cadence day, which is rarely the day they belong on",
+      400,
+    );
+  }
+
   const state = await readState();
   const weekState = state.weeks[week];
   if (!weekState) throw new ScheduleError(`No batch for week ${week}`, 404);
@@ -94,8 +120,20 @@ export async function buildWeekPayload(
     throw new ScheduleError("channel.config.json lists no social accounts to post to", 400);
   }
 
+  let words = weekState.words;
+  if (opts.only) {
+    const unknown = opts.only.filter((w) => !words.includes(w));
+    if (unknown.length) {
+      throw new ScheduleError(
+        `Week ${week} has no episode named ${unknown.join(", ")}. It holds: ${words.join(", ")}`,
+        404,
+      );
+    }
+    words = opts.only;
+  }
+
   const episodes = await Promise.all(
-    weekState.words.map(async (word) => {
+    words.map(async (word) => {
       const draft = await readDraft(week, word);
       const file = episodeVideoFile(word, weekState.renderDate);
       const thumb = episodeThumbFile(word, weekState.renderDate);
@@ -113,6 +151,8 @@ export async function buildWeekPayload(
         thumbnailUrl: thumb ? episodeUrl(thumb) : undefined,
         /* TikTok takes a frame, not an image. */
         coverTimestampMs: channel.media?.coverTimestampMs,
+        /* Undefined means "use the cadence day", which is the normal week. */
+        scheduledFor: opts.at,
         captions,
       };
     }),
