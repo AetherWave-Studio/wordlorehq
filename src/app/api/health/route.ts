@@ -12,10 +12,16 @@
  * field here is already public (the site URL, the media host, the filenames the
  * manifest carries).
  *
+ * It also reports WHICH BUILD is answering. A 200 from this route only proves
+ * something is deployed, not that it is the commit you just merged, and more
+ * than one "the fix is live" call here has actually been deploy lag read as
+ * success. The commit sha turns that guess into a comparison against git.
+ *
  * Deliberately OUTSIDE the middleware matcher, which gates every route that can
  * ACT. This one cannot: no writes, no outbound calls, nothing an anonymous
  * caller can set in motion. Knowing that a key is configured does not help
- * anyone who does not have the admin password.
+ * anyone who does not have the admin password. The commit sha is public the
+ * moment the repo is - it names a build, it does not unlock one.
  */
 
 import { NextResponse } from "next/server";
@@ -44,8 +50,17 @@ export async function GET() {
     renders = {};
   }
 
+  /* Vercel system env vars, present on every deployment; null when running
+     outside Vercel (local dev), which is itself the honest answer. */
+  const build = {
+    commit: process.env.VERCEL_GIT_COMMIT_SHA ?? null,
+    ref: process.env.VERCEL_GIT_COMMIT_REF ?? null,
+    env: process.env.VERCEL_ENV ?? null,
+  };
+
   return NextResponse.json({
     channel: channel.id,
+    build,
     configured,
     ready: Object.values(configured).every(Boolean),
     media: {

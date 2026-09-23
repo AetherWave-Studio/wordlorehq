@@ -51,6 +51,12 @@ channel work, that belongs in the config instead.
    open dashboard, when they are unset).
 9. Create the weekly routine from `.wordlore-context/routine-prompt.md`, with
    `OPENAI_API_KEY` and `DISCORD_WEBHOOK_URL` in its environment.
+10. Confirm the deploy with `GET /api/health`. It is unauthenticated and
+    reports booleans, never secret values: `ready` covers the API key and the
+    admin pair, `build.commit` names the sha that is actually answering. Check
+    that sha against git rather than treating a 200 as proof - a 200 only says
+    *something* is deployed, and the gap between merging and that something
+    being the new build has been mistaken for a working fix more than once.
 
 Budget an afternoon for the config, the assets and the deploy. Budget
 considerably longer for step 5, which is the only genuinely creative part.
