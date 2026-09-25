@@ -116,10 +116,21 @@ export type ChannelConfig = {
      * Where TikTok should take its cover frame, in milliseconds.
      *
      * TikTok picks a frame rather than accepting an image, so the rendered
-     * thumbnail cannot reach it. Set this to a moment that is interesting in
-     * every episode - for a fixed-beat format that is a real constant, but
-     * check it against several episodes before trusting it, because beat
-     * lengths move with narration. Leave unset rather than guess: a wrong
+     * thumbnail cannot reach it.
+     *
+     * FALLBACK ONLY. The scheduler prefers the per-episode value the render
+     * measured into state.json, because this format is NOT fixed-beat: beat
+     * lengths come from the TTS audio, so the word card's window slides
+     * episode to episode. An earlier version of this comment said a constant
+     * was fine "for a fixed-beat format" and told you to check it against
+     * several episodes - it was checked against three, and broke on the
+     * fourth. See coverTimestampMsFrom in remotion/tokens/timing.ts.
+     *
+     * This value is used only for episodes rendered before covers were
+     * recorded. 6000 is not a guess: measured against week 2026-09-21 it sits
+     * inside all four cards (assassin 4.8-10.5s, museum 5.4-10.5s, cretin
+     * 4.0-6.8s, book 4.5-8.5s), where the previous 8000 fell outside cretin's
+     * by 1.2s. Leave unset rather than guess for a new channel: a wrong
      * timestamp is a worse cover than TikTok's own choice.
      */
     coverTimestampMs?: number;
