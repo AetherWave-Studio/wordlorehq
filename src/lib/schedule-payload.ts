@@ -149,8 +149,16 @@ export async function buildWeekPayload(
            their own first frame, which for this format is the blank one Beat 1
            fades in from. Only some platforms accept it; the server decides. */
         thumbnailUrl: thumb ? episodeUrl(thumb) : undefined,
-        /* TikTok takes a frame, not an image. */
-        coverTimestampMs: channel.media?.coverTimestampMs,
+        /* TikTok takes a frame, not an image, so it needs an instant rather
+           than the thumbnail above. Prefer the one the render measured for
+           THIS episode: the word card's window moves with narration length,
+           and a channel constant cannot track it (see coverTimestampMsFrom in
+           remotion/tokens/timing.ts - the legal windows of two episodes can
+           intersect in a single instant, so no fixed value is right for all of
+           them). The constant is only a fallback for episodes rendered before
+           this was recorded. */
+        coverTimestampMs:
+          weekState.covers?.[word] ?? channel.media?.coverTimestampMs,
         /* Undefined means "use the cadence day", which is the normal week. */
         scheduledFor: opts.at,
         captions,
