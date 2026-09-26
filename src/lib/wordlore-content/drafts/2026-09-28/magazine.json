@@ -1,0 +1,30 @@
+{
+  "word": "MAGAZINE",
+  "pronunciation": "/ˌmæg.əˈziːn/",
+  "partOfSpeech": "noun",
+  "definition": "a periodical publication, or a chamber that holds ammunition",
+  "hook": "Magazine used to mean a warehouse for gunpowder.",
+  "modernAnchor": "We flip through one at the checkout line, nowhere near a weapon in sight.",
+  "origin": {
+    "language": "Arabic",
+    "era": "14th century North Africa",
+    "originalWord": "makhazin",
+    "originalMeaning": "storehouses"
+  },
+  "journey": [
+    "Arabic makhazin named storehouses, plural of makhzan, where merchants and soldiers kept goods and gunpowder safe.",
+    "European traders borrowed the word for military supply depots, then narrowed it to rooms built for ammunition.",
+    "In the 1700s, publishers began calling their bundled pamphlets magazines too, a storehouse of articles instead.",
+    "Today the word splits cleanly: a gun's magazine holds bullets, a newsstand magazine holds stories."
+  ],
+  "payoff": {
+    "setupWord": "MAGAZINE",
+    "connector": "is, literally,",
+    "revelation": "A STOREHOUSE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "DANDELION"
+  },
+  "musicVariant": "dark"
+}

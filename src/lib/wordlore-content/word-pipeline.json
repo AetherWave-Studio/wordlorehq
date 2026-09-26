@@ -1,12 +1,6 @@
 {
   "available": [
     {
-      "word": "MAGAZINE",
-      "tier": 2,
-      "language": "Arabic",
-      "payoff": "Arabic \"makhazin,\" storehouses, originally for ammunition"
-    },
-    {
       "word": "HAZARD",
       "tier": 2,
       "language": "Arabic",
@@ -31,12 +25,6 @@
       "payoff": "Arabic \"amir al-bahr,\" commander of the sea"
     },
     {
-      "word": "TRIVIAL",
-      "tier": 4,
-      "language": "Latin",
-      "payoff": "Latin \"tri via,\" three roads, a crossroads gossip spot"
-    },
-    {
       "word": "DISMAL",
       "tier": 4,
       "language": "Latin",
@@ -59,12 +47,6 @@
       "tier": 4,
       "language": "Latin",
       "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
-    },
-    {
-      "word": "SILLY",
-      "tier": 1,
-      "language": "Old English",
-      "payoff": "Old English \"gesaelig,\" blessed and happy, before it drifted to foolish"
     },
     {
       "word": "SARCOPHAGUS",
@@ -101,12 +83,6 @@
       "tier": 2,
       "language": "Latin",
       "payoff": "Latin \"candidatus,\" dressed in white - Roman office-seekers wore bleached togas"
-    },
-    {
-      "word": "DANDELION",
-      "tier": 4,
-      "language": "French",
-      "payoff": "French \"dent de lion,\" lion tooth, for the jagged leaves"
     },
     {
       "word": "PENCIL",
@@ -341,6 +317,26 @@
       "word": "BOOK",
       "week": "2026-09-21",
       "drafted": "2026-09-19"
+    },
+    {
+      "word": "SILLY",
+      "week": "2026-09-28",
+      "drafted": "2026-09-26"
+    },
+    {
+      "word": "MAGAZINE",
+      "week": "2026-09-28",
+      "drafted": "2026-09-26"
+    },
+    {
+      "word": "DANDELION",
+      "week": "2026-09-28",
+      "drafted": "2026-09-26"
+    },
+    {
+      "word": "TRIVIAL",
+      "week": "2026-09-28",
+      "drafted": "2026-09-26"
     }
   ]
 }

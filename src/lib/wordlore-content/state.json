@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-09-21",
+  "currentWeek": "2026-09-28",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -130,6 +130,18 @@
         "museum": "done",
         "cretin": "done",
         "book": "done"
+      },
+      "publishes": {}
+    },
+    "2026-09-28": {
+      "status": "ready",
+      "renderDate": "2026-09-26",
+      "words": ["silly", "magazine", "dandelion", "trivial"],
+      "renders": {
+        "silly": "done",
+        "magazine": "done",
+        "dandelion": "done",
+        "trivial": "done"
       },
       "publishes": {}
     }

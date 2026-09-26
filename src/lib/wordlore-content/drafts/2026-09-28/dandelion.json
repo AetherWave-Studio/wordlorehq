@@ -1,0 +1,30 @@
+{
+  "word": "DANDELION",
+  "pronunciation": "/ˈdæn.dɪˌlaɪ.ən/",
+  "partOfSpeech": "noun",
+  "definition": "a common yellow-flowered weed with jagged leaves and windborne seeds",
+  "hook": "Dandelion is named after a lion's teeth, not its flower.",
+  "modernAnchor": "We blow its seeds into the wind and never once picture a lion's mouth.",
+  "origin": {
+    "language": "French",
+    "era": "medieval France",
+    "originalWord": "dent de lion",
+    "originalMeaning": "tooth of the lion"
+  },
+  "journey": [
+    "Medieval French herbalists looked at the plant's jagged, pointed leaves and saw something else entirely.",
+    "The leaves reminded them of a lion's sharp teeth, so they named the plant dent de lion.",
+    "English speakers borrowed the French phrase and mashed its three words into one, dandelion.",
+    "The lion's teeth stayed hidden in the spelling long after everyone stopped picturing an actual lion."
+  ],
+  "payoff": {
+    "setupWord": "DANDELION",
+    "connector": "is, literally,",
+    "revelation": "LION'S TOOTH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "TRIVIAL"
+  },
+  "musicVariant": "light"
+}

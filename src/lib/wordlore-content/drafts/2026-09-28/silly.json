@@ -1,0 +1,30 @@
+{
+  "word": "SILLY",
+  "pronunciation": "/ˈsɪl.i/",
+  "partOfSpeech": "adjective",
+  "definition": "foolish or lacking good sense",
+  "hook": "Silly used to mean blessed.",
+  "modernAnchor": "We use it for a foolish joke or a harmless goof, nothing holy about it.",
+  "origin": {
+    "language": "Old English",
+    "era": "early medieval England",
+    "originalWord": "gesaelig",
+    "originalMeaning": "blessed and happy"
+  },
+  "journey": [
+    "Old English speakers called someone gesaelig, blessed, when good fortune and God's favor seemed to follow them.",
+    "Blessed drifted toward innocent, since people assumed anyone that fortunate could not possibly be cunning or shrewd.",
+    "Innocent slid further into naive, then foolish, as English kept softening the word's edge each generation.",
+    "By the time silly reached us, blessed had vanished completely, leaving only a word for harmless foolishness."
+  ],
+  "payoff": {
+    "setupWord": "SILLY",
+    "connector": "is, literally,",
+    "revelation": "BLESSED"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MAGAZINE"
+  },
+  "musicVariant": "light"
+}

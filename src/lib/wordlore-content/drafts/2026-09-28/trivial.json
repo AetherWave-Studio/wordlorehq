@@ -1,0 +1,30 @@
+{
+  "word": "TRIVIAL",
+  "pronunciation": "/ˈtrɪv.i.əl/",
+  "partOfSpeech": "adjective",
+  "definition": "of little importance or value",
+  "hook": "Trivial used to just mean where three roads meet.",
+  "modernAnchor": "We use it to wave away anything unimportant, no roads involved.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "trivialis",
+    "originalMeaning": "of the crossroads, three roads"
+  },
+  "journey": [
+    "Latin trivium combined tri, three, and via, road, naming the spot where three roads met.",
+    "Crossroads were where ordinary people gathered, gossiped, and traded common, unremarkable news of the day.",
+    "Trivialis came to describe whatever belonged to that crossroads chatter, the kind everyone already knew.",
+    "English kept the word but dropped the roads, leaving only something too minor to matter."
+  ],
+  "payoff": {
+    "setupWord": "TRIVIAL",
+    "connector": "is, literally,",
+    "revelation": "OF THE CROSSROADS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SILLY"
+  },
+  "musicVariant": "dark"
+}
