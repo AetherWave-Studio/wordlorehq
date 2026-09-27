@@ -59,6 +59,17 @@ export type WeekState = {
   renderDate: string | null;
   words: string[];
   renders: Record<string, RenderStatus>;
+  /**
+   * Per-episode cover timestamp in ms, written by the render from the measured
+   * beat durations. TikTok picks its cover by timestamp rather than accepting
+   * an image, and the word card's window moves with narration length, so this
+   * cannot be a channel constant - see coverTimestampMsFrom in
+   * remotion/tokens/timing.ts for why no fixed value works.
+   *
+   * Absent for episodes rendered before this was recorded; those fall back to
+   * channel.media.coverTimestampMs.
+   */
+  covers?: Record<string, number>;
   publishes: Record<string, Record<string, string | null>>;
 };
 

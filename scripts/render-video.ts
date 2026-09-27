@@ -34,7 +34,12 @@ import { execSync } from 'child_process';
 import { generateNarration, generateTrailerNarration } from './generate-narration';
 import type { WordloreInput } from '../remotion/Composition';
 import type { TrailerInput } from '../remotion/Trailer';
-import { beatBounds } from '../remotion/tokens/timing';
+import { coverTimestampMsFrom, beatBounds } from '../remotion/tokens/timing';
+/* The real State type, not a local restatement of it. A narrow duplicate
+   lived here and silently lacked `covers`; two definitions of one shape is
+   how a checker ends up disagreeing with the thing it checks. Type-only, so
+   nothing from the content lib is imported at runtime. */
+import type { State as StateFile } from '../src/lib/wordlore-content';
 import { THUMBNAIL_FRAME } from '../remotion/Thumbnail';
 import { applyPattern, channel, hashtags } from '../src/lib/channel';
 
@@ -82,10 +87,6 @@ const OUT_BASE = process.env.WORDLORE_OUT_DIR ?? path.join(REPO_ROOT, 'public');
 const EPISODES_DIR = path.join(OUT_BASE, 'episodes');
 const TRAILERS_DIR = path.join(OUT_BASE, 'trailers');
 
-interface StateFile {
-  currentWeek: string;
-  weeks: Record<string, { words: string[] }>;
-}
 
 /**
  * Resolve an input argument to a path to the episode JSON.
@@ -146,6 +147,34 @@ function buildMetadata(input: WordloreInput): string {
   ].join('\n');
 }
 
+/**
+ * Store an episode's cover timestamp in state.json, beside its render status.
+ *
+ * state.json is the committed record of what the pipeline produced, and the
+ * routine's adopt workflow already carries it back to the repo, so nothing new
+ * has to be plumbed for the scheduler to read this. Failure here is logged and
+ * swallowed on purpose: a cover timestamp is worth strictly less than the
+ * render that just succeeded, and losing the MP4 over a bookkeeping write
+ * would be a bad trade. The scheduler falls back to the channel constant when
+ * the entry is missing.
+ */
+function recordCoverTimestamp(contentKey: string, coverMs: number): void {
+  const statePath = path.join(CONTENT_ROOT, 'state.json');
+  try {
+    const state: StateFile = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
+    const week = state.currentWeek;
+    const weekState = state.weeks?.[week];
+    if (!weekState) {
+      console.warn(`  ! no state.weeks[${week}] - cover timestamp not recorded`);
+      return;
+    }
+    weekState.covers = { ...(weekState.covers ?? {}), [contentKey]: coverMs };
+    fs.writeFileSync(statePath, `${JSON.stringify(state, null, 2)}\n`);
+  } catch (e) {
+    console.warn(`  ! could not record cover timestamp: ${(e as Error).message}`);
+  }
+}
+
 async function renderVideo(inputArg: string): Promise<void> {
   const inputPath = resolveInputPath(inputArg);
   const input: WordloreInput = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
@@ -164,6 +193,21 @@ async function renderVideo(inputArg: string): Promise<void> {
   const fmt = (a: number[]) => a.map((x) => x.toFixed(2)).join(', ');
   console.log(`  raw TTS:  [${fmt(rawDurations)}] = ${rawDurations.reduce((a, b) => a + b, 0).toFixed(1)}s`);
   console.log(`  bounded:  [${fmt(beatDurationsSec)}] = ${beatDurationsSec.reduce((a, b) => a + b, 0).toFixed(1)}s`);
+
+  /* Record where THIS episode's word card sits, for the platforms that pick a
+   * cover by timestamp. Written here because this is the only place the
+   * measured durations exist - they come from the TTS audio and are gone once
+   * the render finishes. A channel constant cannot do this job: see
+   * coverTimestampMsFrom for the proof that no fixed value is correct for
+   * every episode. */
+  const coverMs = coverTimestampMsFrom(beatDurationsSec);
+  console.log(`  cover:    ${(coverMs / 1000).toFixed(2)}s (midpoint of the word card)`);
+  /* Keyed by the CONTENT key (lowercased word), not wordSlug. wordSlug
+     hyphenates whitespace for filenames; state.weeks[].words and the draft
+     filenames do not. They are identical for one-word episodes and would
+     have diverged silently on the first two-word one, falling back to the
+     constant with nothing to show why. */
+  recordCoverTimestamp(input.word.toLowerCase(), coverMs);
 
   // 2. Probe disk for the other audio assets. The Composition will only
   //    mount Audio components for files this orchestrator confirmed exist —
