@@ -49,34 +49,10 @@
       "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
     },
     {
-      "word": "SARCOPHAGUS",
-      "tier": 1,
-      "language": "Greek",
-      "payoff": "Greek \"sarkophagos,\" flesh-eating - a stone believed to consume the body"
-    },
-    {
-      "word": "BONFIRE",
-      "tier": 1,
-      "language": "Middle English",
-      "payoff": "Middle English \"bone fire,\" a fire built of bones"
-    },
-    {
       "word": "NICE",
       "tier": 2,
       "language": "Latin",
       "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
-    },
-    {
-      "word": "VACCINE",
-      "tier": 2,
-      "language": "Latin",
-      "payoff": "Latin \"vacca,\" cow - the first one was cowpox"
-    },
-    {
-      "word": "ALCOHOL",
-      "tier": 2,
-      "language": "Arabic",
-      "payoff": "Arabic \"al-kuhl,\" the fine powder used as eyeliner"
     },
     {
       "word": "CANDIDATE",
@@ -337,6 +313,26 @@
       "word": "TRIVIAL",
       "week": "2026-09-28",
       "drafted": "2026-09-26"
+    },
+    {
+      "word": "SARCOPHAGUS",
+      "week": "2026-10-05",
+      "drafted": "2026-10-03"
+    },
+    {
+      "word": "BONFIRE",
+      "week": "2026-10-05",
+      "drafted": "2026-10-03"
+    },
+    {
+      "word": "ALCOHOL",
+      "week": "2026-10-05",
+      "drafted": "2026-10-03"
+    },
+    {
+      "word": "VACCINE",
+      "week": "2026-10-05",
+      "drafted": "2026-10-03"
     }
   ]
 }

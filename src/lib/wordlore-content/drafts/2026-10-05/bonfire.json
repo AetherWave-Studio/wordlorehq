@@ -1,0 +1,30 @@
+{
+  "word": "BONFIRE",
+  "pronunciation": "/ˈbɒn.faɪər/",
+  "partOfSpeech": "noun",
+  "definition": "a large open-air fire built for celebration or burning rubbish",
+  "hook": "A bonfire was once a fire made of bones.",
+  "modernAnchor": "Marshmallows, friends, a big blaze on the beach. We call it a bonfire.",
+  "origin": {
+    "language": "Middle English",
+    "era": "late medieval England",
+    "originalWord": "banefyre",
+    "originalMeaning": "a fire of bones"
+  },
+  "journey": [
+    "In medieval Britain, bones left over from slaughtered animals were piled up and burned.",
+    "People called these blazes bone fires, and they burned at festivals like Saint John's Eve.",
+    "Spellings drifted from bonefire to bonfire as the pronunciation shortened over the centuries.",
+    "The bones are long gone from the pile, but the word still remembers what fed the flames."
+  ],
+  "payoff": {
+    "setupWord": "BONFIRE",
+    "connector": "is, literally,",
+    "revelation": "A FIRE OF BONES"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ALCOHOL"
+  },
+  "musicVariant": "dark"
+}

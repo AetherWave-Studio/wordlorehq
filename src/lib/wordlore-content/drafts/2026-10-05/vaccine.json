@@ -1,0 +1,30 @@
+{
+  "word": "VACCINE",
+  "pronunciation": "/vækˈsiːn/",
+  "partOfSpeech": "noun",
+  "definition": "a preparation that trains the body to resist a particular disease",
+  "hook": "Vaccine means cow.",
+  "modernAnchor": "A small jab in the arm that keeps a deadly disease away. We call it a vaccine.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "vacca",
+    "originalMeaning": "cow"
+  },
+  "journey": [
+    "Latin vacca meant cow, and vaccinus meant of or from cows.",
+    "In 1796, Edward Jenner noticed that milkmaids who caught cowpox seemed safe from smallpox.",
+    "He used cowpox matter to protect a boy, and the method became known as vaccination.",
+    "Louis Pasteur later stretched the word to cover every protective shot, whatever animal it came from."
+  ],
+  "payoff": {
+    "setupWord": "VACCINE",
+    "connector": "is, literally,",
+    "revelation": "FROM A COW"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SARCOPHAGUS"
+  },
+  "musicVariant": "warm"
+}

@@ -1,0 +1,30 @@
+{
+  "word": "ALCOHOL",
+  "pronunciation": "/ˈæl.kə.hɒl/",
+  "partOfSpeech": "noun",
+  "definition": "a colorless flammable liquid, and the intoxicating ingredient in beer, wine and spirits",
+  "hook": "Alcohol started out as eyeliner.",
+  "modernAnchor": "A glass of wine, a hand sanitizer, a bottle behind the bar. We call it alcohol.",
+  "origin": {
+    "language": "Arabic",
+    "era": "medieval Arab world",
+    "originalWord": "al-kuhl",
+    "originalMeaning": "the fine powder used as eyeliner"
+  },
+  "journey": [
+    "Arabic speakers used al-kuhl for kohl, a fine black powder made by grinding minerals like antimony.",
+    "Alchemists learned to make things fine by heating them into vapor and collecting the essence.",
+    "European alchemists borrowed the word for any such essence, including the spirit distilled from wine.",
+    "The meaning narrowed to that one spirit, and the powder that lined ancient eyes was forgotten."
+  ],
+  "payoff": {
+    "setupWord": "ALCOHOL",
+    "connector": "is, literally,",
+    "revelation": "EYELINER POWDER"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "VACCINE"
+  },
+  "musicVariant": "warm"
+}

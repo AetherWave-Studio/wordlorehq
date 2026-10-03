@@ -1,10 +1,15 @@
 {
-  "currentWeek": "2026-09-28",
+  "currentWeek": "2026-10-05",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
       "renderDate": "2026-05-21",
-      "words": ["nightmare", "goodbye", "disaster", "robot"],
+      "words": [
+        "nightmare",
+        "goodbye",
+        "disaster",
+        "robot"
+      ],
       "renders": {
         "nightmare": "done",
         "goodbye": "done",
@@ -16,7 +21,12 @@
     "2026-05-25": {
       "status": "ready",
       "renderDate": "2026-05-23",
-      "words": ["clue", "muscle", "panic", "salary"],
+      "words": [
+        "clue",
+        "muscle",
+        "panic",
+        "salary"
+      ],
       "renders": {
         "clue": "done",
         "muscle": "done",
@@ -28,7 +38,12 @@
     "2026-06-08": {
       "status": "ready",
       "renderDate": "2026-06-05",
-      "words": ["sinister", "avocado", "weird", "quarantine"],
+      "words": [
+        "sinister",
+        "avocado",
+        "weird",
+        "quarantine"
+      ],
       "renders": {
         "sinister": "done",
         "avocado": "done",
@@ -40,7 +55,12 @@
     "2026-06-15": {
       "status": "ready",
       "renderDate": "2026-06-05",
-      "words": ["companion", "hooligan", "sarcasm", "tarantula"],
+      "words": [
+        "companion",
+        "hooligan",
+        "sarcasm",
+        "tarantula"
+      ],
       "renders": {
         "companion": "done",
         "hooligan": "done",
@@ -52,7 +72,12 @@
     "2026-06-22": {
       "status": "ready",
       "renderDate": "2026-09-06",
-      "words": ["lunatic", "bedlam", "barbarian", "hysteria"],
+      "words": [
+        "lunatic",
+        "bedlam",
+        "barbarian",
+        "hysteria"
+      ],
       "renders": {
         "lunatic": "done",
         "bedlam": "done",
@@ -64,7 +89,12 @@
     "2026-06-29": {
       "status": "ready",
       "renderDate": "2026-09-07",
-      "words": ["volcano", "cereal", "tantalize", "nostalgia"],
+      "words": [
+        "volcano",
+        "cereal",
+        "tantalize",
+        "nostalgia"
+      ],
       "renders": {
         "volcano": "done",
         "cereal": "done",
@@ -76,7 +106,12 @@
     "2026-07-06": {
       "status": "ready",
       "renderDate": "2026-09-12",
-      "words": ["january", "halcyon", "tragedy", "mortgage"],
+      "words": [
+        "january",
+        "halcyon",
+        "tragedy",
+        "mortgage"
+      ],
       "renders": {
         "january": "done",
         "halcyon": "done",
@@ -88,7 +123,12 @@
     "2026-08-17": {
       "status": "ready",
       "renderDate": "2026-08-13",
-      "words": ["berserk", "checkmate", "gymnasium", "ordeal"],
+      "words": [
+        "berserk",
+        "checkmate",
+        "gymnasium",
+        "ordeal"
+      ],
       "renders": {
         "berserk": "done",
         "checkmate": "done",
@@ -100,7 +140,12 @@
     "2026-09-07": {
       "status": "ready",
       "renderDate": "2026-09-07",
-      "words": ["juggernaut", "villain", "gossip", "malaria"],
+      "words": [
+        "juggernaut",
+        "villain",
+        "gossip",
+        "malaria"
+      ],
       "renders": {
         "juggernaut": "done",
         "villain": "done",
@@ -112,7 +157,12 @@
     "2026-09-14": {
       "status": "ready",
       "renderDate": "2026-09-12",
-      "words": ["window", "pandemonium", "pants", "money"],
+      "words": [
+        "window",
+        "pandemonium",
+        "pants",
+        "money"
+      ],
       "renders": {
         "window": "done",
         "pandemonium": "done",
@@ -124,7 +174,12 @@
     "2026-09-21": {
       "status": "ready",
       "renderDate": "2026-09-19",
-      "words": ["assassin", "museum", "cretin", "book"],
+      "words": [
+        "assassin",
+        "museum",
+        "cretin",
+        "book"
+      ],
       "renders": {
         "assassin": "done",
         "museum": "done",
@@ -136,7 +191,12 @@
     "2026-09-28": {
       "status": "ready",
       "renderDate": "2026-09-26",
-      "words": ["silly", "magazine", "dandelion", "trivial"],
+      "words": [
+        "silly",
+        "magazine",
+        "dandelion",
+        "trivial"
+      ],
       "renders": {
         "silly": "done",
         "magazine": "done",
@@ -144,6 +204,24 @@
         "trivial": "done"
       },
       "publishes": {}
+    },
+    "2026-10-05": {
+      "status": "ready",
+      "renderDate": null,
+      "words": [
+        "sarcophagus",
+        "bonfire",
+        "alcohol",
+        "vaccine"
+      ],
+      "renders": {},
+      "publishes": {},
+      "covers": {
+        "sarcophagus": 7250,
+        "bonfire": 6382,
+        "alcohol": 5824,
+        "vaccine": 5000
+      }
     }
   }
 }

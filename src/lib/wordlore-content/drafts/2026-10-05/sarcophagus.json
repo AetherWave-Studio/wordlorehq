@@ -1,0 +1,30 @@
+{
+  "word": "SARCOPHAGUS",
+  "pronunciation": "/sɑːrˈkɒf.ə.ɡəs/",
+  "partOfSpeech": "noun",
+  "definition": "a stone coffin, often carved or inscribed, used for a burial",
+  "hook": "A sarcophagus was named for what it did to the body.",
+  "modernAnchor": "Museum halls, Egyptian tombs, a carved stone box with a lid. We call it a sarcophagus.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "sarkophagos",
+    "originalMeaning": "flesh-eating"
+  },
+  "journey": [
+    "Greeks quarried a limestone near Assos that was said to dissolve a corpse within weeks.",
+    "They called the stone lithos sarkophagos, flesh-eating stone, from sarx, flesh, and phagein, to eat.",
+    "Coffins carved from that stone took the name, and the phrase shrank to just the second half.",
+    "Rome and later Europe kept the word for any grand stone coffin, long after the legend stopped mattering."
+  ],
+  "payoff": {
+    "setupWord": "SARCOPHAGUS",
+    "connector": "is, literally,",
+    "revelation": "FLESH-EATING"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BONFIRE"
+  },
+  "musicVariant": "dark"
+}
