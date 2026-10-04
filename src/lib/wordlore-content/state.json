@@ -207,14 +207,19 @@
     },
     "2026-10-05": {
       "status": "ready",
-      "renderDate": null,
+      "renderDate": "2026-10-03",
       "words": [
         "sarcophagus",
         "bonfire",
         "alcohol",
         "vaccine"
       ],
-      "renders": {},
+      "renders": {
+        "sarcophagus": "done",
+        "bonfire": "done",
+        "alcohol": "done",
+        "vaccine": "done"
+      },
       "publishes": {},
       "covers": {
         "sarcophagus": 7250,
