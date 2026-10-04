@@ -139,10 +139,36 @@ async function main() {
     console.log(`  ${platform.padEnd(10)} ${account.username ?? account.name ?? account.id}`);
   }
 
-  const covers = new Map<string, string>();
-  for (const r of preview.results ?? []) covers.set(r.platform, r.cover);
+  /* Covers, per platform - and per EPISODE where they differ.
+   *
+   * This used to be one line per platform, built by writing each result into a
+   * Map keyed on platform: last episode wins. That was fine while every
+   * episode shared one channel-wide cover timestamp. It stopped being fine
+   * when the cover became per-episode (the word card's window moves with
+   * narration length, so no fixed timestamp is right for every episode - see
+   * coverTimestampMsFrom in remotion/tokens/timing.ts). A single collapsed
+   * line would have reported whichever episode happened to sort last while
+   * looking like it described all four, which is exactly the kind of summary
+   * a human checks instead of the thing itself. */
+  const byPlatform = new Map<string, Map<string, string>>();
+  for (const r of preview.results ?? []) {
+    if (!byPlatform.has(r.platform)) byPlatform.set(r.platform, new Map());
+    byPlatform.get(r.platform)!.set(r.episode, r.cover);
+  }
   console.log("\nCovers:");
-  for (const [p, c] of covers) console.log(`  ${p.padEnd(10)} ${c}`);
+  for (const [platform, perEpisode] of byPlatform) {
+    const distinct = new Set(perEpisode.values());
+    if (distinct.size === 1) {
+      console.log(`  ${platform.padEnd(10)} ${[...distinct][0]}`);
+    } else {
+      /* Expected once covers are recorded per episode. Listed in full so the
+         Monday check reads real values rather than one standing in for four. */
+      console.log(`  ${platform.padEnd(10)} varies by episode:`);
+      for (const [episode, cover] of perEpisode) {
+        console.log(`    ${episode.padEnd(13)} ${cover}`);
+      }
+    }
+  }
 
   const slots = preview.results?.length ?? 0;
   const pending = (preview.results ?? []).filter((r: any) => r.status === "dry-run").length;

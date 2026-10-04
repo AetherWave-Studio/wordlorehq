@@ -26,9 +26,23 @@ you are inside on a Monday.
   One Blotato workspace holds several brands. If YouTube shows
   `Andrew Froehlich (AetherWave Studio)`, **stop** - that is another channel's
   feed, and posting there is not recoverable by deleting afterwards.
-- **Covers** should read `thumbnail` for youtube and instagram, `frame at 8.0s`
+- **Covers** should read `thumbnail` for youtube and instagram, `frame at N.Ns`
   for tiktok, and `platform default (no cover field)` for facebook and threads.
   The last two are correct, not a failure: those platforms accept no cover.
+
+  **Do not check TikTok's number against a literal.** It is computed per
+  episode from that episode's measured beat durations, so it legitimately
+  differs between episodes and changes week to week. The line may read
+  `varies by episode:` with one row each - that is the normal shape once
+  covers are recorded, not a fault. Treat anything from about 3.5s to 8.0s as
+  plausible and carry on; question it only if it is outside that range, or
+  missing entirely.
+
+  (This exact line used to say `frame at 8.0s`. When the value changed to a
+  computed one, this checklist still said 8.0s, the Monday run found the
+  mismatch, correctly stopped rather than improvising - and the week did not
+  go out. A check pinned to a value that is designed to move will fail that
+  way every time it moves.)
 - **Slot count** should be 20 (four episodes x five platforms).
 
 **3. If it says `0 to book, 20 already scheduled`, stop.** The week is done.
