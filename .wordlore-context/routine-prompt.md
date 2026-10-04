@@ -122,9 +122,32 @@ proxy MITMs TLS with a CA the headless Chromium does not trust) and writes to
 `public/episodes/<word>-<YYYY-MM-DD>.mp4`. `ffmpeg` and `ffprobe` are not in
 the base image - install them before the first render.
 
-**Confirm the MP4 exists and is non-trivial in size before marking that word
-`done` in `state.json`.** A flag with no file behind it is worse than a failed
-render, because the dashboard then reports work that was never produced.
+**The script writes the bookkeeping itself - you do not mark words `done` by
+hand any more.** After each successful render it sets, in the week that holds
+that word, `renders[<word>] = "done"`, the week's `renderDate`, and the
+episode's per-episode `covers[<word>]` timestamp. It refuses to flag a word
+whose MP4 is absent or under 1 MB, because a flag with no file behind it is
+worse than a failed render - the dashboard then reports work that was never
+produced.
+
+**What you do instead is read the line it prints.** On success each render ends
+with:
+
+```
+  state:    2026-10-05 sarcophagus done, renderDate 2026-10-03, cover 7.25s
+```
+
+If you see `!! ACTION REQUIRED` instead, the write did not land and that word is
+NOT recorded - fix it before step 7, or the week will not publish. Treat a
+missing `state:` line the same way: absence is not success.
+
+_Why this is spelled out:_ on 2026-10-03 this was a hand-edit and it was
+skipped. All four episodes rendered, uploaded and committed; `renders` stayed
+`{}`; and Monday's publish run refused the whole week with "Not every episode is
+rendered". The week of 09-28 had already been missed for an unrelated reason, so
+that would have been two in a row. The render script had state.json open anyway
+to write `covers`, which is probably what made the hand-edit look redundant - so
+now it genuinely is.
 
 **6b. Then clear backlog, if the week itself came out clean.** Read
 `state.json` for any word whose status is `missing` - recorded `done` with no
