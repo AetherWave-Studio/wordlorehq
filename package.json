@@ -9,7 +9,8 @@
     "lint": "eslint",
     "render": "tsx scripts/render-video.ts",
     "render:trailer": "tsx scripts/render-video.ts --trailer",
-    "narration": "tsx scripts/generate-narration.ts"
+    "narration": "tsx scripts/generate-narration.ts",
+    "test:publish": "tsx tests/schedule-week.test.mts"
   },
   "dependencies": {
     "next": "16.2.6",
