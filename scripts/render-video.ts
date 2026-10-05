@@ -40,6 +40,7 @@ import { coverTimestampMsFrom, beatBounds } from '../remotion/tokens/timing';
    how a checker ends up disagreeing with the thing it checks. Type-only, so
    nothing from the content lib is imported at runtime. */
 import type { State as StateFile } from '../src/lib/wordlore-content';
+import { applyEpisodeRecord } from '../src/lib/wordlore-content/record-render';
 import { THUMBNAIL_FRAME } from '../remotion/Thumbnail';
 import { applyPattern, channel, hashtags } from '../src/lib/channel';
 
@@ -147,31 +148,81 @@ function buildMetadata(input: WordloreInput): string {
   ].join('\n');
 }
 
+/** Smallest plausible episode MP4. A real 70-75s 1080x1920 render is 10-25 MB;
+ *  anything under a megabyte means Remotion or the loudnorm pass produced a
+ *  stub, and flagging that `done` is the one outcome worse than a failed
+ *  render - the dashboard then reports work that does not exist. */
+const MIN_PLAUSIBLE_MP4_BYTES = 1_000_000;
+
 /**
- * Store an episode's cover timestamp in state.json, beside its render status.
+ * Record in state.json that this episode rendered, and where its word card sits.
  *
- * state.json is the committed record of what the pipeline produced, and the
- * routine's adopt workflow already carries it back to the repo, so nothing new
- * has to be plumbed for the scheduler to read this. Failure here is logged and
- * swallowed on purpose: a cover timestamp is worth strictly less than the
- * render that just succeeded, and losing the MP4 over a bookkeeping write
- * would be a bad trade. The scheduler falls back to the channel constant when
- * the entry is missing.
+ * Three facts, one write, after the MP4 and thumbnail both exist:
+ *   - `renders[word] = "done"`, the dashboard's and the scheduler's claim that
+ *     this episode is publishable
+ *   - `renderDate`, which is what `episodeVideoFile` builds the filename from
+ *   - `covers[word]`, the per-episode TikTok cover timestamp
+ *
+ * This used to be a hand-edit. routine-prompt.md step 6 asked the routine's
+ * agent to open state.json and mark each word `done` after confirming the MP4.
+ * On 2026-10-03 that step was skipped: all four episodes rendered, uploaded and
+ * committed, `renders` stayed `{}`, and Monday's publish run would have refused
+ * the week with "Not every episode is rendered" - the second consecutive missed
+ * week. The script already had this file open to write `covers`, which may well
+ * be what made the hand-edit look redundant. So it writes all of it now.
+ *
+ * Failure is logged and swallowed, as the cover write always was: losing the
+ * MP4 over a bookkeeping error would be a bad trade. But a swallowed failure
+ * here costs a week rather than one cover, so it prints ACTION REQUIRED and
+ * the write is read back and confirmed rather than assumed.
  */
-function recordCoverTimestamp(contentKey: string, coverMs: number): void {
+function recordEpisodeRendered(
+  contentKey: string,
+  coverMs: number,
+  renderDate: string,
+  mp4Path: string,
+): void {
   const statePath = path.join(CONTENT_ROOT, 'state.json');
+
+  // Evidence first. `done` is a claim about a file, so check the file.
+  let bytes: number;
+  try {
+    bytes = fs.statSync(mp4Path).size;
+  } catch {
+    console.warn(`  !! ACTION REQUIRED: ${mp4Path} is not on disk - not marking ${contentKey} done`);
+    return;
+  }
+  if (bytes < MIN_PLAUSIBLE_MP4_BYTES) {
+    console.warn(
+      `  !! ACTION REQUIRED: ${mp4Path} is only ${(bytes / 1024).toFixed(0)} KB ` +
+        `- too small to be a real episode, not marking ${contentKey} done`,
+    );
+    return;
+  }
+
   try {
     const state: StateFile = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
-    const week = state.currentWeek;
-    const weekState = state.weeks?.[week];
-    if (!weekState) {
-      console.warn(`  ! no state.weeks[${week}] - cover timestamp not recorded`);
+    const { week, warnings } = applyEpisodeRecord(state, { contentKey, coverMs, renderDate });
+    for (const w of warnings) console.warn(`  ! ${w}`);
+    if (!week) {
+      console.warn(`  !! ACTION REQUIRED: no week in state.json holds ${contentKey} - not recorded`);
       return;
     }
-    weekState.covers = { ...(weekState.covers ?? {}), [contentKey]: coverMs };
     fs.writeFileSync(statePath, `${JSON.stringify(state, null, 2)}\n`);
+
+    // Read back, because a silent no-op here is what cost the 10-05 week.
+    const after: StateFile = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
+    const saved = after.weeks?.[week];
+    if (saved?.renders?.[contentKey] === 'done' && saved?.covers?.[contentKey] === coverMs) {
+      console.log(
+        `  state:    ${week} ${contentKey} done, renderDate ${renderDate}, ` +
+          `cover ${(coverMs / 1000).toFixed(2)}s`,
+      );
+    } else {
+      console.warn(`  !! ACTION REQUIRED: state.json did not keep ${contentKey} - mark it by hand`);
+    }
   } catch (e) {
-    console.warn(`  ! could not record cover timestamp: ${(e as Error).message}`);
+    console.warn(`  !! ACTION REQUIRED: could not record ${contentKey}: ${(e as Error).message}`);
   }
 }
 
@@ -202,12 +253,6 @@ async function renderVideo(inputArg: string): Promise<void> {
    * every episode. */
   const coverMs = coverTimestampMsFrom(beatDurationsSec);
   console.log(`  cover:    ${(coverMs / 1000).toFixed(2)}s (midpoint of the word card)`);
-  /* Keyed by the CONTENT key (lowercased word), not wordSlug. wordSlug
-     hyphenates whitespace for filenames; state.weeks[].words and the draft
-     filenames do not. They are identical for one-word episodes and would
-     have diverged silently on the first two-word one, falling back to the
-     constant with nothing to show why. */
-  recordCoverTimestamp(input.word.toLowerCase(), coverMs);
 
   // 2. Probe disk for the other audio assets. The Composition will only
   //    mount Audio components for files this orchestrator confirmed exist —
@@ -301,6 +346,14 @@ async function renderVideo(inputArg: string): Promise<void> {
   // 5. Metadata
   const metadataPath = path.join(EPISODES_DIR, `${wordSlug}-${date}-metadata.txt`);
   fs.writeFileSync(metadataPath, buildMetadata(input));
+
+  /* 6. Bookkeeping, last, because `done` is a claim about the MP4 above and
+   *    this is the first point at which that file exists. Keyed by the CONTENT
+   *    key (lowercased word), not wordSlug: wordSlug hyphenates whitespace for
+   *    filenames, while state.weeks[].words and the draft filenames do not.
+   *    They are identical for one-word episodes and would have diverged
+   *    silently on the first two-word one. */
+  recordEpisodeRendered(input.word.toLowerCase(), coverMs, date, outputMp4);
 
   console.log(`\n+ Render complete`);
   console.log(`  Video:    ${outputMp4}`);
