@@ -29,9 +29,15 @@ that line to `$DISCORD_WEBHOOK_URL` itself, so you do not need to.
 - **Do not judge, fix or retry anything yourself.** If the script refuses or
   fails, relay its line and stop. A human reads it in Discord.
 - **Do not post to any platform, Blotato, or Discord by any other means.**
-- If the repo is not checked out (no `scripts/schedule-week.ts`), say exactly
-  that and stop: the routine needs `AetherWave-Studio/wordlorehq` attached as a
-  source. Do not reconstruct the procedure from memory.
+- **The one exception to "no other Discord post":** if the repo is not checked
+  out (no `scripts/schedule-week.ts`), the script cannot report for you, so post
+  this single line yourself and stop, without reconstructing the procedure:
+
+  ```
+  curl -sS -X POST -H "Content-Type: application/json" \n    -d '{"content":"Wordlore NOT booked: repo not attached to the routine (no checkout of AetherWave-Studio/wordlorehq)"}' \n    "$DISCORD_WEBHOOK_URL"
+  ```
+
+  That was the 2026-10-05 failure: no checkout, GitHub 403, and nothing said.
 
 ## Why it is this short (2026-10-05)
 

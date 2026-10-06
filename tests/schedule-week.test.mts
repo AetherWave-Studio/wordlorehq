@@ -54,7 +54,7 @@ const server = http.createServer((req, res) => {
       return;
     }
     if (req.url === "/api/channel/schedule-week" && req.method === "POST") {
-      const results: any[] = [];
+      const results: Array<Record<string, string>> = [];
       for (const ep of body.episodes ?? []) {
         for (const platform of body.platforms ?? []) {
           const key = `${body.week}|${ep.episode}|${platform}`;
