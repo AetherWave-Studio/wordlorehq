@@ -1,0 +1,57 @@
+# Monday publish, as a GitHub Action instead of a claude.ai routine.
+#
+# Why: the claude.ai Monday routine was created without a repository attached,
+# so every Monday it woke up in an empty container, got a 403 from GitHub and
+# booked nothing (found 2026-10-05 from its own run log). The repo is already
+# connected here, so the job runs where the code is. The Saturday render
+# routine is unchanged.
+#
+# What it does: runs scripts/schedule-week.ts, which (after wordlorehq #28)
+# enforces the publish checklist in code, books the current ISO week's 20
+# slots by default, is idempotent against the channel_publishes unique index,
+# and posts its own one-line result (success or exact refusal) to Discord.
+# Secrets: AETHERWAVE_API_KEY, DISCORD_WEBHOOK_URL. Variable: AETHERWAVE_API_BASE.
+name: Publish week (Monday)
+on:
+  schedule:
+    - cron: '9 12 * * 1'   # Monday 12:09Z (06:09 MT), after the Saturday render has long landed
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run only (no booking)'
+        type: boolean
+        default: true
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: publish-week
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Book the week
+        env:
+          AETHERWAVE_API_KEY: ${{ secrets.AETHERWAVE_API_KEY }}
+          AETHERWAVE_API_BASE: ${{ vars.AETHERWAVE_API_BASE || 'https://aetherwavestudio.com' }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          CI: 'true'
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            npx tsx scripts/schedule-week.ts --dry-run
+          else
+            npx tsx scripts/schedule-week.ts
+          fi
+      - name: Report a job failure to Discord (the script normally posts its own line)
+        if: failure()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          [ -n "$DISCORD_WEBHOOK_URL" ] && curl -s -X POST -H 'Content-Type: application/json' \
+            -d "{\"content\":\"Wordlore NOT booked: the Monday publish job failed before the script could report. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            "$DISCORD_WEBHOOK_URL" || true
