@@ -1,0 +1,30 @@
+{
+  "word": "SHAMPOO",
+  "pronunciation": "/ʃæmˈpuː/",
+  "partOfSpeech": "noun",
+  "definition": "a liquid soap used for washing the hair",
+  "hook": "Shampoo started out as a massage.",
+  "modernAnchor": "A bottle in the shower, a lather in your hair. We call it shampoo.",
+  "origin": {
+    "language": "Hindi",
+    "era": "1700s India",
+    "originalWord": "champo",
+    "originalMeaning": "press or knead"
+  },
+  "journey": [
+    "Hindi champo is the command to press, the word for kneading tired muscles.",
+    "British traders in India picked it up in the 1700s and brought the word home as shampooing, meaning a massage.",
+    "In 1814 Sake Dean Mahomed opened a shampooing bath house in Brighton, and the fashion for it spread through England.",
+    "By the 1860s the word had slid from the massage to the head, and then to the soap itself."
+  ],
+  "payoff": {
+    "setupWord": "SHAMPOO",
+    "connector": "is, literally,",
+    "revelation": "TO PRESS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SLOGAN"
+  },
+  "musicVariant": "light"
+}

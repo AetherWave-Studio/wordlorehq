@@ -1,0 +1,30 @@
+{
+  "word": "ORCHID",
+  "pronunciation": "/ˈɔːr.kɪd/",
+  "partOfSpeech": "noun",
+  "definition": "a plant with showy, intricately shaped flowers, often grown as a houseplant",
+  "hook": "Orchid means testicle.",
+  "modernAnchor": "A delicate stem on a windowsill, a gift for a birthday or a wedding. We call it an orchid.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "orkhis",
+    "originalMeaning": "testicle"
+  },
+  "journey": [
+    "Greek orkhis meant testicle, and the philosopher Theophrastus used it for a plant in his botany around 300 BCE.",
+    "The plant grew paired, rounded tubers underground, and to Greek eyes they looked anatomically familiar.",
+    "Ancient herbalists took the resemblance seriously, and orchid roots were eaten as a cure for fertility trouble.",
+    "In 1845 the botanist John Lindley anglicized the Latin orchis into orchid, and the blunt body part disappeared behind the flower."
+  ],
+  "payoff": {
+    "setupWord": "ORCHID",
+    "connector": "is, literally,",
+    "revelation": "A TESTICLE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "CANDIDATE"
+  },
+  "musicVariant": "warm"
+}

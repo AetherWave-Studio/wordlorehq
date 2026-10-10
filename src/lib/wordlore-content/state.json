@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-10-05",
+  "currentWeek": "2026-10-12",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -226,6 +226,29 @@
         "bonfire": 6382,
         "alcohol": 5824,
         "vaccine": 5000
+      }
+    },
+    "2026-10-12": {
+      "status": "ready",
+      "renderDate": "2026-10-10",
+      "words": [
+        "orchid",
+        "candidate",
+        "shampoo",
+        "slogan"
+      ],
+      "renders": {
+        "orchid": "done",
+        "candidate": "done",
+        "shampoo": "done",
+        "slogan": "done"
+      },
+      "publishes": {},
+      "covers": {
+        "orchid": 5044,
+        "candidate": 6206,
+        "shampoo": 5110,
+        "slogan": 5588
       }
     }
   }

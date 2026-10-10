@@ -172,3 +172,15 @@ that a disputed origin gets said out loud in the journey, not smoothed over.
 | **DANDELION** | French "dent de lion," lion tooth | Visual, good for a light week |
 | **PENCIL** | Latin "penicillus," little tail | Same root as the paintbrush |
 | **HEARSE** | Latin "hirpex," a harrow | Three-step drift: farm tool, candle frame, funeral car |
+
+## Refill batch (added 2026-10-10, no Tier 1 words left in `available`)
+
+Every Tier 1 candidate had been used, so week 2026-10-12 had nothing to satisfy the
+"at least one Tier 1" rule. ORCHID was added and used the same day; the other two sit in
+word-pipeline.json's `available` list.
+
+| Word | Tier | Payoff | Notes |
+|---|---|---|---|
+| **ORCHID** | 1 | Greek "orkhis," testicle, from the paired tubers | Used week 2026-10-12 |
+| **MUMMY** | 1 | Persian "mum," wax, via Arabic "mumiya," bitumen - Europeans once ground mummies into medicine | Check source before drafting |
+| **DECIMATE** | 1 | Latin "decimare," kill one in ten - a Roman army punishment | Modern meaning drifted to "destroy most of" |

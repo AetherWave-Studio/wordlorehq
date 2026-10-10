@@ -1,0 +1,30 @@
+{
+  "word": "CANDIDATE",
+  "pronunciation": "/ˈkæn.dɪ.dət/",
+  "partOfSpeech": "noun",
+  "definition": "a person who seeks or is nominated for an office, prize, or position",
+  "hook": "A candidate is someone dressed in white.",
+  "modernAnchor": "A face on a campaign poster, a name on a ballot, a hand shaking yours at the door. We call that person a candidate.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "candidatus",
+    "originalMeaning": "clothed in white"
+  },
+  "journey": [
+    "Latin candidus meant bright white, and candidatus meant dressed in white.",
+    "Romans who wanted public office wore togas rubbed with chalk until they gleamed, so crowds could pick them out.",
+    "The bleached toga announced the wearer was running, and a candidatus became anyone standing for election.",
+    "The chalk and the toga are long gone, but the word kept the job and dropped the outfit."
+  ],
+  "payoff": {
+    "setupWord": "CANDIDATE",
+    "connector": "is, literally,",
+    "revelation": "DRESSED IN WHITE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SHAMPOO"
+  },
+  "musicVariant": "dark"
+}

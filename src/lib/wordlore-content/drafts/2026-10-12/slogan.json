@@ -1,0 +1,30 @@
+{
+  "word": "SLOGAN",
+  "pronunciation": "/ˈsloʊ.ɡən/",
+  "partOfSpeech": "noun",
+  "definition": "a short, memorable phrase used in advertising or politics",
+  "hook": "Slogan began as a battle scream.",
+  "modernAnchor": "Three words on a billboard, a jingle you cannot shake. We call it a slogan.",
+  "origin": {
+    "language": "Scottish Gaelic",
+    "era": "1500s Scotland",
+    "originalWord": "sluagh-ghairm",
+    "originalMeaning": "army cry"
+  },
+  "journey": [
+    "Gaelic sluagh meant host or army, and gairm meant a cry, so sluagh-ghairm was the war cry of the host.",
+    "Highland clans shouted their rallying cry as they charged, and each clan had its own.",
+    "English borrowed it in the 1500s as slogorne, and for centuries it meant only a battle shout.",
+    "Around the 1800s the word moved from the battlefield to politics, and later to advertising, where the charge is for your wallet."
+  ],
+  "payoff": {
+    "setupWord": "SLOGAN",
+    "connector": "is, literally,",
+    "revelation": "AN ARMY CRY"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ORCHID"
+  },
+  "musicVariant": "dark"
+}

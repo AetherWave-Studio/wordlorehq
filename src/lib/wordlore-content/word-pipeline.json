@@ -13,12 +13,6 @@
       "payoff": "Greek \"elektron,\" amber, which produces static when rubbed"
     },
     {
-      "word": "SHAMPOO",
-      "tier": 4,
-      "language": "Hindi",
-      "payoff": "Hindi \"champo,\" to press or massage"
-    },
-    {
       "word": "ADMIRAL",
       "tier": 4,
       "language": "Arabic",
@@ -37,12 +31,6 @@
       "payoff": "Latin \"de lira,\" out of the furrow, a plowing metaphor for madness"
     },
     {
-      "word": "SLOGAN",
-      "tier": 4,
-      "language": "Scottish Gaelic",
-      "payoff": "Scottish Gaelic \"sluagh-ghairm,\" army cry, a battle shout"
-    },
-    {
       "word": "AMATEUR",
       "tier": 4,
       "language": "Latin",
@@ -55,12 +43,6 @@
       "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
     },
     {
-      "word": "CANDIDATE",
-      "tier": 2,
-      "language": "Latin",
-      "payoff": "Latin \"candidatus,\" dressed in white - Roman office-seekers wore bleached togas"
-    },
-    {
       "word": "PENCIL",
       "tier": 4,
       "language": "Latin",
@@ -71,6 +53,18 @@
       "tier": 4,
       "language": "Latin",
       "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
+    },
+    {
+      "word": "MUMMY",
+      "tier": 1,
+      "language": "Persian",
+      "payoff": "Persian \"mum,\" wax, via Arabic \"mumiya,\" bitumen - Europeans once ground mummies into medicine"
+    },
+    {
+      "word": "DECIMATE",
+      "tier": 1,
+      "language": "Latin",
+      "payoff": "Latin \"decimare,\" to kill one in every ten - a Roman army punishment"
     }
   ],
   "used": [
@@ -333,6 +327,26 @@
       "word": "VACCINE",
       "week": "2026-10-05",
       "drafted": "2026-10-03"
+    },
+    {
+      "word": "ORCHID",
+      "week": "2026-10-12",
+      "drafted": "2026-10-10"
+    },
+    {
+      "word": "CANDIDATE",
+      "week": "2026-10-12",
+      "drafted": "2026-10-10"
+    },
+    {
+      "word": "SHAMPOO",
+      "week": "2026-10-12",
+      "drafted": "2026-10-10"
+    },
+    {
+      "word": "SLOGAN",
+      "week": "2026-10-12",
+      "drafted": "2026-10-10"
     }
   ]
 }
