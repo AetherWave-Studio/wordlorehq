@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-10-12",
+  "currentWeek": "2026-10-19",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -249,6 +249,29 @@
         "candidate": 6206,
         "shampoo": 5110,
         "slogan": 5588
+      }
+    },
+    "2026-10-19": {
+      "status": "ready",
+      "words": [
+        "mummy",
+        "decimate",
+        "electric",
+        "hazard"
+      ],
+      "renders": {
+        "mummy": "done",
+        "decimate": "done",
+        "electric": "done",
+        "hazard": "done"
+      },
+      "publishes": {},
+      "renderDate": "2026-10-17",
+      "covers": {
+        "mummy": 6816,
+        "decimate": 6757,
+        "electric": 6434,
+        "hazard": 5691
       }
     }
   }

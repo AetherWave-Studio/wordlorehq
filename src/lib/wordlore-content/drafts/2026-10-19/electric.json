@@ -1,0 +1,30 @@
+{
+  "word": "ELECTRIC",
+  "pronunciation": "/ɪˈlɛk.trɪk/",
+  "partOfSpeech": "adjective",
+  "definition": "powered by or relating to electricity",
+  "hook": "Electric is named after a jewel made of tree sap.",
+  "modernAnchor": "A wall socket, a car that hums, a spark when you touch a doorknob. We call it electric.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "elektron",
+    "originalMeaning": "amber"
+  },
+  "journey": [
+    "Greek elektron meant amber, the golden fossilized resin of ancient trees.",
+    "Greeks noticed that rubbing amber with fur made it pull feathers and dust toward it.",
+    "In 1600 the English physician William Gilbert coined the Latin electricus, meaning like amber, for that mysterious pull.",
+    "Later scientists kept the name for the force itself, and the jewel's static became the power in the wall."
+  ],
+  "payoff": {
+    "setupWord": "ELECTRIC",
+    "connector": "is, literally,",
+    "revelation": "LIKE AMBER"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "HAZARD"
+  },
+  "musicVariant": "dark"
+}

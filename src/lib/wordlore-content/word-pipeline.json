@@ -1,18 +1,6 @@
 {
   "available": [
     {
-      "word": "HAZARD",
-      "tier": 2,
-      "language": "Arabic",
-      "payoff": "Arabic \"az-zahr,\" the dice, via Old French, started as a dice game"
-    },
-    {
-      "word": "ELECTRIC",
-      "tier": 3,
-      "language": "Greek",
-      "payoff": "Greek \"elektron,\" amber, which produces static when rubbed"
-    },
-    {
       "word": "ADMIRAL",
       "tier": 4,
       "language": "Arabic",
@@ -53,18 +41,6 @@
       "tier": 4,
       "language": "Latin",
       "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
-    },
-    {
-      "word": "MUMMY",
-      "tier": 1,
-      "language": "Persian",
-      "payoff": "Persian \"mum,\" wax, via Arabic \"mumiya,\" bitumen - Europeans once ground mummies into medicine"
-    },
-    {
-      "word": "DECIMATE",
-      "tier": 1,
-      "language": "Latin",
-      "payoff": "Latin \"decimare,\" to kill one in every ten - a Roman army punishment"
     }
   ],
   "used": [
@@ -347,6 +323,26 @@
       "word": "SLOGAN",
       "week": "2026-10-12",
       "drafted": "2026-10-10"
+    },
+    {
+      "word": "MUMMY",
+      "week": "2026-10-19",
+      "drafted": "2026-10-17"
+    },
+    {
+      "word": "DECIMATE",
+      "week": "2026-10-19",
+      "drafted": "2026-10-17"
+    },
+    {
+      "word": "ELECTRIC",
+      "week": "2026-10-19",
+      "drafted": "2026-10-17"
+    },
+    {
+      "word": "HAZARD",
+      "week": "2026-10-19",
+      "drafted": "2026-10-17"
     }
   ]
 }

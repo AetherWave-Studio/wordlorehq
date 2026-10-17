@@ -1,0 +1,30 @@
+{
+  "word": "HAZARD",
+  "pronunciation": "/ˈhæz.ərd/",
+  "partOfSpeech": "noun",
+  "definition": "a danger or risk",
+  "hook": "Hazard started as a game, and the stakes were real.",
+  "modernAnchor": "A yellow sign, a wet floor, a flashing light. We call it a hazard.",
+  "origin": {
+    "language": "Arabic",
+    "era": "medieval Middle East",
+    "originalWord": "az-zahr",
+    "originalMeaning": "the dice"
+  },
+  "journey": [
+    "Arabic az-zahr meant the dice, and it named a gambling game played with them.",
+    "Crusaders brought the game to Europe, where Old French turned the name into hasard.",
+    "English players picked it up in the 1300s, and hazard was a dice game of chance where fortunes were lost on a single throw.",
+    "Gambling losses made chance feel like danger, so a game of luck slowly became any risk at all."
+  ],
+  "payoff": {
+    "setupWord": "HAZARD",
+    "connector": "is, literally,",
+    "revelation": "THE DICE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "MUMMY"
+  },
+  "musicVariant": "dark"
+}

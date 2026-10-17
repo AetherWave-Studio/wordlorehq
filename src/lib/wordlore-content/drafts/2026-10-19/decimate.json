@@ -1,0 +1,30 @@
+{
+  "word": "DECIMATE",
+  "pronunciation": "/ˈdɛs.ɪ.meɪt/",
+  "partOfSpeech": "verb",
+  "definition": "to destroy a large part of something",
+  "hook": "Decimate is a math problem, and the answer is one in ten.",
+  "modernAnchor": "A storm flattens a town. A recession wipes out a market. We say it was decimated.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "decimare",
+    "originalMeaning": "to take one in ten"
+  },
+  "journey": [
+    "Latin decem meant ten, and decimare meant to take a tenth.",
+    "When a Roman legion mutinied or fled, the army answered with a brutal punishment.",
+    "The soldiers were split into groups of ten and drew lots. The one who drew the short lot was beaten to death by the other nine.",
+    "Over the centuries the exact fraction faded, and decimate came to mean destroying almost anything on a large scale."
+  ],
+  "payoff": {
+    "setupWord": "DECIMATE",
+    "connector": "is, literally,",
+    "revelation": "KILL ONE IN TEN"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ELECTRIC"
+  },
+  "musicVariant": "dark"
+}

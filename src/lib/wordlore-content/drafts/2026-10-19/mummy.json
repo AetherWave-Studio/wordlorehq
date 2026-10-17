@@ -1,0 +1,30 @@
+{
+  "word": "MUMMY",
+  "pronunciation": "/ˈmʌm.i/",
+  "partOfSpeech": "noun",
+  "definition": "a body preserved by embalming, especially in ancient Egypt",
+  "hook": "Mummy once meant wax, and then it meant medicine.",
+  "modernAnchor": "Linen wrappings, a golden mask, a tomb in the desert sands. We call it a mummy.",
+  "origin": {
+    "language": "Persian",
+    "era": "medieval Persia",
+    "originalWord": "mum",
+    "originalMeaning": "wax"
+  },
+  "journey": [
+    "Persian mum meant wax, and the Persians used a tarry bitumen they called mumiya, the wax-like pitch.",
+    "Arabic borrowed mumiya, and traders carried the word and the substance west into Europe.",
+    "Europeans noticed the blackened Egyptian bodies looked coated in the same pitch and named them after it.",
+    "For centuries doctors ground real mummies into powder and sold it as medicine. The word stuck to the corpses."
+  ],
+  "payoff": {
+    "setupWord": "MUMMY",
+    "connector": "is, literally,",
+    "revelation": "WAX"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "DECIMATE"
+  },
+  "musicVariant": "dark"
+}
