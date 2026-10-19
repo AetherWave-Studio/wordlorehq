@@ -14,7 +14,19 @@
 name: Publish week (Monday)
 on:
   schedule:
+    # Three chances, not one. On 2026-10-12 the single 12:09Z schedule was
+    # delivered by GitHub at 21:12Z - nine hours late, and six hours after the
+    # 15:00Z Monday slot had passed, so that episode was refused "Cannot
+    # schedule a post in the past" and had to go out by hand. GitHub delays and
+    # sometimes drops scheduled runs under load; it guarantees nothing about
+    # when a cron is delivered. Booking is idempotent against the
+    # channel_publishes unique index, so whichever of these lands first books
+    # the week and the rest report "already scheduled" and cost nothing.
+    # 09:09Z carries ~6h of slack before the slot, which would have absorbed
+    # every delay seen so far.
+    - cron: '9 9 * * 1'    # Monday 09:09Z (03:09 MT) - earliest, most slack
     - cron: '9 12 * * 1'   # Monday 12:09Z (06:09 MT), after the Saturday render has long landed
+    - cron: '9 14 * * 1'   # Monday 14:09Z (08:09 MT) - last chance, ~51min before the 15:00Z slot
   workflow_dispatch:
     inputs:
       dry_run:
