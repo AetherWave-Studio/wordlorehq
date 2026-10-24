@@ -1,0 +1,30 @@
+{
+  "word": "SKELETON",
+  "pronunciation": "/ˈskɛl.ɪ.tən/",
+  "partOfSpeech": "noun",
+  "definition": "the framework of bones that supports a body",
+  "hook": "Skeleton was never the word for bones. It was the word for what is left.",
+  "modernAnchor": "A plastic one on a porch, a real one in a museum. We call it a skeleton.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "skeletos",
+    "originalMeaning": "dried up"
+  },
+  "journey": [
+    "Greek skellein meant to dry up or parch, the verb you would use for a field in a drought.",
+    "Greeks used skeletos for a body dried out by sun and time, a mummy or a withered corpse.",
+    "The word named the whole dried body, flesh and all, not just the bones inside it.",
+    "Latin and then English narrowed it over the centuries until only the bones kept the name."
+  ],
+  "payoff": {
+    "setupWord": "SKELETON",
+    "connector": "is, literally,",
+    "revelation": "DRIED UP"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ADMIRAL"
+  },
+  "musicVariant": "dark"
+}

@@ -1,0 +1,30 @@
+{
+  "word": "KIDNAP",
+  "pronunciation": "/ˈkɪd.næp/",
+  "partOfSpeech": "verb",
+  "definition": "to take someone away by force and hold them",
+  "hook": "Kidnap is two slang words that were stuck together in the 1600s.",
+  "modernAnchor": "A black van, a ransom note, a headline. We call it a kidnapping.",
+  "origin": {
+    "language": "English",
+    "era": "late 1600s England",
+    "originalWord": "kid nap",
+    "originalMeaning": "to snatch a child"
+  },
+  "journey": [
+    "Kid was slang for a child, and nap was a dialect word meaning to snatch or seize.",
+    "Put together, a kidnapper was a person who snatched children.",
+    "In the late 1600s children were stolen and shipped to the American colonies to work as servants.",
+    "The word outgrew its victims, and now anyone who is seized and held has been kidnapped."
+  ],
+  "payoff": {
+    "setupWord": "KIDNAP",
+    "connector": "is, literally,",
+    "revelation": "TO SNATCH A CHILD"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "NICE"
+  },
+  "musicVariant": "dark"
+}

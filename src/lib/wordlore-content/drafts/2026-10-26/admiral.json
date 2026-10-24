@@ -1,0 +1,30 @@
+{
+  "word": "ADMIRAL",
+  "pronunciation": "/ˈæd.mər.əl/",
+  "partOfSpeech": "noun",
+  "definition": "the commander of a fleet or a navy",
+  "hook": "Admiral is an Arabic title that European sailors mistook for a rank.",
+  "modernAnchor": "Gold braid, a captain's hat, a fleet on the horizon. We call that person an admiral.",
+  "origin": {
+    "language": "Arabic",
+    "era": "medieval Middle East",
+    "originalWord": "amir al-bahr",
+    "originalMeaning": "commander of the sea"
+  },
+  "journey": [
+    "Arabic amir meant commander, and it was attached to many offices. Amir al-bahr was the commander of the sea.",
+    "Crusaders and Mediterranean traders met Arab fleets and borrowed the title for their own naval leaders.",
+    "In Latin and French the al- was taken for part of the word itself, giving amiral.",
+    "Spelling later shifted again to admiral, and the commander of the sea became a rank in every navy."
+  ],
+  "payoff": {
+    "setupWord": "ADMIRAL",
+    "connector": "is, literally,",
+    "revelation": "COMMANDER OF THE SEA"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "KIDNAP"
+  },
+  "musicVariant": "dark"
+}
