@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-10-19",
+  "currentWeek": "2026-10-26",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -273,6 +273,18 @@
         "electric": 6434,
         "hazard": 5691
       }
+    },
+    "2026-10-26": {
+      "status": "drafting",
+      "renderDate": null,
+      "words": [
+        "skeleton",
+        "admiral",
+        "kidnap",
+        "nice"
+      ],
+      "renders": {},
+      "publishes": {}
     }
   }
 }

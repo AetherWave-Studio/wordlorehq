@@ -1,12 +1,6 @@
 {
   "available": [
     {
-      "word": "ADMIRAL",
-      "tier": 4,
-      "language": "Arabic",
-      "payoff": "Arabic \"amir al-bahr,\" commander of the sea"
-    },
-    {
       "word": "DISMAL",
       "tier": 4,
       "language": "Latin",
@@ -25,12 +19,6 @@
       "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
     },
     {
-      "word": "NICE",
-      "tier": 2,
-      "language": "Latin",
-      "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
-    },
-    {
       "word": "PENCIL",
       "tier": 4,
       "language": "Latin",
@@ -41,6 +29,48 @@
       "tier": 4,
       "language": "Latin",
       "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
+    },
+    {
+      "word": "TSUNAMI",
+      "tier": 2,
+      "language": "Japanese",
+      "payoff": "Japanese \"tsu-nami,\" harbor wave, named by fishermen who found their harbor wrecked after a calm sea"
+    },
+    {
+      "word": "HURRICANE",
+      "tier": 3,
+      "language": "Taino",
+      "payoff": "Taino \"hurakan,\" the god of storms, via Spanish huracan"
+    },
+    {
+      "word": "NAUSEA",
+      "tier": 4,
+      "language": "Greek",
+      "payoff": "Greek \"nausia,\" seasickness, from naus, a ship"
+    },
+    {
+      "word": "MAROON",
+      "tier": 4,
+      "language": "Spanish",
+      "payoff": "Spanish \"cimarron,\" wild or untamed, first used of runaway cattle then of escaped slaves"
+    },
+    {
+      "word": "MOSQUITO",
+      "tier": 4,
+      "language": "Spanish",
+      "payoff": "Spanish \"mosquito,\" little fly"
+    },
+    {
+      "word": "COFFIN",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Greek \"kophinos,\" a basket, via Latin and Old French, where it meant any box or case"
+    },
+    {
+      "word": "GHOUL",
+      "tier": 1,
+      "language": "Arabic",
+      "payoff": "Arabic \"ghul,\" a desert demon that lures travelers and feeds on the dead"
     }
   ],
   "used": [
@@ -343,6 +373,26 @@
       "word": "HAZARD",
       "week": "2026-10-19",
       "drafted": "2026-10-17"
+    },
+    {
+      "word": "SKELETON",
+      "week": "2026-10-26",
+      "drafted": "2026-10-24"
+    },
+    {
+      "word": "ADMIRAL",
+      "week": "2026-10-26",
+      "drafted": "2026-10-24"
+    },
+    {
+      "word": "KIDNAP",
+      "week": "2026-10-26",
+      "drafted": "2026-10-24"
+    },
+    {
+      "word": "NICE",
+      "week": "2026-10-26",
+      "drafted": "2026-10-24"
     }
   ]
 }

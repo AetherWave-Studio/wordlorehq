@@ -184,3 +184,21 @@ word-pipeline.json's `available` list.
 | **ORCHID** | 1 | Greek "orkhis," testicle, from the paired tubers | Used week 2026-10-12 |
 | **MUMMY** | 1 | Persian "mum," wax, via Arabic "mumiya," bitumen - Europeans once ground mummies into medicine | Check source before drafting |
 | **DECIMATE** | 1 | Latin "decimare," kill one in ten - a Roman army punishment | Modern meaning drifted to "destroy most of" |
+
+## Refill batch (added 2026-10-24, `available` held 7 and no Tier 1)
+
+SKELETON and KIDNAP were added as Tier 1 and used the same day in week 2026-10-26. The rest sit in
+word-pipeline.json's `available` list. KIDNAP, TSUNAMI, HURRICANE and MAROON have folk-etymology
+variants; the drafting run should check its own source before writing the episode.
+
+| Word | Tier | Payoff | Notes |
+|---|---|---|---|
+| **SKELETON** | 1 | Greek "skeletos," dried up | Used week 2026-10-26 |
+| **KIDNAP** | 1 | English "kid nap," to snatch a child | Used week 2026-10-26 |
+| **COFFIN** | 1 | Greek "kophinos," a basket | |
+| **GHOUL** | 1 | Arabic "ghul," a desert demon | |
+| **TSUNAMI** | 2 | Japanese "harbor wave" | |
+| **HURRICANE** | 3 | Taino "hurakan," god of storms | |
+| **NAUSEA** | 4 | Greek "nausia," seasickness, from naus, ship | |
+| **MAROON** | 4 | Spanish "cimarron," wild or untamed | |
+| **MOSQUITO** | 4 | Spanish, little fly | |

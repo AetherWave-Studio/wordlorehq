@@ -1,0 +1,30 @@
+{
+  "word": "NICE",
+  "pronunciation": "/naɪs/",
+  "partOfSpeech": "adjective",
+  "definition": "pleasant, kind or agreeable",
+  "hook": "Nice used to be an insult. It meant you were ignorant.",
+  "modernAnchor": "A kind word, a good meal, a pleasant day. We call it nice.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "nescius",
+    "originalMeaning": "not knowing"
+  },
+  "journey": [
+    "Latin nescius joined ne, not, with scire, to know. It described a person who simply did not know.",
+    "Old French turned it into nice, and it reached English in the 1300s meaning foolish or silly.",
+    "Over the next few centuries it drifted through shy, fussy and finely detailed, as in a nice distinction.",
+    "By the 1700s it meant pleasant, and one of the worst things you could call someone became a compliment."
+  ],
+  "payoff": {
+    "setupWord": "NICE",
+    "connector": "is, literally,",
+    "revelation": "NOT KNOWING"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SKELETON"
+  },
+  "musicVariant": "warm"
+}
