@@ -1,0 +1,30 @@
+{
+  "word": "TOXIC",
+  "pronunciation": "/ˈtɒk.sɪk/",
+  "partOfSpeech": "adjective",
+  "definition": "poisonous, or harmful to health",
+  "hook": "Toxic did not start as a word about poison. It started as a word about a bow.",
+  "modernAnchor": "A warning label, a chemical spill, a friendship that drains you. We call it toxic.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "toxikon",
+    "originalMeaning": "of the bow"
+  },
+  "journey": [
+    "Greek toxon meant a bow, the weapon an archer drew.",
+    "Archers coated their arrowheads to make a shallow wound lethal, and the Greeks called that coating toxikon pharmakon, the drug of the bow.",
+    "The phrase wore down in use. Speakers kept toxikon, the bow word, and dropped pharmakon, the word that actually meant drug.",
+    "Latin borrowed the survivor as toxicum, and by then the archer was gone. All that was left was the thing on the tip."
+  ],
+  "payoff": {
+    "setupWord": "TOXIC",
+    "connector": "is, literally,",
+    "revelation": "OF THE BOW"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ADMIRAL"
+  },
+  "musicVariant": "dark"
+}

@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-10-19",
+  "currentWeek": "2026-10-26",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -272,6 +272,29 @@
         "decimate": 6757,
         "electric": 6434,
         "hazard": 5691
+      }
+    },
+    "2026-10-26": {
+      "status": "ready",
+      "renderDate": "2026-10-27",
+      "words": [
+        "toxic",
+        "admiral",
+        "chocolate",
+        "nice"
+      ],
+      "renders": {
+        "toxic": "done",
+        "admiral": "done",
+        "chocolate": "done",
+        "nice": "done"
+      },
+      "publishes": {},
+      "covers": {
+        "toxic": 6934,
+        "admiral": 6963,
+        "chocolate": 6926,
+        "nice": 5397
       }
     }
   }

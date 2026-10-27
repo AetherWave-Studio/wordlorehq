@@ -1,12 +1,6 @@
 {
   "available": [
     {
-      "word": "ADMIRAL",
-      "tier": 4,
-      "language": "Arabic",
-      "payoff": "Arabic \"amir al-bahr,\" commander of the sea"
-    },
-    {
       "word": "DISMAL",
       "tier": 4,
       "language": "Latin",
@@ -25,12 +19,6 @@
       "payoff": "Latin \"amator\" via French, lover, one who does it for love not money"
     },
     {
-      "word": "NICE",
-      "tier": 2,
-      "language": "Latin",
-      "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
-    },
-    {
       "word": "PENCIL",
       "tier": 4,
       "language": "Latin",
@@ -41,6 +29,36 @@
       "tier": 4,
       "language": "Latin",
       "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
+    },
+    {
+      "word": "SHAMBLES",
+      "tier": 1,
+      "language": "Old English",
+      "payoff": "Old English \"sceamol\", a butcher's bench - a meat market, then a slaughterhouse, then any scene of carnage"
+    },
+    {
+      "word": "BANKRUPT",
+      "tier": 1,
+      "language": "Italian",
+      "payoff": "Italian \"banca rotta\", broken bench - a failed moneylender's table smashed in the marketplace"
+    },
+    {
+      "word": "AVATAR",
+      "tier": 2,
+      "language": "Sanskrit",
+      "payoff": "Sanskrit \"avatara\", a descent - a god coming down into the world in bodily form"
+    },
+    {
+      "word": "SKY",
+      "tier": 2,
+      "language": "Norse",
+      "payoff": "Old Norse \"sky\", cloud - English named the whole heavens after the thing blocking the view of it"
+    },
+    {
+      "word": "DENIM",
+      "tier": 4,
+      "language": "French",
+      "payoff": "French \"de Nimes\", from the city of Nimes - the fabric is named after where it was woven"
     }
   ],
   "used": [
@@ -343,6 +361,30 @@
       "word": "HAZARD",
       "week": "2026-10-19",
       "drafted": "2026-10-17"
+    },
+    {
+      "word": "ADMIRAL",
+      "tier": 4,
+      "language": "Arabic",
+      "payoff": "Arabic \"amir al-bahr,\" commander of the sea"
+    },
+    {
+      "word": "NICE",
+      "tier": 2,
+      "language": "Latin",
+      "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
+    },
+    {
+      "word": "TOXIC",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Greek \"toxikon\", the poison smeared on a bow's arrows - the bow is the root, not the poison"
+    },
+    {
+      "word": "CHOCOLATE",
+      "tier": 2,
+      "language": "Nahuatl",
+      "payoff": "Nahuatl \"xocolatl\", bitter water - unsweetened, spiced with chilli, drunk not eaten"
     }
   ]
 }

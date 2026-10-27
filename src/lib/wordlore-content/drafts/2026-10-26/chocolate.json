@@ -1,0 +1,30 @@
+{
+  "word": "CHOCOLATE",
+  "pronunciation": "/ˈtʃɒk.lət/",
+  "partOfSpeech": "noun",
+  "definition": "a sweet food made from roasted and ground cacao seeds",
+  "hook": "Chocolate was not sweet, and it was not even a food.",
+  "modernAnchor": "A wrapped bar, a hot mug, a box tied with ribbon. We call it chocolate.",
+  "origin": {
+    "language": "Nahuatl",
+    "era": "Aztec Mexico",
+    "originalWord": "xocolatl",
+    "originalMeaning": "bitter water"
+  },
+  "journey": [
+    "The Aztecs ground cacao seeds and poured the paste between vessels until the surface carried a thick foam.",
+    "They drank it unsweetened and spiced with chilli, and the name said exactly how it tasted: xocolatl, bitter water.",
+    "Spanish colonists carried the drink home and buried the bitterness under sugar, cinnamon and milk.",
+    "Three centuries later it was pressed into a solid bar and handed to children. The taste is gone, and only the name still remembers it."
+  ],
+  "payoff": {
+    "setupWord": "CHOCOLATE",
+    "connector": "is, literally,",
+    "revelation": "BITTER WATER"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "NICE"
+  },
+  "musicVariant": "dark"
+}

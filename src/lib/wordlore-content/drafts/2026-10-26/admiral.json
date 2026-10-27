@@ -1,0 +1,30 @@
+{
+  "word": "ADMIRAL",
+  "pronunciation": "/ˈæd.mɪ.rəl/",
+  "partOfSpeech": "noun",
+  "definition": "a commander of a fleet or a navy",
+  "hook": "There is no D in admiral. English added one by mistake and never took it out.",
+  "modernAnchor": "Gold braid, a flagship, a fleet riding at anchor. We call him an admiral.",
+  "origin": {
+    "language": "Arabic",
+    "era": "medieval Arab world",
+    "originalWord": "amir al-bahr",
+    "originalMeaning": "commander of the sea"
+  },
+  "journey": [
+    "Arabic amir meant commander, and the title amir al-bahr named the commander of the sea.",
+    "Sicilian and Crusader courts borrowed the rank, but they borrowed it in fragments, often just amir al, commander of the, with no sea attached.",
+    "Medieval scribes heard a familiar Latin word hiding inside the sound and spelled it admiral, as though it came from admirari, to wonder at.",
+    "The D is that guess, set in writing and never removed. The sea the title was built on fell out of the word entirely."
+  ],
+  "payoff": {
+    "setupWord": "ADMIRAL",
+    "connector": "is, literally,",
+    "revelation": "COMMANDER OF THE SEA"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "CHOCOLATE"
+  },
+  "musicVariant": "dark"
+}

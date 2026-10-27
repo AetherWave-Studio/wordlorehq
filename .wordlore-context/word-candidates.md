@@ -184,3 +184,28 @@ word-pipeline.json's `available` list.
 | **ORCHID** | 1 | Greek "orkhis," testicle, from the paired tubers | Used week 2026-10-12 |
 | **MUMMY** | 1 | Persian "mum," wax, via Arabic "mumiya," bitumen - Europeans once ground mummies into medicine | Check source before drafting |
 | **DECIMATE** | 1 | Latin "decimare," kill one in ten - a Roman army punishment | Modern meaning drifted to "destroy most of" |
+
+## Refill batch (added 2026-10-27, pool could not satisfy the selection rules)
+
+`available` held 7 entries: six Latin and one Arabic, with no Tier 1 among them.
+That is below the step-2 threshold of 8, but the harder problem was that it was
+unselectable - step 3 requires four words from four different language families
+and at least one Tier 1, and a pool of 6 Latin + 1 Arabic can yield at most two
+qualifying picks. Refilled for family spread rather than for count alone.
+
+| Word | Tier | Language | Payoff |
+|---|---|---|---|
+| **TOXIC** | 1 | Greek | *toxikon*, the poison smeared on a bow's arrows. The bow is the root; the poison is the borrowed part |
+| **SHAMBLES** | 1 | Old English | *sceamol*, a butcher's bench. Meat market, then slaughterhouse, then any scene of carnage |
+| **BANKRUPT** | 1 | Italian | *banca rotta*, broken bench. A failed moneylender's table smashed in the marketplace |
+| **AVATAR** | 2 | Sanskrit | *avatara*, a descent. A god coming down into the world in bodily form |
+| **CHOCOLATE** | 2 | Nahuatl | *xocolatl*, bitter water. Unsweetened, spiced with chilli, drunk and not eaten |
+| **SKY** | 2 | Norse | Old Norse *sky*, cloud. English named the heavens after the thing blocking the view of them |
+| **DENIM** | 4 | French | *de Nimes*, from the city of Nimes. The fabric is named for where it was woven |
+
+TOXIC and CHOCOLATE were taken straight into week 2026-10-26. The remaining
+five leave the pool at 10 with Old English, Italian, Sanskrit, Norse and French
+represented, so the next run has family spread to select from.
+
+_Note for whoever refills next: count is the stated rule, but spread is the
+binding one. Seven Latin words pass the count check and still cannot make a week._
