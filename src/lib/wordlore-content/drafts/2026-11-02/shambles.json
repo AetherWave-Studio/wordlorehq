@@ -1,0 +1,30 @@
+{
+  "word": "SHAMBLES",
+  "pronunciation": "/ˈʃæm.bəlz/",
+  "partOfSpeech": "noun",
+  "definition": "a scene of complete disorder or chaos",
+  "hook": "Shambles used to be a place you could actually visit, and it smelled terrible.",
+  "modernAnchor": "A messy kitchen. A failed meeting. A plan that fell apart. We call it a shambles.",
+  "origin": {
+    "language": "Old English",
+    "era": "Anglo-Saxon England",
+    "originalWord": "sceamol",
+    "originalMeaning": "a butcher's bench"
+  },
+  "journey": [
+    "Old English sceamol meant a stool or bench, the low table a seller set out his goods on.",
+    "Medieval towns gave the word to the meat market, the street where butchers laid out and cut their wares.",
+    "Those streets ran with blood and offal, so shambles came to mean a slaughterhouse, and then any scene of carnage.",
+    "By the 1900s the blood had drained away and only the mess remained. Any disaster could be a shambles."
+  ],
+  "payoff": {
+    "setupWord": "SHAMBLES",
+    "connector": "is, literally,",
+    "revelation": "A BUTCHER'S BENCH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BANKRUPT"
+  },
+  "musicVariant": "dark"
+}

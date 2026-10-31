@@ -1,0 +1,30 @@
+{
+  "word": "BANKRUPT",
+  "pronunciation": "/ˈbæŋk.rʌpt/",
+  "partOfSpeech": "adjective",
+  "definition": "unable to pay one's debts, and legally declared so",
+  "hook": "Going bankrupt used to involve someone smashing furniture in public.",
+  "modernAnchor": "A boarded-up shop. A court filing. A business that ran out of money. We call it bankrupt.",
+  "origin": {
+    "language": "Italian",
+    "era": "Renaissance Italy",
+    "originalWord": "banca rotta",
+    "originalMeaning": "a broken bench"
+  },
+  "journey": [
+    "Italian moneylenders did business at a bench in the marketplace. The bench was the banca, and it gave us the word bank.",
+    "A lender who could not repay his customers lost his place in the market.",
+    "Tradition says the crowd broke his bench in public, banca rotta, so everyone knew he was finished.",
+    "French and then English borrowed the phrase, and the broken bench became a legal state."
+  ],
+  "payoff": {
+    "setupWord": "BANKRUPT",
+    "connector": "is, literally,",
+    "revelation": "A BROKEN BENCH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "AVATAR"
+  },
+  "musicVariant": "dark"
+}

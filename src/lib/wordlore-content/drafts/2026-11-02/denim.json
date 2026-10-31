@@ -1,0 +1,30 @@
+{
+  "word": "DENIM",
+  "pronunciation": "/ˈdɛn.ɪm/",
+  "partOfSpeech": "noun",
+  "definition": "a sturdy cotton twill fabric, used for jeans",
+  "hook": "Denim is not a fabric name. It is an address.",
+  "modernAnchor": "Blue jeans. A worn jacket. The one fabric everyone owns. We call it denim.",
+  "origin": {
+    "language": "French",
+    "era": "17th century France",
+    "originalWord": "de Nimes",
+    "originalMeaning": "from Nimes"
+  },
+  "journey": [
+    "Nimes, a city in southern France, was known for a tough woven cloth called serge.",
+    "Merchants labelled the cloth by where it came from: serge de Nimes, serge from Nimes.",
+    "English traders shortened the label and slurred it, and de Nimes became denim.",
+    "The city faded from the name and the fabric went on to clothe miners, cowboys and everyone since."
+  ],
+  "payoff": {
+    "setupWord": "DENIM",
+    "connector": "is, literally,",
+    "revelation": "FROM NIMES"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SHAMBLES"
+  },
+  "musicVariant": "dark"
+}
