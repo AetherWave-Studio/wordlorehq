@@ -1,0 +1,30 @@
+{
+  "word": "SHAMBLES",
+  "pronunciation": "/ˈʃæm.bəlz/",
+  "partOfSpeech": "noun",
+  "definition": "a state of total disorder",
+  "hook": "A shambles was a real place, and you could buy meat there.",
+  "modernAnchor": "A wrecked kitchen, a collapsed plan, a room the morning after. We call it a shambles.",
+  "origin": {
+    "language": "Old English",
+    "era": "Anglo-Saxon England",
+    "originalWord": "sceamol",
+    "originalMeaning": "a bench"
+  },
+  "journey": [
+    "Old English sceamol meant a bench or a footstool, taken from Latin scamellum, a little bench.",
+    "Butchers laid their meat out on those benches, and by the 1300s a shambles was the row of stalls where meat was sold. Some English towns still have a street called the Shambles.",
+    "Where meat was sold, animals were killed, and the word slid off the counter and into the slaughterhouse behind it.",
+    "From a slaughterhouse it became any scene that resembled one, and from there, any mess at all."
+  ],
+  "payoff": {
+    "setupWord": "SHAMBLES",
+    "connector": "is, literally,",
+    "revelation": "A BUTCHER'S BENCH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "BANKRUPT"
+  },
+  "musicVariant": "dark"
+}

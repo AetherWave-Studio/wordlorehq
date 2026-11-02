@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-10-26",
+  "currentWeek": "2026-11-02",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -295,6 +295,26 @@
         "admiral": 6963,
         "chocolate": 6926,
         "nice": 5397
+      }
+    },
+    "2026-11-02": {
+      "status": "ready",
+      "renderDate": "2026-11-02",
+      "words": [
+        "shambles",
+        "bankrupt",
+        "avatar"
+      ],
+      "renders": {
+        "shambles": "done",
+        "bankrupt": "done",
+        "avatar": "done"
+      },
+      "publishes": {},
+      "covers": {
+        "shambles": 6404,
+        "bankrupt": 6949,
+        "avatar": 6199
       }
     }
   }

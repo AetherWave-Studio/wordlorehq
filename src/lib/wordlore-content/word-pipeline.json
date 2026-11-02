@@ -31,24 +31,6 @@
       "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
     },
     {
-      "word": "SHAMBLES",
-      "tier": 1,
-      "language": "Old English",
-      "payoff": "Old English \"sceamol\", a butcher's bench - a meat market, then a slaughterhouse, then any scene of carnage"
-    },
-    {
-      "word": "BANKRUPT",
-      "tier": 1,
-      "language": "Italian",
-      "payoff": "Italian \"banca rotta\", broken bench - a failed moneylender's table smashed in the marketplace"
-    },
-    {
-      "word": "AVATAR",
-      "tier": 2,
-      "language": "Sanskrit",
-      "payoff": "Sanskrit \"avatara\", a descent - a god coming down into the world in bodily form"
-    },
-    {
       "word": "SKY",
       "tier": 2,
       "language": "Norse",
@@ -59,6 +41,36 @@
       "tier": 4,
       "language": "French",
       "payoff": "French \"de Nimes\", from the city of Nimes - the fabric is named after where it was woven"
+    },
+    {
+      "word": "SQUIRREL",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Greek \"skiouros\", shadow-tail - the animal named for sitting under its own tail"
+    },
+    {
+      "word": "SHIBBOLETH",
+      "tier": 1,
+      "language": "Hebrew",
+      "payoff": "Hebrew \"shibboleth\", an ear of grain - a password that exposed who could not say it"
+    },
+    {
+      "word": "KETCHUP",
+      "tier": 1,
+      "language": "Hokkien",
+      "payoff": "Hokkien \"ke-tsiap\", a brine of fermented fish - no tomato in it at all"
+    },
+    {
+      "word": "ALGEBRA",
+      "tier": 2,
+      "language": "Arabic",
+      "payoff": "Arabic \"al-jabr\", the reunion of broken parts - a bone-setting term before it was maths"
+    },
+    {
+      "word": "TULIP",
+      "tier": 2,
+      "language": "Persian",
+      "payoff": "Persian \"dulband\", a turban - the flower named for what its shape resembled"
     }
   ],
   "used": [
@@ -385,6 +397,24 @@
       "tier": 2,
       "language": "Nahuatl",
       "payoff": "Nahuatl \"xocolatl\", bitter water - unsweetened, spiced with chilli, drunk not eaten"
+    },
+    {
+      "word": "SHAMBLES",
+      "tier": 1,
+      "language": "Old English",
+      "payoff": "Old English \"sceamol\", a butcher's bench - a meat market, then a slaughterhouse, then any scene of carnage"
+    },
+    {
+      "word": "BANKRUPT",
+      "tier": 1,
+      "language": "Italian",
+      "payoff": "Italian \"banca rotta\", broken bench - a failed moneylender's table smashed in the marketplace"
+    },
+    {
+      "word": "AVATAR",
+      "tier": 2,
+      "language": "Sanskrit",
+      "payoff": "Sanskrit \"avatara\", a descent - a god coming down into the world in bodily form"
     }
   ]
 }

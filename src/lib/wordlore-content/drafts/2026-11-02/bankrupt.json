@@ -1,0 +1,30 @@
+{
+  "word": "BANKRUPT",
+  "pronunciation": "/ˈbæŋk.rʌpt/",
+  "partOfSpeech": "adjective",
+  "definition": "unable to pay what you owe",
+  "hook": "Bankrupt is not about money running out. It is about furniture being destroyed.",
+  "modernAnchor": "A shuttered shop, a final notice, a company that cannot pay. We call it bankrupt.",
+  "origin": {
+    "language": "Italian",
+    "era": "Renaissance Italy",
+    "originalWord": "banca rotta",
+    "originalMeaning": "broken bench"
+  },
+  "journey": [
+    "Moneylenders in medieval Italian cities worked outdoors, each one at a bench in the marketplace. The bench was a banca, and that is where the word bank comes from.",
+    "The bench was the business. It was the counter, the shopfront and the proof you were still trading.",
+    "When a lender could not pay what he owed, his bench was broken in front of the market. Banca rotta, broken bench, named the act and the man it was done to.",
+    "French and English took the phrase and welded it into one word. The public smashing is gone, but the furniture is still in there."
+  ],
+  "payoff": {
+    "setupWord": "BANKRUPT",
+    "connector": "is, literally,",
+    "revelation": "BROKEN BENCH"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "AVATAR"
+  },
+  "musicVariant": "dark"
+}

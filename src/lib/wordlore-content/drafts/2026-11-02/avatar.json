@@ -1,0 +1,30 @@
+{
+  "word": "AVATAR",
+  "pronunciation": "/ˈæv.ə.tɑːr/",
+  "partOfSpeech": "noun",
+  "definition": "an image or character representing a person online",
+  "hook": "Your avatar is a god coming down to earth.",
+  "modernAnchor": "A little circle beside your name, a character you steer through a game. We call it an avatar.",
+  "origin": {
+    "language": "Sanskrit",
+    "era": "ancient India",
+    "originalWord": "avatara",
+    "originalMeaning": "a descent"
+  },
+  "journey": [
+    "Sanskrit avatara is built from ava, down, and tri, to cross over. Together they mean a crossing down, a descent.",
+    "In Hindu tradition it named something exact: a deity crossing out of the divine world and taking a body in this one. Vishnu is counted as having ten.",
+    "English borrowed the word in the 1700s with that meaning intact, and used it that way for roughly two centuries.",
+    "Then computers needed a name for the body you take on inside a world that is not your own, and reached for it. The descent was always the whole idea."
+  ],
+  "payoff": {
+    "setupWord": "AVATAR",
+    "connector": "is, literally,",
+    "revelation": "A DESCENT"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SHAMBLES"
+  },
+  "musicVariant": "dark"
+}
