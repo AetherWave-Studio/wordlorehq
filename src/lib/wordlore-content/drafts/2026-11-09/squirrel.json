@@ -1,0 +1,30 @@
+{
+  "word": "SQUIRREL",
+  "pronunciation": "/ˈskwɪr.əl/",
+  "partOfSpeech": "noun",
+  "definition": "a small tree-dwelling rodent with a long bushy tail",
+  "hook": "The Greeks named the squirrel after what it does with its tail.",
+  "modernAnchor": "A flick of grey up a tree trunk, a tail like a question mark. We call it a squirrel.",
+  "origin": {
+    "language": "Greek",
+    "era": "ancient Greece",
+    "originalWord": "skiouros",
+    "originalMeaning": "shadow-tail"
+  },
+  "journey": [
+    "Greek skia meant shadow and oura meant tail. Put together, skiouros, the shadow-tailed one.",
+    "Ancient writers said the animal sat upright and held that tail over itself like a parasol, shading its own body.",
+    "Latin took it as sciurus, Old French wore it down to esquirel, and English borrowed that in the 1300s.",
+    "Every sound has shifted since, but the picture underneath has not moved: an animal sitting in the shade it carries."
+  ],
+  "payoff": {
+    "setupWord": "SQUIRREL",
+    "connector": "is, literally,",
+    "revelation": "SHADOW-TAIL"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "KETCHUP"
+  },
+  "musicVariant": "dark"
+}

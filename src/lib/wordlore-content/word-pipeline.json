@@ -43,22 +43,10 @@
       "payoff": "French \"de Nimes\", from the city of Nimes - the fabric is named after where it was woven"
     },
     {
-      "word": "SQUIRREL",
-      "tier": 1,
-      "language": "Greek",
-      "payoff": "Greek \"skiouros\", shadow-tail - the animal named for sitting under its own tail"
-    },
-    {
       "word": "SHIBBOLETH",
       "tier": 1,
       "language": "Hebrew",
       "payoff": "Hebrew \"shibboleth\", an ear of grain - a password that exposed who could not say it"
-    },
-    {
-      "word": "KETCHUP",
-      "tier": 1,
-      "language": "Hokkien",
-      "payoff": "Hokkien \"ke-tsiap\", a brine of fermented fish - no tomato in it at all"
     },
     {
       "word": "ALGEBRA",
@@ -415,6 +403,18 @@
       "tier": 2,
       "language": "Sanskrit",
       "payoff": "Sanskrit \"avatara\", a descent - a god coming down into the world in bodily form"
+    },
+    {
+      "word": "SQUIRREL",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Greek \"skiouros\", shadow-tail - the animal named for sitting under its own tail"
+    },
+    {
+      "word": "KETCHUP",
+      "tier": 1,
+      "language": "Hokkien",
+      "payoff": "Hokkien \"ke-tsiap\", a brine of fermented fish - no tomato in it at all"
     }
   ]
 }

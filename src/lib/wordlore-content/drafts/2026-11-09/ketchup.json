@@ -1,0 +1,30 @@
+{
+  "word": "KETCHUP",
+  "pronunciation": "/ˈketʃ.əp/",
+  "partOfSpeech": "noun",
+  "definition": "a thick sauce made from tomatoes, vinegar and sugar",
+  "hook": "There was no tomato in ketchup. There was fish.",
+  "modernAnchor": "A red squeeze bottle, a paper cup of fries, a diner table. We call it ketchup.",
+  "origin": {
+    "language": "Hokkien",
+    "era": "coastal southern China",
+    "originalWord": "ke-tsiap",
+    "originalMeaning": "the brine of pickled fish"
+  },
+  "journey": [
+    "In Hokkien-speaking ports, ke-tsiap named the salty liquid drawn off fermented fish. Dark, sharp and nothing like a condiment for chips.",
+    "English and Dutch traders met it in Southeast Asia in the 1600s and carried the word home along with a taste for the stuff.",
+    "British cooks had no fermented fish to hand, so they rebuilt it from what they did have: mushrooms, walnuts, oysters, anchovies. Mushroom ketchup outsold every rival for a century.",
+    "Tomatoes arrived late, in America in the 1800s, and won so completely that the word now means only them."
+  ],
+  "payoff": {
+    "setupWord": "KETCHUP",
+    "connector": "is, literally,",
+    "revelation": "PICKLED FISH BRINE"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SQUIRREL"
+  },
+  "musicVariant": "dark"
+}

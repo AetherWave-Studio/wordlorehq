@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-11-02",
+  "currentWeek": "2026-11-09",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -315,6 +315,23 @@
         "shambles": 6404,
         "bankrupt": 6949,
         "avatar": 6199
+      }
+    },
+    "2026-11-09": {
+      "status": "ready",
+      "renderDate": "2026-11-12",
+      "words": [
+        "squirrel",
+        "ketchup"
+      ],
+      "renders": {
+        "squirrel": "done",
+        "ketchup": "done"
+      },
+      "publishes": {},
+      "covers": {
+        "squirrel": 7456,
+        "ketchup": 6485
       }
     }
   }

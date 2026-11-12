@@ -1,7 +1,7 @@
 {
   "_comment": "Episodes held by this channel's media host. Written by scripts/sync-media.mjs; read by reconcileRenders as evidence that a remotely hosted episode exists. Do not hand-edit - regenerate it.",
   "baseUrl": "https://media.aetherwavestudio.com/channels/wordlore/episodes",
-  "updated": "2026-11-02",
+  "updated": "2026-11-12",
   "files": [
     "admiral-2026-10-27.jpg",
     "admiral-2026-10-27.mp4",
@@ -52,6 +52,8 @@
     "january-2026-09-12.mp4",
     "juggernaut-2026-09-07.jpg",
     "juggernaut-2026-09-07.mp4",
+    "ketchup-2026-11-12.jpg",
+    "ketchup-2026-11-12.mp4",
     "lunatic-2026-09-06.mp4",
     "magazine-2026-09-26.jpg",
     "magazine-2026-09-26.mp4",
@@ -93,6 +95,8 @@
     "sinister-2026-06-05.mp4",
     "slogan-2026-10-10.jpg",
     "slogan-2026-10-10.mp4",
+    "squirrel-2026-11-12.jpg",
+    "squirrel-2026-11-12.mp4",
     "tantalize-2026-09-07.mp4",
     "tarantula-2026-06-05.mp4",
     "toxic-2026-10-27.jpg",
