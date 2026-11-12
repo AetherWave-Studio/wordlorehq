@@ -16,7 +16,7 @@ import { spawn } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { AddressInfo } from "node:net";
-import { previewProblems } from "../src/lib/publish-checks";
+import { previewProblems, type PreviewRow } from "../src/lib/publish-checks";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(here, "..");
@@ -43,6 +43,12 @@ let failOnce = new Set<string>();          // slots that fail on their first com
 let postingAs: Record<string, { name: string }> = {};
 const posted: string[] = [];               // webhook lines
 
+/* One slot in the fake's schedule-week response: the real PreviewRow the
+   publish checks consume, plus the `error` the platform returns on a failed
+   slot. Typed off PreviewRow rather than restated, so the fake cannot drift
+   from the shape the code under test actually reads. */
+type SlotResult = PreviewRow & { error?: string };
+
 const server = http.createServer((req, res) => {
   let raw = "";
   req.on("data", (c) => (raw += c));
@@ -54,7 +60,7 @@ const server = http.createServer((req, res) => {
       return;
     }
     if (req.url === "/api/channel/schedule-week" && req.method === "POST") {
-      const results: any[] = [];
+      const results: SlotResult[] = [];
       for (const ep of body.episodes ?? []) {
         for (const platform of body.platforms ?? []) {
           const key = `${body.week}|${ep.episode}|${platform}`;
