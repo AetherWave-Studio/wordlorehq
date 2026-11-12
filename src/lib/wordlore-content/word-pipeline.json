@@ -340,57 +340,48 @@
     },
     {
       "word": "ADMIRAL",
-      "tier": 4,
-      "language": "Arabic",
-      "payoff": "Arabic \"amir al-bahr,\" commander of the sea"
+      "week": "2026-10-26",
+      "drafted": "2026-10-27"
     },
     {
       "word": "NICE",
-      "tier": 2,
-      "language": "Latin",
-      "payoff": "Latin \"nescius,\" ignorant, arriving through French as foolish before it turned pleasant"
+      "week": "2026-10-26",
+      "drafted": "2026-10-27"
     },
     {
       "word": "TOXIC",
-      "tier": 1,
-      "language": "Greek",
-      "payoff": "Greek \"toxikon\", the poison smeared on a bow's arrows - the bow is the root, not the poison"
+      "week": "2026-10-26",
+      "drafted": "2026-10-27"
     },
     {
       "word": "CHOCOLATE",
-      "tier": 2,
-      "language": "Nahuatl",
-      "payoff": "Nahuatl \"xocolatl\", bitter water - unsweetened, spiced with chilli, drunk not eaten"
+      "week": "2026-10-26",
+      "drafted": "2026-10-27"
     },
     {
       "word": "SHAMBLES",
-      "tier": 1,
-      "language": "Old English",
-      "payoff": "Old English \"sceamol\", a butcher's bench - a meat market, then a slaughterhouse, then any scene of carnage"
+      "week": "2026-11-02",
+      "drafted": "2026-11-02"
     },
     {
       "word": "BANKRUPT",
-      "tier": 1,
-      "language": "Italian",
-      "payoff": "Italian \"banca rotta\", broken bench - a failed moneylender's table smashed in the marketplace"
+      "week": "2026-11-02",
+      "drafted": "2026-11-02"
     },
     {
       "word": "AVATAR",
-      "tier": 2,
-      "language": "Sanskrit",
-      "payoff": "Sanskrit \"avatara\", a descent - a god coming down into the world in bodily form"
+      "week": "2026-11-02",
+      "drafted": "2026-11-02"
     },
     {
       "word": "SQUIRREL",
-      "tier": 1,
-      "language": "Greek",
-      "payoff": "Greek \"skiouros\", shadow-tail - the animal named for sitting under its own tail"
+      "week": "2026-11-09",
+      "drafted": "2026-11-12"
     },
     {
       "word": "KETCHUP",
-      "tier": 1,
-      "language": "Hokkien",
-      "payoff": "Hokkien \"ke-tsiap\", a brine of fermented fish - no tomato in it at all"
+      "week": "2026-11-09",
+      "drafted": "2026-11-12"
     },
     {
       "word": "SKY",
