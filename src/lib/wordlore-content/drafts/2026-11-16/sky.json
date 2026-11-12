@@ -1,0 +1,30 @@
+{
+  "word": "SKY",
+  "pronunciation": "/skaɪ/",
+  "partOfSpeech": "noun",
+  "definition": "the expanse of air above the earth, seen from the ground",
+  "hook": "English took the word sky from the Vikings, and it meant the thing in the way of it.",
+  "modernAnchor": "Blue overhead, a plane crossing it, nothing at all in the way. We call it the sky.",
+  "origin": {
+    "language": "Norse",
+    "era": "Viking-age England",
+    "originalWord": "ský",
+    "originalMeaning": "cloud"
+  },
+  "journey": [
+    "Old Norse ský meant cloud, and it came into English around 1200 with the Scandinavian settlers.",
+    "English already had its own words for the heavens. What it borrowed from Norse was the word for the grey stuff crossing them.",
+    "For a long stretch of Middle English, sky meant cloud and little else. When a writer said the skies, he meant the clouds.",
+    "Then the word drifted upward, past the thing it named, and settled on the whole open expanse behind it."
+  ],
+  "payoff": {
+    "setupWord": "SKY",
+    "connector": "is, literally,",
+    "revelation": "CLOUD"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SHIBBOLETH"
+  },
+  "musicVariant": "dark"
+}

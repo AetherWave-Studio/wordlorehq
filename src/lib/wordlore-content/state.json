@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-11-09",
+  "currentWeek": "2026-11-16",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -332,6 +332,29 @@
       "covers": {
         "squirrel": 7456,
         "ketchup": 6485
+      }
+    },
+    "2026-11-16": {
+      "status": "ready",
+      "renderDate": "2026-11-12",
+      "words": [
+        "sky",
+        "shibboleth",
+        "algebra",
+        "hearse"
+      ],
+      "renders": {
+        "sky": "done",
+        "shibboleth": "done",
+        "algebra": "done",
+        "hearse": "done"
+      },
+      "publishes": {},
+      "covers": {
+        "sky": 7632,
+        "shibboleth": 8000,
+        "algebra": 8000,
+        "hearse": 6801
       }
     }
   }

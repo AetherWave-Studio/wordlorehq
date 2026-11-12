@@ -1,0 +1,30 @@
+{
+  "word": "SHIBBOLETH",
+  "pronunciation": "/ˈʃɪb.ə.lɛθ/",
+  "partOfSpeech": "noun",
+  "definition": "a word or custom that marks out who belongs to a group and who does not",
+  "hook": "A whole army was sorted out by the way men pronounced one word.",
+  "modernAnchor": "A password, a shared joke, a way of saying a word that tells people whose side you are on. We call it a shibboleth.",
+  "origin": {
+    "language": "Hebrew",
+    "era": "ancient Israel",
+    "originalWord": "shibboleth",
+    "originalMeaning": "an ear of grain"
+  },
+  "journey": [
+    "In the book of Judges, the men of Gilead held the fords of the Jordan against the fleeing men of Ephraim.",
+    "Everyone who wanted to cross was made to say one word. The Ephraimites could not manage the sh, and said sibboleth.",
+    "That slip was the entire test. Judges counts forty-two thousand dead at the river over a sound they could not make.",
+    "Scholars still argue whether the word meant an ear of grain or a flowing stream. The guards did not care what it meant, only how it sounded."
+  ],
+  "payoff": {
+    "setupWord": "SHIBBOLETH",
+    "connector": "is, literally,",
+    "revelation": "AN EAR OF GRAIN"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "ALGEBRA"
+  },
+  "musicVariant": "dark"
+}

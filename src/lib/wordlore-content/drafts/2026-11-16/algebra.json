@@ -1,0 +1,30 @@
+{
+  "word": "ALGEBRA",
+  "pronunciation": "/ˈæl.dʒə.brə/",
+  "partOfSpeech": "noun",
+  "definition": "the branch of mathematics in which letters stand for unknown numbers",
+  "hook": "Algebra was a word for setting broken bones before it was a word for mathematics.",
+  "modernAnchor": "A letter standing in for a number, a sheet of homework, x on both sides. We call it algebra.",
+  "origin": {
+    "language": "Arabic",
+    "era": "ninth-century Baghdad",
+    "originalWord": "al-jabr",
+    "originalMeaning": "the setting of broken parts"
+  },
+  "journey": [
+    "Around the year 820 the Baghdad scholar al-Khwarizmi wrote a book on solving equations, and called his method al-jabr.",
+    "The verb behind it, jabara, meant to restore or to set something broken, the way a surgeon sets a bone.",
+    "He meant it as a picture. An equation with terms stranded on the wrong side is a thing out of joint, and you put it back together.",
+    "The older sense travelled too. In Don Quixote an algebrista is not a mathematician but the man who sets the bone."
+  ],
+  "payoff": {
+    "setupWord": "ALGEBRA",
+    "connector": "is, literally,",
+    "revelation": "BONE-SETTING"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "HEARSE"
+  },
+  "musicVariant": "dark"
+}

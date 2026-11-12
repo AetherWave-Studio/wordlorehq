@@ -1,0 +1,30 @@
+{
+  "word": "HEARSE",
+  "pronunciation": "/hɜːrs/",
+  "partOfSpeech": "noun",
+  "definition": "a vehicle that carries a coffin at a funeral",
+  "hook": "The hearse began as a farm tool for breaking up soil.",
+  "modernAnchor": "A long black car moving at walking pace with its headlights on in daylight. We call it a hearse.",
+  "origin": {
+    "language": "Latin",
+    "era": "ancient Rome",
+    "originalWord": "hirpex",
+    "originalMeaning": "a harrow for breaking soil"
+  },
+  "journey": [
+    "A hirpex was a harrow: a heavy triangular frame set with iron teeth, dragged across a field to break the earth.",
+    "Old French kept the word as herse. Then somebody noticed that a frame of candles standing over a coffin had the very same shape.",
+    "By about 1300 the word had moved to the candle frame, then to the canopy above the tomb, then to the carriage underneath it.",
+    "The same root gave English rehearse, to rake over the same ground again, which is exactly what a rehearsal is."
+  ],
+  "payoff": {
+    "setupWord": "HEARSE",
+    "connector": "is, literally,",
+    "revelation": "A SPIKED FARM TOOL"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "SKY"
+  },
+  "musicVariant": "dark"
+}

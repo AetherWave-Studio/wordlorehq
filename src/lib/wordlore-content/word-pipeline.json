@@ -25,34 +25,10 @@
       "payoff": "Latin \"penicillus,\" little tail - a fine brush"
     },
     {
-      "word": "HEARSE",
-      "tier": 4,
-      "language": "Latin",
-      "payoff": "Latin \"hirpex,\" a harrow - the spiked frame of candles set over a coffin"
-    },
-    {
-      "word": "SKY",
-      "tier": 2,
-      "language": "Norse",
-      "payoff": "Old Norse \"sky\", cloud - English named the whole heavens after the thing blocking the view of it"
-    },
-    {
       "word": "DENIM",
       "tier": 4,
       "language": "French",
       "payoff": "French \"de Nimes\", from the city of Nimes - the fabric is named after where it was woven"
-    },
-    {
-      "word": "SHIBBOLETH",
-      "tier": 1,
-      "language": "Hebrew",
-      "payoff": "Hebrew \"shibboleth\", an ear of grain - a password that exposed who could not say it"
-    },
-    {
-      "word": "ALGEBRA",
-      "tier": 2,
-      "language": "Arabic",
-      "payoff": "Arabic \"al-jabr\", the reunion of broken parts - a bone-setting term before it was maths"
     },
     {
       "word": "TULIP",
@@ -415,6 +391,26 @@
       "tier": 1,
       "language": "Hokkien",
       "payoff": "Hokkien \"ke-tsiap\", a brine of fermented fish - no tomato in it at all"
+    },
+    {
+      "word": "SKY",
+      "week": "2026-11-16",
+      "drafted": "2026-11-12"
+    },
+    {
+      "word": "SHIBBOLETH",
+      "week": "2026-11-16",
+      "drafted": "2026-11-12"
+    },
+    {
+      "word": "ALGEBRA",
+      "week": "2026-11-16",
+      "drafted": "2026-11-12"
+    },
+    {
+      "word": "HEARSE",
+      "week": "2026-11-16",
+      "drafted": "2026-11-12"
     }
   ]
 }
