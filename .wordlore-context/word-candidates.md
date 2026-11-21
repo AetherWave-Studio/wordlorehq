@@ -209,3 +209,48 @@ represented, so the next run has family spread to select from.
 
 _Note for whoever refills next: count is the stated rule, but spread is the
 binding one. Seven Latin words pass the count check and still cannot make a week._
+
+## Refill batch (added 2026-11-21, pool was unselectable again)
+
+`available` held 6 entries: four Latin, one French, one Persian, and no Tier 1.
+Three language families and no Tier 1 means step 3 could not assemble a legal
+batch at all. Not a short week - zero words. Simulated against the step 3 rules,
+the pool yielded 0 full weeks before this refill and 3 after it.
+
+This is the third time in six weeks (2026-10-10, 2026-10-27, now) and the count
+gate cannot see it. Six entries is below eight, so a refill does fire, but the
+rule asks for a number of entries and the four vetting criteria say nothing
+about language family or tier. A refill of six Latin Tier 4 words satisfies
+step 2 to the letter and leaves the pool exactly as unselectable as before.
+
+Why it keeps happening, written down so the next refill does not have to
+rediscover it: step 3 spends four *different* families every week and at least
+one Tier 1 every week. Latin is the easiest family to find new candidates in and
+the slowest to spend, so the pool silts up with Latin while the rare families
+and the Tier 1 words drain first. Left alone, the batch size decays - weeks
+2026-11-02 and 2026-11-09 shipped three words and two words on the way down.
+
+Added for spread first and count second. Nine words, eight families that were
+not in the pool, five of them Tier 1:
+
+| Word | Tier | Language | Payoff |
+|---|---|---|---|
+| **IDIOT** | 1 | Greek | *idiotes*, a private citizen, someone who held no public office |
+| **JUNGLE** | 1 | Sanskrit | *jangala*, dry barren wasteland, the opposite of what the word now paints |
+| **LORD** | 1 | Old English | *hlafweard*, the loaf guardian, keeper of the household bread |
+| **HUSBAND** | 1 | Norse | *husbondi*, the householder, the man bound to a house |
+| **INFLUENZA** | 1 | Italian | *influenza*, the influence of the stars, once blamed for the sickness |
+| **CURFEW** | 2 | French | *couvre-feu*, cover the fire, the bell that ordered hearths put out |
+| **TYCOON** | 2 | Japanese | *taikun*, great lord, the title foreigners gave the shogun |
+| **SOFA** | 3 | Arabic | *suffah*, a raised stone bench along a wall, reaching English via Turkish |
+| **ALLIGATOR** | 3 | Spanish | *el lagarto*, the lizard, article and noun fused together in English |
+
+That leaves `available` at 15 entries across 11 families with 5 Tier 1 words,
+which is three clean weeks. Every payoff above is well documented rather than a
+contested claim, but the drafting run should still check its own source before
+writing the episode.
+
+_Note for whoever refills next: count is the stated rule, spread is the binding
+one, and a pool can pass the count check while being able to make no week at
+all. Check that the pool still holds four distinct families and one unused
+Tier 1 after you are done, not just twelve entries._

@@ -35,6 +35,60 @@
       "tier": 2,
       "language": "Persian",
       "payoff": "Persian \"dulband\", a turban - the flower named for what its shape resembled"
+    },
+    {
+      "word": "IDIOT",
+      "tier": 1,
+      "language": "Greek",
+      "payoff": "Greek \"idiotes,\" a private citizen, someone who held no public office"
+    },
+    {
+      "word": "JUNGLE",
+      "tier": 1,
+      "language": "Sanskrit",
+      "payoff": "Sanskrit \"jangala,\" dry barren wasteland, the opposite of what the word now paints"
+    },
+    {
+      "word": "LORD",
+      "tier": 1,
+      "language": "Old English",
+      "payoff": "Old English \"hlafweard,\" the loaf guardian, keeper of the household bread"
+    },
+    {
+      "word": "HUSBAND",
+      "tier": 1,
+      "language": "Norse",
+      "payoff": "Old Norse \"husbondi,\" the householder, the man bound to a house"
+    },
+    {
+      "word": "INFLUENZA",
+      "tier": 1,
+      "language": "Italian",
+      "payoff": "Italian \"influenza,\" the influence of the stars, once blamed for the sickness"
+    },
+    {
+      "word": "CURFEW",
+      "tier": 2,
+      "language": "French",
+      "payoff": "French \"couvre-feu,\" cover the fire, the bell that ordered hearths put out"
+    },
+    {
+      "word": "TYCOON",
+      "tier": 2,
+      "language": "Japanese",
+      "payoff": "Japanese \"taikun,\" great lord, the title foreigners gave the shogun"
+    },
+    {
+      "word": "SOFA",
+      "tier": 3,
+      "language": "Arabic",
+      "payoff": "Arabic \"suffah,\" a raised stone bench along a wall, reaching English via Turkish"
+    },
+    {
+      "word": "ALLIGATOR",
+      "tier": 3,
+      "language": "Spanish",
+      "payoff": "Spanish \"el lagarto,\" the lizard, article and noun fused together in English"
     }
   ],
   "used": [
