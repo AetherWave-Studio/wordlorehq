@@ -51,8 +51,8 @@ import { applyPattern, channel, hashtags } from '../src/lib/channel';
  * and the whole video reads as rushed. The padding adds breathing room after
  * VO; the clamp enforces the brand's pacing floor.
  */
-const PER_BEAT_TAIL_PAD_SEC = 0.5;
-function applyBeatBounds(measured: number[]): number[] {
+export const PER_BEAT_TAIL_PAD_SEC = 0.5;
+export function applyBeatBounds(measured: number[]): number[] {
   const orderedBounds = [
     beatBounds.beat1Hook,
     beatBounds.beat2WordReveal,
@@ -65,7 +65,23 @@ function applyBeatBounds(measured: number[]): number[] {
   return measured.map((sec, i) => {
     const { min, max } = orderedBounds[i];
     const padded = sec + PER_BEAT_TAIL_PAD_SEC;
-    return Math.max(min, Math.min(max, padded));
+    /* `max` is a pacing target, NOT a hard cut. The voiceover Sequences in
+       Composition.tsx carry `from` but no `durationInFrames`, so each beat's
+       audio plays its full natural length whatever the scene does. Clamping a
+       scene BELOW its own narration therefore does not shorten the narration -
+       it slides the remainder on top of the next beat, two voices at once.
+       Measured on the whole of week 2026-11-16: every one of the four
+       episodes overran beat 5, by 3.60s (sky), 4.82s (algebra), 5.16s
+       (shibboleth) and 5.62s (hearse), and that tail landed on beat 6, the
+       payoff - the single line the episode exists to deliver. Andrew heard it
+       as the text cutting early while the voice ran on into the reveal.
+       So: honour `min` as the pacing floor, honour `max` while the audio fits
+       inside it, and never return a scene shorter than the audio it has to
+       hold. A beat that outgrows its target makes the video longer, which is
+       visible and fixable in the script; a beat that outgrows its scene makes
+       the video wrong, and is audible only by watching the whole thing. */
+    const targeted = Math.max(min, Math.min(max, padded));
+    return Math.max(targeted, sec);
   });
 }
 
