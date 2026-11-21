@@ -39,6 +39,16 @@ Three failures produced nine weeks of silence between 2026-07-06 and
    dashboard took its "current" badge from that field, a three-week-old batch
    presented as this week's work. Step 1 now derives the target from the
    calendar, and the dashboard labels every batch by its real age.
+5. **The queue was measured by count while selection needed spread.** Step 2
+   asked whether `available` held 8 entries. Step 3 asks for four words from
+   four DIFFERENT language families including a Tier 1, which is a different
+   question, and a pool can pass the first and fail the second completely. It
+   has three times: 2026-10-10, 2026-10-27, and 2026-11-21, when six entries
+   on the shelf could assemble ZERO legal weeks. Each time somebody refilled
+   for spread and wrote a note saying spread is the binding rule, and the next
+   run read the stated rule and refilled for count again. Weeks 2026-11-02 and
+   2026-11-09 shipped three words and two words on the way down. Step 2 is now
+   a script that answers the question step 3 actually asks.
 
 ## Steps
 
@@ -77,20 +87,54 @@ Let `thisMonday` be the Monday of the week you are running in (UTC), and
   is still ahead, so fill it.
 - Otherwise the target is `nextMonday`.
 
-If the target already has an entry, stop and post to Discord:
-`Wordlore routine: week <target> already on disk, skipping.`
+If the target already has an entry, **run step 2's pool check before you stop**,
+refill if it asks for one, and land that refill. Then post to Discord:
+`Wordlore routine: week <target> already on disk, skipping. Pool: <runway> legal weeks.`
+
+A skip week is the one week with spare capacity to restock, and exiting at step
+1 is how the shortage of 2026-11-21 reached the run that needed the words. The
+run of 2026-11-14 found its target already built by an off-schedule run two days
+earlier, skipped correctly, never looked at the queue, and left a pool that
+could make zero weeks for the next run to discover.
 
 **Do not backfill a week older than `thisMonday`.** Those publish slots have
 passed and cannot be recovered by relabelling. Weeks 2026-08-24 and 2026-08-31
 have no batch and never will; that gap is history, not a task. The channel
 restarts from the current week, not from the hole.
 
-**2. Check the queue, and refill it rather than stopping.** If
-`word-pipeline.json.available` holds fewer than 8 entries, add new candidates
-to `.wordlore-context/word-candidates.md` and to `available` until it holds at
-least 12. Vet each against the four selection criteria in that file, and check
-every one against `used[]` before adding it. Post to Discord that you refilled
-and with which words. Only stop if you cannot produce 4 usable words.
+**2. Check the queue with the script, and refill it rather than stopping.**
+
+```
+node scripts/check-pool.mjs
+```
+
+Exit 0 and you have a pool. Exit 1 and it prints what is short. **That script is
+the gate - do not substitute a glance at the entry count**, which is the mistake
+it exists to stop.
+
+Counting entries is not the same question as "can this pool make a week." Step 3
+wants four words from four DIFFERENT language families with at least one Tier 1,
+so what binds is spread and Tier 1 cover, not the total. The pool drifts away
+from both for a structural reason: step 3 spends four different families and one
+Tier 1 every single week, while Latin is the easiest family to find new
+candidates in and the slowest to spend. Left alone the pool silts up with Latin
+and loses its rare families and its Tier 1 words first. Adding six more Latin
+Tier 4 words raises the count and moves the runway not at all.
+
+So when the check asks for a refill, add candidates **for families the pool does
+not already hold**, and Tier 1 words, until `check-pool.mjs` reports a runway of
+3. Write every new word into BOTH `.wordlore-context/word-candidates.md` - with
+a dated refill-batch note saying why, as the previous batches do - and
+`available`. Vet each against the four selection criteria in that file, and
+check every one against `used[]` before adding it.
+
+Words that go into `available` without being written into the candidate bank are
+how the shortage stayed invisible: SQUIRREL, KETCHUP, SHIBBOLETH and ALGEBRA all
+became episodes without ever appearing there, so the bank still reads as though
+the 2026-10-27 refill were intact.
+
+Post to Discord that you refilled and with which words. Only stop if you cannot
+reach a runway of 1 after refilling.
 
 **3. Select 4 words** from `available`:
 
@@ -103,7 +147,12 @@ and with which words. Only stop if you cannot produce 4 usable words.
 `src/lib/wordlore-content/drafts/<week>/<word>.json`, matching the schema in
 `drafts/2026-06-08/sinister.json` exactly - no added fields, no omitted fields.
 Every entry in `available` is an object (`{word, tier, language, payoff}`), not
-a bare string; keep that shape when you move words to `used[]`.
+a bare string. `used[]` takes a **different** shape - `{word, week, drafted}`,
+the `UsedWord` type in `src/lib/wordlore-content/index.ts` - so convert as you
+move rather than copying the candidate fields across. Nine entries were filed in
+the candidate shape and had to be repaired in #31, which left blank Week and
+Drafted columns on /admin/pipeline until then. The tier, language and payoff text
+is not lost by converting: it stays in `word-candidates.md`.
 
 **ZERO em dashes or en dashes in any string field.** Use hyphens.
 
