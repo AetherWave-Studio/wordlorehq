@@ -1,5 +1,5 @@
 {
-  "currentWeek": "2026-11-16",
+  "currentWeek": "2026-11-23",
   "weeks": {
     "2026-05-18": {
       "status": "ready",
@@ -355,6 +355,29 @@
         "shibboleth": 8000,
         "algebra": 8000,
         "hearse": 6801
+      }
+    },
+    "2026-11-23": {
+      "status": "ready",
+      "renderDate": "2026-11-21",
+      "words": [
+        "lord",
+        "influenza",
+        "tycoon",
+        "tulip"
+      ],
+      "renders": {
+        "lord": "done",
+        "influenza": "done",
+        "tycoon": "done",
+        "tulip": "done"
+      },
+      "publishes": {},
+      "covers": {
+        "lord": 8338,
+        "influenza": 8059,
+        "tycoon": 8757,
+        "tulip": 8441
       }
     }
   }

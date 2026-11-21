@@ -1,0 +1,30 @@
+{
+  "word": "LORD",
+  "pronunciation": "/lɔːrd/",
+  "partOfSpeech": "noun",
+  "definition": "a man of high rank who holds power or authority over others",
+  "hook": "A lord was not the man with the sword. He was the man in charge of the bread.",
+  "modernAnchor": "A title on a letter, a robe in a chamber, a hand that grants or refuses. We call him a lord.",
+  "origin": {
+    "language": "Old English",
+    "era": "Anglo-Saxon England",
+    "originalWord": "hlafweard",
+    "originalMeaning": "guardian of the loaf"
+  },
+  "journey": [
+    "Old English hlaf was a loaf of bread, and weard was a guard. The head of a household was its hlafweard, the loaf guardian.",
+    "His power was simple. He held the grain, so he decided who ate. The people who depended on him were called loaf eaters.",
+    "His wife had her own title, the loaf kneader. Worn down over the centuries, that one became the word lady.",
+    "Hlafweard shrank to hlaford, then to lord. The bread fell out of the word, and only the power over the hungry stayed behind."
+  ],
+  "payoff": {
+    "setupWord": "LORD",
+    "connector": "is, literally,",
+    "revelation": "THE BREAD GUARD"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "INFLUENZA"
+  },
+  "musicVariant": "dark"
+}

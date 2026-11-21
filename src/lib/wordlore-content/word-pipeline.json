@@ -31,12 +31,6 @@
       "payoff": "French \"de Nimes\", from the city of Nimes - the fabric is named after where it was woven"
     },
     {
-      "word": "TULIP",
-      "tier": 2,
-      "language": "Persian",
-      "payoff": "Persian \"dulband\", a turban - the flower named for what its shape resembled"
-    },
-    {
       "word": "IDIOT",
       "tier": 1,
       "language": "Greek",
@@ -49,34 +43,16 @@
       "payoff": "Sanskrit \"jangala,\" dry barren wasteland, the opposite of what the word now paints"
     },
     {
-      "word": "LORD",
-      "tier": 1,
-      "language": "Old English",
-      "payoff": "Old English \"hlafweard,\" the loaf guardian, keeper of the household bread"
-    },
-    {
       "word": "HUSBAND",
       "tier": 1,
       "language": "Norse",
       "payoff": "Old Norse \"husbondi,\" the householder, the man bound to a house"
     },
     {
-      "word": "INFLUENZA",
-      "tier": 1,
-      "language": "Italian",
-      "payoff": "Italian \"influenza,\" the influence of the stars, once blamed for the sickness"
-    },
-    {
       "word": "CURFEW",
       "tier": 2,
       "language": "French",
       "payoff": "French \"couvre-feu,\" cover the fire, the bell that ordered hearths put out"
-    },
-    {
-      "word": "TYCOON",
-      "tier": 2,
-      "language": "Japanese",
-      "payoff": "Japanese \"taikun,\" great lord, the title foreigners gave the shogun"
     },
     {
       "word": "SOFA",
@@ -456,6 +432,26 @@
       "word": "HEARSE",
       "week": "2026-11-16",
       "drafted": "2026-11-12"
+    },
+    {
+      "word": "LORD",
+      "week": "2026-11-23",
+      "drafted": "2026-11-21"
+    },
+    {
+      "word": "INFLUENZA",
+      "week": "2026-11-23",
+      "drafted": "2026-11-21"
+    },
+    {
+      "word": "TYCOON",
+      "week": "2026-11-23",
+      "drafted": "2026-11-21"
+    },
+    {
+      "word": "TULIP",
+      "week": "2026-11-23",
+      "drafted": "2026-11-21"
     }
   ]
 }

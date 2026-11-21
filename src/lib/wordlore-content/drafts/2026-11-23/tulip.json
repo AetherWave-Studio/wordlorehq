@@ -1,0 +1,30 @@
+{
+  "word": "TULIP",
+  "pronunciation": "/ˈtuː.lɪp/",
+  "partOfSpeech": "noun",
+  "definition": "a spring flower with a single cup-shaped bloom on a tall stem",
+  "hook": "The tulip is named after a hat, and it may be because of a misunderstanding.",
+  "modernAnchor": "A row of bright cups on straight green stems, the first color of spring. We call it a tulip.",
+  "origin": {
+    "language": "Persian",
+    "era": "the Ottoman court of the 1550s",
+    "originalWord": "dulband",
+    "originalMeaning": "turban"
+  },
+  "journey": [
+    "Persian dulband was a turban, a long cloth wound around the head. The Ottoman Turks borrowed the word as tulbend.",
+    "In the 1550s a European ambassador to the sultan saw a flower he had never seen before and asked what it was called.",
+    "The Turks called it lale. But the name he carried home was the word for turban, perhaps because someone was only describing its shape.",
+    "Europe kept the mistake. The same Persian word reached English twice, once as turban, and once as the flower that looked like one."
+  ],
+  "payoff": {
+    "setupWord": "TULIP",
+    "connector": "is, literally,",
+    "revelation": "A TURBAN"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "LORD"
+  },
+  "musicVariant": "dark"
+}

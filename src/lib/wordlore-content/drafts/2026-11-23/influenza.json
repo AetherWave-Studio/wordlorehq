@@ -1,0 +1,30 @@
+{
+  "word": "INFLUENZA",
+  "pronunciation": "/ˌɪn.fluˈɛn.zə/",
+  "partOfSpeech": "noun",
+  "definition": "a contagious viral infection that brings fever, aching and exhaustion",
+  "hook": "Every winter you catch a disease that is named after astrology.",
+  "modernAnchor": "A fever, aching legs, three days lost under a blanket. We call it influenza, or just the flu.",
+  "origin": {
+    "language": "Italian",
+    "era": "medieval Italy",
+    "originalWord": "influenza",
+    "originalMeaning": "influence of the stars"
+  },
+  "journey": [
+    "Medieval astrologers believed an invisible fluid flowed down from the stars and into people. That flowing in was called an influence.",
+    "When a sickness swept through a whole city at once, no one could see a cause. So Italians blamed the sky and called the outbreak an influenza.",
+    "In 1743 an epidemic spread out of Italy across Europe, and English newspapers carried the Italian name along with the news.",
+    "Within a century English had clipped it to flu. The stars were cleared of the charge, but their name is still on the diagnosis."
+  ],
+  "payoff": {
+    "setupWord": "INFLUENZA",
+    "connector": "is, literally,",
+    "revelation": "INFLUENCE OF THE STARS"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "TYCOON"
+  },
+  "musicVariant": "dark"
+}

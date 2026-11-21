@@ -1,0 +1,30 @@
+{
+  "word": "TYCOON",
+  "pronunciation": "/taɪˈkuːn/",
+  "partOfSpeech": "noun",
+  "definition": "a wealthy and powerful person in business or industry",
+  "hook": "Tycoon was a title invented to impress foreigners, and it worked on the Americans.",
+  "modernAnchor": "A corner office, a private jet, a name on the side of a tower. We call that person a tycoon.",
+  "origin": {
+    "language": "Japanese",
+    "era": "Edo-period Japan",
+    "originalWord": "taikun",
+    "originalMeaning": "great lord"
+  },
+  "journey": [
+    "Japan was ruled by the shogun, but shogun only meant general. For dealing with foreign powers, his court wanted something grander.",
+    "So in letters abroad he was styled taikun, the great lord. When Commodore Perry arrived in 1853, that was the title he was given.",
+    "Americans carried the word home. Abraham Lincoln's own secretaries used it as their private nickname for him. The Tycoon.",
+    "After the First World War, magazines pinned it on the barons of oil, steel and rail. The shogun was gone. The title went to the money."
+  ],
+  "payoff": {
+    "setupWord": "TYCOON",
+    "connector": "is, literally,",
+    "revelation": "GREAT LORD"
+  },
+  "outro": {
+    "type": "tease",
+    "nextWord": "TULIP"
+  },
+  "musicVariant": "dark"
+}
